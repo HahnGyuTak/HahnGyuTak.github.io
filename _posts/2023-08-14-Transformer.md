@@ -1,5 +1,5 @@
 ---
-title: Transfomer - Attention Is All You Need
+title: [Paper Review]Transfomer - Attention Is All You Need
 date: 2023-08-14 20:02:43 +/-0000
 categories: [Paper Review, NLP]
 tags: [nlp, ai, generative, attention, math, transfomer, sota]   
@@ -18,20 +18,20 @@ img_path: /assets/img/Transformer/
         - 초록색 박스 - Neural Network, 단어를 벡터로 변환(워드 임베딩) 후 입력
         - 현재 word vector를 이전의 값을 바탕으로 업데이트
         - 워드 임베딩 - Word Embedding
-            
+          
+        
         ![2](2.png){: width="500"}
         ![3](3.png){: width="500"}
-
-            
+        
+        
         - 맥락의 두 벡터에 weight를 곱하여 hidden layer로 만들고 다시 weight를 곱한 뒤 softmax를 취함
         - ouput과 실제 원 핫 벡터의 loss를 구하고 이를 다음 layer로 전달
         - 이전 값을 계속하여 사용하기 때문에 Gradient Vanishing이 발생 → 문장이 길면 성능 하락
     - LSTM
         - 과거의 값들 중 최근 기억을 사용하여 과거 기억을 수정
-            
+          
             ![4](4.png){: width="500"}
-
-            
+    
         - 위 → 는 과거의 기억(Long term Memory). 아래 →는 최근 기억(Short Term Memory)
         - 첫번째 Fully Connected Layer에 단기기억과 현재 word가 입력
         - Sigmoid로 최근 기억을 0 ~ 1 사이로 만든 뒤, 장기기억의 중요도를 결정하는 요소가 됨
@@ -58,7 +58,7 @@ img_path: /assets/img/Transformer/
 
 - 문맥에 따라 집중할 단어를 결정하는 방식
 - Encoder, Decoder 구조
-    
+  
     <img width="700" alt="Attention" src="https://github.com/HahnGyuTak/Thesis-Review/assets/50629765/1b7c73d9-5317-4c77-89f6-0baedceed046">
 
     
@@ -71,15 +71,15 @@ img_path: /assets/img/Transformer/
 ### Attention 메커니즘
 
 1. Encoder(h)와 Decoder(s)의 hidden state를 내적하여 Encoder의 셀 각각의 Attention Score를 구함
-    
+   
     → Attention Score = ${s_{t}}^{T} \cdot h_{i}$ 
     
 2. Attention score를 $softmax$ 에 입력하여 Attention distribution을 구함 → 중요도를 0 ~ 1사이 확률로 표현
-    
+   
     → Attention distribution  $a^{t} = softmax(e^{t})$
     
 3. Encoder hidden state와 Attention distribution을 곱하고 더하여 Attention Value 행렬을 만든다.
-    
+   
     → Attention Value  $\mathit {a}_{t} = \sum \alpha {_{i}}^{t}{h}_{i}$
     
 4. Decoder hidden state를 Attention Value 아래에 concatenate하여 Decoder의 문맥을 추가
@@ -93,11 +93,11 @@ img_path: /assets/img/Transformer/
 # Transformer - **Attention Is All You Need (2017)**
 
 - RNN 계열 모델 없이 Attention 구조만 사용하여 만든 언어 모델
-    
+  
     → single Attention을 여러개 붙여 사용한 Multi-head Attention을 사용
     
 - Encoder 6개, Decoder 6개로 이루어진 구조
-    
+  
     ![transformer](transformer.png){: width="300"}
 
     
@@ -114,16 +114,16 @@ img_path: /assets/img/Transformer/
     - Self Attention : 단어 간의 연관성을 찾는 과정
         - 들어온 Word Embedding값과 딥러닝의 weight값으로 Query, Key, Value vector를 구한다.
         - 구하고자 하는 it의 Query vector를 문장의 모든 단어의 key vector와 내적하여 Attention Score를 구한다.
-            
+          
             → score가 가장 큰 벡터의 단어가 가장 의미적으로 유사한 단어 (자기 자신 제외)
             
         - Nomalize(차원 수로 나누고 softmax)하여 학습이 안정되게 한 후, 이를 value와 곱하여 최종 Attention Value를 구한다.
-            
+          
             <aside>
             ✔️ $Attention(Q, K, V) = softmax(\frac{QK^{T}}{\sqrt{d_{k}}})V$
             
             </aside>
-            
+    
 3. 위 과정을 여러번 수행하면 Multi Head Attention이 된다.
 4. 여러개의 Attention에서 나온 벡터들을 concatenation하고 weight와 연산하여 초기 dimention을 맞춰준다.
 
@@ -156,10 +156,9 @@ img_path: /assets/img/Transformer/
 - Encoder의 Key와 Value를 Decoder에게 넘겨줌
 - Decoder에 입력으로 들어오는 input vector는 넘겨받은 Key와 내적한 후에, Value를 곱해준다
 - 이 output은 다음 Decoder에 Query로 들어가고, 또다시 넘겨받은 Key와 Value와 연산한다.
-    
+  
     → Decoder의 Query가 Encoder의 어떤 Vector에 더 많은 가중치를 두는지 결정
     
-
 - Feed Forward Neural Network, Residual Connection, Layer Nomalization을 거쳐 문장의 각 단어별로 최종 Encoding된 단어 vector를 얻는다.
 - 이를 선형 변환하여 target 문장의 언어의 vocabulary size크기의 벡터로 바꾸고, Softmax를 취하여 현재 단어의 다음에는 어떤 단어가 올지 확률분포를 구한다.
 - 이 확률 분포와 실제 target문장의 오차를 줄이는 방향으로 학습을 진행.
@@ -167,7 +166,7 @@ img_path: /assets/img/Transformer/
 ## 요약
 
 - Encoder
-    
+  
     <img width="600" alt="Encoder2" src="https://github.com/HahnGyuTak/Thesis-Review/assets/50629765/89af1b59-7120-4a99-ab6c-eeffc345d551">{: width="600"}
 
     
@@ -178,7 +177,7 @@ img_path: /assets/img/Transformer/
     - Feed Forward Neural Network
     - 위 과정을 6번 반복
 - Decoder
-    
+  
     <img width="588" alt="Decoder2" src="https://github.com/HahnGyuTak/Thesis-Review/assets/50629765/62a38943-7d87-4235-897c-b2651b1d2c80">{: width="600"}
 
     
