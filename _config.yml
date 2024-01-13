@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: ImTak # the main title
 
-tagline: Recording My Footprints # it will display as the sub-title
+tagline: GG # it will display as the sub-title
 
 description: A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
@@ -27,8 +27,8 @@ url: "https://HahnGyuTak.github.io"
 github:
   username: HahnGyuTak # change to your github username
 
-# twitter:
-#   username: twitter_username # change to your twitter username
+instagram:
+  username: 1mtaak # change to your twitter username
 
 social:
   # Change to your full name.
@@ -37,7 +37,7 @@ social:
   email: gue707@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your twitter homepage
+    - https://www.instagram.com/1mtaak # change to your twitter homepage
     - https://github.com/HahnGyuTak # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.instagram.com/i_m_taak/
