@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: ImTak # the main title
 
-tagline: GG # it will display as the sub-title
+tagline: 묻고 생성으로 가 # it will display as the sub-title
 
 description: A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
