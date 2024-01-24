@@ -72,7 +72,7 @@ typora-root-url: ../
 
 1. Encoder(h)와 Decoder(s)의 hidden state를 내적하여 Encoder의 셀 각각의 Attention Score를 구함
    
-    → Attention Score = ${s_{t}}^{T} \cdot h_{i}$ 
+    → Attention Score = ${s\_{t}}^{T} \cdot h\_{i}$ 
     
 2. Attention score를 $softmax$ 에 입력하여 Attention distribution을 구함 → 중요도를 0 ~ 1사이 확률로 표현
    
@@ -80,10 +80,10 @@ typora-root-url: ../
     
 3. Encoder hidden state와 Attention distribution을 곱하고 더하여 Attention Value 행렬을 만든다.
    
-    → Attention Value  $\mathit {a}_{t} = \sum \alpha {_{i}}^{t}{h}_{i}$
+    → Attention Value  $\mathit {a}\_{t} = \sum \alpha {\_{i}}^{t}{h}_{i}$
     
 4. Decoder hidden state를 Attention Value 아래에 concatenate하여 Decoder의 문맥을 추가
-5. $tanh$, $softmax$ 등의 활성화 함수를 이용해 학습을 시켜 최종 출력 $y$를 얻을수 있다.
+5. $tanh$, $sof]ㅣㅏ,tmax$ 등의 활성화 함수를 이용해 학습을 시켜 최종 출력 $y$를 얻을수 있다.
 
 <aside>
 ✔️ **→ 각 문맥들(hidden states)의 중요도(Attention score)를 반영하여 최종 문맥(Attention Value)을 구함**
