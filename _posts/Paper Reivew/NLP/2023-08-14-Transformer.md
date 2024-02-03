@@ -4,7 +4,7 @@ date: 2023-08-14 20:02:43 +/-0000
 categories: [Paper Review, NLP]
 tags: [nlp, ai, generative, attention, math, transfomer, sota]   
 math: true  # TAG names should always be lowercase
-typora-root-url: ../
+typora-root-url: ../../
 ---
 
 # Transformer
@@ -12,7 +12,7 @@ typora-root-url: ../
 
 - 선행 연구
     - RNN
-        ![1](/assets/img/Transformer/1.png){: width="500" .normal}
+        ![1](../assets/img/Transformer/1.png){: width="500" .normal}
         
         - 각 박스 - 단어
         - 초록색 박스 - Neural Network, 단어를 벡터로 변환(워드 임베딩) 후 입력
@@ -20,8 +20,8 @@ typora-root-url: ../
         - 워드 임베딩 - Word Embedding
           
         
-        ![2](/assets/img/Transformer/2.png){: width="500"}
-        ![3](/assets/img/Transformer/3.png){: width="500"}
+        ![2](../assets/img/Transformer/2.png){: width="500"}
+        ![3](../assets/img/Transformer/3.png){: width="500"}
         
         
         - 맥락의 두 벡터에 weight를 곱하여 hidden layer로 만들고 다시 weight를 곱한 뒤 softmax를 취함
@@ -30,7 +30,7 @@ typora-root-url: ../
     - LSTM
         - 과거의 값들 중 최근 기억을 사용하여 과거 기억을 수정
           
-            ![4](/assets/img/Transformer/4.png){: width="500"}
+            ![4](../assets/img/Transformer/4.png){: width="500"}
     
         - 위 → 는 과거의 기억(Long term Memory). 아래 →는 최근 기억(Short Term Memory)
         - 첫번째 Fully Connected Layer에 단기기억과 현재 word가 입력
@@ -98,7 +98,7 @@ typora-root-url: ../
     
 - Encoder 6개, Decoder 6개로 이루어진 구조
   
-    ![transformer](/assets/img/Transformer/transformer.png){: width="300"}
+    ![transformer](../assets/img/Transformer/transformer.png){: width="300"}
 
     
     - Encoder 블록 각각은  Self-Attention, Neural Network으로 구성되어있다.
