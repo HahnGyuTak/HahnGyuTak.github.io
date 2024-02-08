@@ -4,4 +4,12 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Generative AI에 도전 중인 사람의 블로그
+## Contact
+* e-mail
+  * gue707@naver.com
+  * gue707@gmail.com
+* SNS
+  * [Instagram](https://www.instagram.com/1mtaak)
+  * Linkedin
+  * [Github](https://github.com/HahnGyuTak)
+  
