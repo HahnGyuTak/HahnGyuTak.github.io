@@ -105,9 +105,12 @@ maniford란 고차원 공간에서 데이터를 설명하는 데 사용되는 �
 #### Total Variation (TV) distance
 
 
+
 $$
 \delta(\mathbb{P}_r, \mathbb{P}_g) = \underset{A \in \Sigma}{\text{sup}} \left |\mathbb{P}_r(A) - \mathbb{P}_g(A)  \right|
 $$
+
+
 두 확률 분포의 측정값의 차의 상한, 즉 벌어질 수 있는 가장 큰 값을 뜻한다.
 
 
@@ -115,9 +118,11 @@ $$
 #### Kullback-Leibler (KL) divergence
 
 
+
 $$
 KL(\mathbb{P}_r \parallel \mathbb{P}_g) = \int \log \left(\frac{P_r(x)}{P_g(x)}P_r(x)d\mu(x) \right)
 $$
+
 
 
 여기서 $\mathbb{P}_r$와 $\mathbb{P}\_g$는 $\mathcal{X}$에 정의된 측정값 $\mu$에 대해 **연속적**이며, 즉 밀도를 가진다고 가정할 수 있다. 
@@ -129,9 +134,11 @@ KL divergence는 $\mathbb{P}\_g(x) = 0$이고 $\mathbb{P}\_r > 0$일때  무한�
 #### Jensen-Shannon (JS) divergence
 
 
+
 $$
 JS(\mathbb{P}_r, \mathbb{P}_g) = KL(\mathbb{P}_r \parallel \mathbb{P}_m) + KL(\mathbb{P}_g \parallel \mathbb{P}_m)
 $$
+
 
 
 여기서 $\mathbb{P}\_m = \frac{\mathbb{P}\_r + \mathbb{P}\_g}{2}$이다.
@@ -143,9 +150,11 @@ JS divergence는 두 분포에 대한 평균에 대한 KL divergence로 정의�
 #### Earth-Mover **(EM) distance** or **Wasserstein distance**
 
 
+
 $$
 W(\mathbb{P}_r, \mathbb{P}_g) = \underset{\gamma \in \prod(\mathbb{P}_r, \mathbb{P}_g)}{\text{inf}} \mathbb{E}_{(x,y)\sim\gamma}\left[\parallel x-y \parallel \right] \tag{1}
 $$
+
 
 
 $\prod(\mathbb{P}\_r, \mathbb{P}\_g)$는 최댓값이 각각 $\mathbb{P}\_r$과 $\mathbb{P}\_g$인 모든 joint distribution $\gamma(x,y)$의 집합을 나타낸다.
@@ -208,7 +217,7 @@ $\theta_t \rightarrow 0$일때, EM distance를 제외한 다른 distance, diverg
 <details>
   <summary><b>Theorem 1</b></summary>
 
-$P_r$을 $mathcal{X}$에 대한 고정 분포이며, $Z$을 다른 space $\mathcal{Z}$에 대한 radom 변수라고 가정하자. <br>
+$P_r$을 $\mathcal{X}$에 대한 고정 분포이며, $Z$을 다른 space $\mathcal{Z}$에 대한 radom 변수라고 가정하자. <br>
 
 $g : \mathcal{Z} \times \mathbb{R}^d$라는 함수라 할때, $g_\theta(z) = (z, \theta)$라 하자. $\mathbb{P}_\theta$는 $g_\theta(Z) $의 분포이다. 
 
