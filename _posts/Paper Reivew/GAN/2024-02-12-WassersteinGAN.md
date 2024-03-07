@@ -7,7 +7,7 @@ math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
-
+[[논문 링크]](https://arxiv.org/abs/1701.07875)
 
 수학적인, 특히 확률론에 관련된 내용과 글이 많아서 가독성이 떨어질 수 있다.
 
@@ -268,9 +268,9 @@ Neural Network에서 EM distance를 minimize하여 train하는 것이 이론적�
 <details>
   <summary><b>Corollary 1</b></summary>
 
-$g_\theta$는 $θ$로 parameterize된 feedfoward Neural Network이고, $p(z)$는 $\mathbb{E}\_{z \sim p(z)} [\parallel z parallel] <  \infty$ (Gaussian, uniform 등)이 되도록 하는 $z$에 대한 사전분포라고 가정하자. 
+$g_\theta$는 $θ$로 parameterize된 feedfoward Neural Network이고, $p(z)$는 $\mathbb{E}\_{z \sim p(z)} [\parallel z \parallel] <  \infty$ (Gaussian, uniform 등)이 되도록 하는 $z$에 대한 사전분포라고 가정하자. 
 
-그러면 위 assumption 1이 충족되므로 $W(\mathbb{P}_r,\mathbb{P}\_θ)$는 모든 곳에서 연속적이고 거의 모든 곳에서 미분 가능하다.
+그러면 위 assumption 1이 충족되므로 $W(\mathbb{P}_r,\mathbb{P}_θ)$는 모든 곳에서 연속적이고 거의 모든 곳에서 미분 가능하다.
 
 </details><br>
 
