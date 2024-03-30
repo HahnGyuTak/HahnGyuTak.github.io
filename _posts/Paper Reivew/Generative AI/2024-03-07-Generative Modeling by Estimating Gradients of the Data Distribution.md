@@ -482,7 +482,7 @@ $$
 \frac{1}{4}
 $$
 
-위 **Algorithm 1**의 효율성을 입증하기 위해 실험을 진행하였으며, 그 결과를 section [3.2](#2. Slow mixing of Langevin dynamics) 에서 설명하였듯이 Annealed Langevin dynamics는 두 mode간의 가중치를 반영하여 복구한 것을 볼 수 있다.
+위 **Algorithm 1**의 효율성을 입증하기 위해 실험을 진행하였으며, 그 결과를 section [3.2](#2-slow-mixing-of-langevin-dynamics)에서 설명하였듯이 Annealed Langevin dynamics는 두 mode간의 가중치를 반영하여 복구한 것을 볼 수 있다.
 
 
 
