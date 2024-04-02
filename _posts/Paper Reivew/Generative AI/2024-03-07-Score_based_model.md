@@ -1,5 +1,5 @@
 ---
-title: "[Paper Review] Generative Modeling by Estimating Gradients of the Data Distribution"
+title: "[Paper Review] Score-based Generative model"
 subtitle: "Score-based Generative model"
 date: 2024-03-30 10:17:11 +/-0000
 categories: [Paper Review, Generative]
@@ -10,7 +10,7 @@ typora-root-url: ../../../
 
 
 
-[arxiv](https://arxiv.org/abs/1907.05600) 
+[arxiv : Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600) 
 
 [github](https://github.com/ermongroup/ncsn)
 
