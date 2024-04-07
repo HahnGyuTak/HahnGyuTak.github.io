@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hahngyutak.github.io/sitemap.xml
