@@ -7,6 +7,8 @@ math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **WassersteinGAN(wGAN) 논문 리뷰**
+
 [[논문 링크]](https://arxiv.org/abs/1701.07875)
 
 수학적인, 특히 확률론에 관련된 내용과 글이 많아서 가독성이 떨어질 수 있다.
