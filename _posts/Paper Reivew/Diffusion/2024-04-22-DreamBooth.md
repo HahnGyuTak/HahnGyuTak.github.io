@@ -35,7 +35,7 @@ DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Genera
 
 > 이를 subject-driven generation이라 하며, 본 논문에서 이러한 새로운 문제를 정의하였다.
 
-<img src="assets/img/DreamBooth/figure2.png" alt="figure2" style="zoom:50%;" />
+<img src="/assets/img/DreamBooth/figure2.png" alt="figure2" style="zoom:50%;" />
 
 위 이미지는 DALL-E2, Imagen과 함께 본 논문에서 제안한 기법을 비교한다.
 
