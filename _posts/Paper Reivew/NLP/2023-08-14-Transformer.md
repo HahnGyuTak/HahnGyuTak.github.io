@@ -2,7 +2,7 @@
 title: "[Paper Review] Transfomer - Attention Is All You Need"
 date: 2023-08-14 20:02:43 +/-0000
 categories: [Paper Review, NLP]
-tags: [nlp, ai, generative, attention, math, transfomer, sota]   
+tags: [NLP, AI, generative, Attention, Transformer]   
 math: true  # TAG names should always be lowercase
 typora-root-url: ../../
 ---
