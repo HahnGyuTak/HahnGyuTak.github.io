@@ -13,7 +13,7 @@ typora-root-url: ../../../
 
 > 제목 : **PromptStyler: Prompt-driven Style Generation for Source-free Domain Generalization**
 >
-> 저자 :  [Junhyeong Cho](https://jhcho99.github.io/), [Gilhyun Nam](https://scholar.google.com/citations?user=7PSBLtIAAAAJ&hl=en), [Sungyeon Kim](http://cvlab.postech.ac.kr/~sungyeon/), [Hunmin Yang](https://scholar.google.co.kr/citations?user=mDxJj2AAAAAJ&hl=en), [Suha Kwak](https://suhakwak.github.io/)
+> 저자 :  [Junhyeong Cho](https://jhcho99.github.io/), [Gilhyun Nam](https://scholar.google.com/citations?user=7PSBLtIAAAAJ&hl=en), [Sungyeon Kim](https://cvlab.postech.ac.kr/~sungyeon/), [Hunmin Yang](https://scholar.google.co.kr/citations?user=mDxJj2AAAAAJ&hl=en), [Suha Kwak](https://suhakwak.github.io/)
 >
 > 링크 : [arXiv](https://arxiv.org/abs/2307.15199) [Project Page](https://promptstyler.github.io/)
 
