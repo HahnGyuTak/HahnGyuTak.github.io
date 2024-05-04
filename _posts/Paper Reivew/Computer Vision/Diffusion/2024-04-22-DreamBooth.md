@@ -1,9 +1,9 @@
 ---
 title: "[Paper Review] DreamBooth"
 date: 2024-04-25 17:58:43 +/-0000
-categories: [Paper Review, Diffusion]
-tags: [AI, generative, diffusion, fine-tuning]   
-math: true  # TAG names should always be lowercase
+categories: [Paper Review, Computer Vision, Generative model]
+tags: [AI, generative, Diffusion, fine-tuning]   
+use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 

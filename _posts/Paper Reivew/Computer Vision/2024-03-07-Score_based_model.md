@@ -2,9 +2,9 @@
 title: "[Paper Review] Score-based Generative model"
 subtitle: "Score-based Generative model"
 date: 2024-03-30 10:17:11 +/-0000
-categories: [Paper Review, Generative]
+categories: [Paper Review, Computer Vision, Generative model]
 tags: [AI, generative, Score-based]   
-math: true  # TAG names should always be lowercase
+use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
