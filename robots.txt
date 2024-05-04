@@ -1,4 +1,10 @@
-User-agent: *
-Allow: /
+---
+permalink: /robots.txt
+# The robots rules
+---
 
-Sitemap: https://hahngyutak.github.io/sitemap.xml
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
