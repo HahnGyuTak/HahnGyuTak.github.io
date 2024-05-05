@@ -4,7 +4,7 @@ date: 2024-04-25 17:58:43 +/-0000
 categories: [Paper Review, Computer Vision, Generative model]
 tags: [AI, generative, Diffusion, fine-tuning]   
 use_math: true  # TAG names should always be lowercase
-typora-root-url: ../../../
+typora-root-url: ../../../../
 ---
 
 

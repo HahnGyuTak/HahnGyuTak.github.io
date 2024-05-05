@@ -4,7 +4,7 @@ date: 2024-03-01 15:12:11 +/-0000
 categories: [Paper Review, Computer Vision, Generative model]
 tags: [GAN, AI, generative]   
 use_math: true  # TAG names should always be lowercase
-typora-root-url: ../../../
+typora-root-url: ../../../../
 ---
 
 # **WassersteinGAN(wGAN) 논문 리뷰**
@@ -208,7 +208,7 @@ $\theta_t \rightarrow 0$일때, EM distance를 제외한 다른 distance, diverg
 
 
 
-<img src="../../assets/img/wGAN/figure1.png" alt="figure1">
+<img src="/assets/img/wGAN/figure1.png" alt="figure1">
 
 </details><br>
 
