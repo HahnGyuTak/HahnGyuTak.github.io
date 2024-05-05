@@ -17,6 +17,12 @@ layout: compress
   {% include head.html %}
   <head>
 
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
+    <script type="text/javascript" async 
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
   </head>
   <body>
     {% include sidebar.html lang=lang %}
@@ -85,9 +91,5 @@ layout: compress
     {% endif %}
 
     {% include_cached search-loader.html %}
-
-    {% if page.use_math %}
-      {% include mathjax_support.html %}
-    {% endif %}
   </body>
 </html>
