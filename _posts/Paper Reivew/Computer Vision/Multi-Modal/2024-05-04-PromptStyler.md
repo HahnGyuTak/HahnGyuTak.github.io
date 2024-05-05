@@ -158,16 +158,14 @@ $T(\mathcal{P}^{\text{style}}_i)$는 이전에 생성되었던 feature들인 $\l
 
 
 
-$ \mathcal{L}\_{\text{style}} = \frac{1}{i-1} \sum\_{j=1}^{i-1}\left \vert\frac{T(\mathcal{P}^{\text{style}}\_i)}{\Vert T(\mathcal{P}^{\text{style}}\_i)\Vert_2} 
-\bullet 
-\frac{T(\mathcal{P}^{\text{style}}\_j)}{\Vert T(\mathcal{P}^{\text{style}}_j)\Vert_2} \right \vert \tag{1}$
-
 
 $$
 \mathcal{L}_{\text{style}} = \frac{1}{i-1} \sum_{j=1}^{i-1}\left \vert\frac{T(\mathcal{P}^{\text{style}}_i)}{\Vert T(\mathcal{P}^{\text{style}}_i)\Vert_2} 
 \bullet 
 \frac{T(\mathcal{P}^{\text{style}}_j)}{\Vert T(\mathcal{P}^{\text{style}}_j)\Vert_2} \right \vert \tag{1}
 $$
+
+
 
 
 
@@ -193,6 +191,7 @@ $i$번째 style vector $s_i$의 경우,
 ($m$번째 class label을 가진 **style-content feature**) - ($n$번째 class label을 가진 **content feature**) 사이의 <b>cosine 유사도 점수인 $z_{imn}$</b>은 다음과 같다.
 
 
+
 $$
 z_{imn} = \frac{T(\mathcal{P}^{\text{style}}_i \circ \mathcal{P}^{\text{content}}_m)}{\Vert T(\mathcal{P}^{\text{style}}_i \circ \mathcal{P}^{\text{content}}_m)\Vert_2} 
 \bullet 
@@ -200,21 +199,17 @@ z_{imn} = \frac{T(\mathcal{P}^{\text{style}}_i \circ \mathcal{P}^{\text{content}
 $$
 
 
-$z\_{imn} = \frac{T(\mathcal{P}^{\text{style}}\_i \circ \mathcal{P}^{\text{content}}\_m)}{\Vert T(\mathcal{P}^{\text{style}}\_i \circ \mathcal{P}^{\text{content}}_m)\Vert_2} 
-\bullet 
-\frac{T(\mathcal{P}^{\text{content}}\_n)}{\Vert T(\mathcal{P}^{\text{content}}\_n)\Vert_2} \tag{2}$
+
 
 
 
 위 $z_{imn}$을 사용하여 $s_i$를 학습하기 위한 content consistency Loss $\mathcal{L}\_{\text{content}}$는 다음과 같다. ($N$은 class 수)
 
 
+
 $$
 \mathcal{L}_{\text{content}} = -\frac{1}{N} \sum_{m=1}^N \log\left ( \frac{e^{z_{imn}}}{\sum_{n=1}^N e^{z_{imn}}} \right) \tag{3}
 $$
-
-
-$\mathcal{L}\_{\text{content}} = -\frac{1}{N} \sum\_{m=1}^N \log\left ( \frac{e^{z\_{imn}}}{\sum_{n=1}^N e^{z\_{imn}}} \right) \tag{3}$
 
 
 
@@ -227,12 +222,13 @@ $\mathcal{L}\_{\text{content}} = -\frac{1}{N} \sum\_{m=1}^N \log\left ( \frac{e^
 PromptStyler는 최종적으로 **Style diversity Loss**와  **Content consistency Loss**를 모두 사용하여 K개의 style word vector $\lbrace s_i \rbrace_{i=1}^K$를 순차적으로 학습한다.
 
 
+
 $$
 \mathcal{L}_{\text{prompt}} = \mathcal{L}_{\text{style}} + \mathcal{L}_{\text{content}} \tag{4}
 $$
 
 
-$\mathcal{L}\_{\text{prompt}} = \mathcal{L}\_{\text{style}} + \mathcal{L}_{\text{content}} \tag{4}$
+
 
 
 
@@ -264,9 +260,12 @@ $\mathcal{L}\_{\text{prompt}} = \mathcal{L}\_{\text{style}} + \mathcal{L}_{\text
 > Classifier의 input feature와 가중치 간의 cosine 유사도를 계산하고 class 간 추가적인 각도 margin penalty를 적용한다. 
 >
 > 
+>
 > $$
 > L_{ArcFace} = -\frac{1}{N} \sum_{i=1}^N \log \frac{e^{s(\cos(\theta_{y_i} + m))}}{e^{s(\cos(\theta_{y_i} + m))} + \sum_{j=1, j\neq y_i}^n e^{s\cos(\theta_j)}}
 > $$
+>
+> 
 >
 > 각도 기반이기 때문에 Class 간 경계를 더 잘 형성하고 유클리드 거리 기반 손실 함수의 한계를 극복하기 위해 제안된 loss이다.
 
