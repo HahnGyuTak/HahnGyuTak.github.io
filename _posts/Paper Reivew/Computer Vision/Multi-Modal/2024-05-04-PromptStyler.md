@@ -208,7 +208,7 @@ $$
 
 
 $$
-\mathcal{L}_{\text{content}} = -\frac{1}{N} \sum_{m=1}^N \log\left ( \frac{e^{z_{imn}}}{\sum_{n=1}^N e^{z_{imn}}} \right) \tag{3}
+\mathcal{L}_{\text{content}} = -\frac{1}{N} \sum_{m=1}^N \log\left ( \frac{e^{z_{imm}}}{\sum_{n=1}^N e^{z_{imn}}} \right) \tag{3}
 $$
 
 
