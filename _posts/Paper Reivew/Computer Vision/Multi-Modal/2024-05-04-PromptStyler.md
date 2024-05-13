@@ -404,7 +404,7 @@ prompt loss에 사용된 $\mathcal{L}\_{\text{style}}$과 $\mathcal{L}_{\text{co
 
 ![figure5](/assets/img/PromptStyler/figure5.png)
 
-위 사진은 "a <b>$\mathit{S}\_{\boldsymbol{\ast}}$ </b>style of a **cat**"의 style-content feature를 적용시킨 결과이다. 6개의 학습된 style word vector $s_i$를 사용하였다.
+위 사진은 "a <b>$\mathit{S}\_{\boldsymbol{\ast}}$ </b>style of a **cat**"에서 추출된 style-content feature를 diffusers라는 라이브러리로 시각화한시킨 결과이다. 6개의 학습된 style word vector $s_i$를 사용하였다.
 
 
 
@@ -448,3 +448,8 @@ PromptStyler는 pretrained Vision-Language 모델의 joint vision-language space
 
 
 
+
+
+## **Code**
+
+[Colab](https://colab.research.google.com/drive/1JDPvPufSxaj2f9T_VOY6tI4OhOtmWEFx?usp=sharing)
