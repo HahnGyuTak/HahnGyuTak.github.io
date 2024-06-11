@@ -54,10 +54,10 @@ Diffusion 모델은 $x_t$에서 약간 denoising된 $x\_{t-1}$을 생성하는 �
 
 
 $$
-\begin{flalign}
-q(x_{t}|x_{0}) &= N(x_{t}; \sqrt{\overline{\alpha}_{t}}x_{0}, (1-\overline{\alpha}_{t})\text{I}) \\
-&= \sqrt{\overline{\alpha}_t}x_0  + \sqrt{1 - \overline{\alpha}_t}\epsilon, \;\epsilon \sim N(0,\text{I})
-\end{flalign}
+\begin{align}
+q(x_{t}|x_{0}) &= N(x_{t}; \sqrt{\overline{\alpha}_{t}}x_{0}, (1-\overline{\alpha}_{t})\text{I}) \nonumber \\
+&= \sqrt{\overline{\alpha}_t}x_0  + \sqrt{1 - \overline{\alpha}_t}\epsilon, \;\epsilon \sim N(0,\text{I}) \nonumber 
+\end{align}
 $$
 
 
@@ -213,10 +213,10 @@ Diffusion 모델이 $x_{t+1}$에서 $x_t$를 예측할 때 Gaussian 분포를 �
 
 
 $$
-\begin{flalign}
+\begin{align}
 p_\theta(x_t|x_{t+1}) &= \textit{N}(\mu, \Sigma) \tag{3}\\
 \log p_\theta(x_t|x_{t+1}) &= -\frac{1}{2}(x_t - \mu)^T \Sigma^{-1}(x_t, - \mu) + C \tag{4} 
-\end{flalign}
+\end{align}
 $$
 
 우리는 $\log p\_\phi(y_t\|x\_{t})$이 $\Sigma_{-1}$보다 낮은 곡률을 가지고 있다고 가정할 수 있으며, 이는 무한한 diffusion step을 가질때 $\|\|\Sigma\|\| \rightarrow 0$이 되어 reasonable하게 된다. 이러한 경우에 $\log p\_\phi(y_t\|x\_{t})$는 $x_t = \mu$ 근처에서 Taylor 전개를 사용하여 다음과 같이 근사화될 수 있다.
@@ -226,11 +226,11 @@ $$
 
 
 $$
-\begin{flalign}
+\begin{align}
 \log p_\phi(y_t|x_{t}) &\approx \log p_\phi(y|x_t)\mid_{x_t=\mu} + (x_t - \mu) \bigtriangledown_{x_t} \log p_\phi(y|x_t)\mid_{x_t=\mu} \tag{5} \\
 &= (x_t - \mu)g + C_1 \tag{6} \\
 
-\end{flalign}
+\end{align}
 $$
 
 
@@ -239,7 +239,7 @@ $$
 
 
 $$
-\begin{flalign}
+\begin{align}
 \log (p_\theta(x_t|x_{t+1})p_\phi(y|x_t)) &\approx -\frac{1}{2}(x_t-\mu)^T\Sigma^{-1}(x_t-\mu) + (x_t-\mu)g + C_2 \tag{7}\\
 
 &= -\frac{1}{2}(x_t-\mu-\Sigma g)^T\Sigma^{-1}(x_t-\mu-\Sigma g) + \frac{1}{2}g^T\Sigma g + C_2 \tag{8}\\
@@ -248,7 +248,7 @@ $$
 
 &= \log p(z) + C_4, \;z\sim \textit{N}(\mu + \Sigma g, \Sigma) \tag{10}
 
-\end{flalign}
+\end{align}
 $$
 
 
@@ -288,12 +288,12 @@ $$
 
 
 $$
-\begin{flalign}
+\begin{align}
 \bigtriangledown_{x_t}\log (p_\theta(x_t)p_\phi(y|x_t)) 
 &= \bigtriangledown_{x_t} \log p_\theta(x_t) + \bigtriangledown_{x_t}\log p_\phi(y|x_t) \tag{12}\\
 
 &= -\frac{1}{\sqrt{1-\overline{\alpha}_t}}\epsilon_\theta(x_t) + \bigtriangledown_{x_t}\log p_\phi(y|x_t) \tag{13}
-\end{flalign}
+\end{align}
 $$
 
 
@@ -301,7 +301,9 @@ $$
 
 
 $$
+\begin{align}
 \hat{\epsilon}(x_t) := \epsilon_\theta(x_t) - \sqrt{1-\overline{\alpha}_t} \bigtriangledown_{x_t} \log p_\phi(y|x_t) \tag{14}
+\end{align}
 $$
 
 

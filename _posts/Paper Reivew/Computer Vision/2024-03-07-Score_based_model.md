@@ -136,13 +136,13 @@ $$
 
 
 $$
-\begin{flalign}
-\frac{1}{2}\mathbb{E}_{p_{data}} \left [\left|\left| s_\theta(x) - \nabla \log p_{\text{data}}(x)  \right|\right|^2_2 \right]
+\begin{align}
+\frac{1}{2}\mathbb{E}_{p_{data}} \left [\left|\left| s_\theta(x) - \nabla \log p_{\text{data}}(x)  \right|\right|^2_2 \right] 
 
-&= \frac{1}{2} \int p(x)(\nabla_x \log p(x) - s_\theta(x))^2 \text{d}x \\
+&= \frac{1}{2} \int p(x)(\nabla_x \log p(x) - s_\theta(x))^2 \text{d}x \nonumber\\
 
-&= \frac{1}{2} \int p(x)(\nabla_x \log p(x))^2\text{d}x + \frac{1}{2} \int p(x)s_\theta(x)^2 \text{d}x - \int p(x) \nabla_x \log p(x)s_\theta(x) \text{d}x
-\end{flalign}
+&= \frac{1}{2} \int p(x)(\nabla_x \log p(x))^2\text{d}x + \frac{1}{2} \int p(x)s_\theta(x)^2 \text{d}x - \int p(x) \nabla_x \log p(x)s_\theta(x) \text{d}x \nonumber
+\end{align}
 $$
 
 
@@ -151,18 +151,18 @@ $$
 
 
 $$
-\begin{flalign}
+\begin{align}
 
 - \int p(x) \nabla_x \log p(x)s_\theta(x) \text{d}x 
-&= - \int p(x) \frac{\nabla_xp(x)}{p(x)}s_\theta(x)\text{d}x \\
+&= - \int p(x) \frac{\nabla_xp(x)}{p(x)}s_\theta(x)\text{d}x \nonumber\\
 
-&= -\int \nabla_x p(x)s_\theta(x) \text{d}x \\
+&= -\int \nabla_x p(x)s_\theta(x) \text{d}x \nonumber\\
 
-&= -p(x)s_\theta(x) |^\infty_{x=-\infty} + \int p(x)\nabla_xs_\theta(x)\text{d}x \\
+&= -p(x)s_\theta(x) |^\infty_{x=-\infty} + \int p(x)\nabla_xs_\theta(x)\text{d}x \nonumber\\
 
-&= \int p(x)\nabla_x s_\theta(x)\text{d}x
+&= \int p(x)\nabla_x s_\theta(x)\text{d}x \nonumber
 
-\end{flalign}
+\end{align}
 $$
 
 
@@ -395,11 +395,11 @@ Gaussian 분포 $p(x)$는 $p(x)  = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\m
 
 
 $$
-\begin{flalign}
-\nabla_x \log p(x) &= \nabla_x  \left  (\log\frac{1}{\sqrt{2\pi\sigma^2}} + -\frac{(x-\mu)^2}{2\sigma^2} \log e \right) \\
+\begin{align}
+\nabla_x \log p(x) &= \nabla_x  \left  (\log\frac{1}{\sqrt{2\pi\sigma^2}} + -\frac{(x-\mu)^2}{2\sigma^2} \log e \right) \nonumber \\
 
-&= -\frac{x-\mu}{\sigma^2}
-\end{flalign}
+&= -\frac{x-\mu}{\sigma^2} \nonumber
+\end{align}
 $$
 
 

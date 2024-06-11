@@ -11,6 +11,6 @@ order: 4
   * gue707@gmail.com
 * SNS
   * [Instagram](https://www.instagram.com/1mtaak)
-  * Linkedin
+  * [Linkedin]#(https://www.linkedin.com/in/gyutakhahn/)
   * [Github](https://github.com/HahnGyuTak)
   
