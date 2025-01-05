@@ -5,7 +5,7 @@ order: 4
 ---
 
 ## Contact
-* [CV](/assets/CV_Gyutak Hahn.pdf)
+* [CV](/assets/CV_Gyutak_Hahn.pdf)
 * e-mail
   * gue707@naver.com
   * gue707@gmail.com

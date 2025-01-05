@@ -46,7 +46,7 @@ typora-root-url: ../../../
    * optimization 단계에서 3D Gaussian을 제거하거나 추가하는  adaptive density control steps을 수행한다.
 3. **실시간 Rendering** 솔루션
    * 빠른 GPU 정렬 알고리즘과 tile-based rasterization에서 영감을 얻었다.
-   * [[Pulsar: Efficient Sphere-Based Neural Rendering]()]을 참고
+   * [[Pulsar: Efficient Sphere-Based Neural Rendering](https://arxiv.org/abs/2004.07484)]을 참고
 
 
 
