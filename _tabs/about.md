@@ -10,7 +10,7 @@ order: 4
   * gue707@naver.com
   * gue707@gmail.com
 * SNS
-  * [Instagram](https://www.instagram.com/1mtaak)
-  * [Linkedin]#(https://www.linkedin.com/in/gyutakhahn/)
+  * [Instagram](https://www.instagram.com/1mtxxk/)
+  * [Linkedin](https://www.linkedin.com/in/gyutakhahn/)
   * [Github](https://github.com/HahnGyuTak)
   
