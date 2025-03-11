@@ -55,34 +55,11 @@ jobs:
             \-\-disable-external=true \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
-      # - name: Upload site artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: "_site${{ steps.pages.outputs.base_path }}"
-  upload:
-    strategy:
-      matrix:
-        runs-on: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.runs-on }}
-    steps:
-      - name: Create a File
-        run: echo "hello from ${{ matrix.runs-on }}" > file-${{ matrix.runs-on }}.txt
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: my-artifact-${{ matrix.runs-on }}
-          path: file-${{ matrix.runs-on }}.txt
-  download:
-    needs: upload
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download All Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: my-artifact
-          pattern: my-artifact-*
-          merge-multiple: true
-      - run: ls -R my-artifact
+          path: "_site${{ steps.pages.outputs.base_path }}"
+          
 
   deploy:
     environment:
