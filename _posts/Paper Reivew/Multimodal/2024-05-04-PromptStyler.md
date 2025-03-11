@@ -4,7 +4,7 @@ date: 2024-05-04 18:14:43 +/-0000
 categories: [Paper Review, Computer Vision, Multi-modal]
 tags: [AI, generative, Diffusion, domain, vision-language]   
 use_math: true 
-typora-root-url: ../../../../
+typora-root-url: ../../../
 ---
 
 
