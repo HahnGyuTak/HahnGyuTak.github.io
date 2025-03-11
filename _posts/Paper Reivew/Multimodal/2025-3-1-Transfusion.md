@@ -15,7 +15,7 @@ typora-root-url: ../../../
 >
 > [[Arxiv](https://arxiv.org/abs/2408.11039)] [[Github](https://github.com/lucidrains/transfusion-pytorch)]
 
-![스크린샷 2025-03-12 오전 1.53.02](/assets/img/2025-3-1-Transfusion/스크린샷 2025-03-12 오전 1.53.02.png)
+![스크린샷 2025-03-12 오전 1.53.02](/assets/img/2025-3-1-Transfusion/figure2.png)
 
 Transfusion은 2024년 8월 Meta에서 공개한 이미지-텍스트 처리 멀티모달 모델로, Language Modeling loss(다음 토큰 예측)와 Diffusion을 결합하여 discrete(이산) 및 continuous(연속) 데이터 모두를 처리할 수 있는 단일 Transformer모델이다.
 
@@ -164,7 +164,7 @@ Inference과정은 Training Objective를 반영하여 LM 모드와 Diffusion 모
 
 실험 결과, 모든 벤치마크에서 Transfusion이 Chameleon보다 우수한 스케일링을 보여준다. 
 
-<img src="/assets/img/2025-3-1-Transfusion/스크린샷 2025-03-12 오전 1.32.22.png" alt="스크린샷 2025-03-12 오전 1.32.22" style="zoom:67%;" />
+<img src="/assets/img/2025-3-1-Transfusion/figure5.png" alt="스크린샷 2025-03-12 오전 1.32.22" style="zoom:67%;" />
 
 특히 이미지 생성 metric 중 FID score에서 Transfusion이 Chameleon보다 34배 더 적은 계산을 사용하여 동등한 성능을 달성한다. 
 
