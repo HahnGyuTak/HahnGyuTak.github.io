@@ -56,9 +56,8 @@ jobs:
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2.0.0
         with:
-          name: github-pages
           path: "_site${{ steps.pages.outputs.base_path }}"
           
 
