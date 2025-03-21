@@ -2,8 +2,8 @@
 title: "[Paper Review] Score-based Generative model"
 subtitle: "Score-based Generative model"
 date: 2024-03-30 10:17:11 +/-0000
-categories: [Paper Review, Computer Vision, Generative model]
-tags: [AI, generative, Score-based]   
+categories: [Paper Review, Computer Vision, NeurIPS2019]
+tags: [NeurIPS, Computer Vision, Score-based model, Image Generation]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---

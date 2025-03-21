@@ -1,8 +1,8 @@
 ---
 title: "[Paper Review] PromptStyler"
 date: 2024-05-04 18:14:43 +/-0000
-categories: [Paper Review, Computer Vision, Multi-modal]
-tags: [AI, generative, Diffusion, domain, vision-language]   
+categories: [Paper Review, Computer Vision, CVPR2023]
+tags: [CVPR, CLIP, Multi-modal, Domain Generalization]   
 use_math: true 
 typora-root-url: ../../../
 ---

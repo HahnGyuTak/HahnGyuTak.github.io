@@ -1,8 +1,8 @@
 ---
 title: "[Paper Review] Analytic-Splatting"
 date: 2024-12-21 20:02:43 +/-0000
-categories: [Paper Review, 3D Vision]
-tags: [AI, 3D]   
+categories: [Paper Review, 3D Vision, ECCV2024]
+tags: [ECCV, 3D Vision, Gaussian Splatting, Anti Aliasing]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---

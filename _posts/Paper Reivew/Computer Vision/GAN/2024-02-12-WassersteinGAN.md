@@ -1,8 +1,8 @@
 ---
 title: "[Paper Review] WassersteinGAN"
 date: 2024-03-01 15:12:11 +/-0000
-categories: [Paper Review, Computer Vision, Generative model]
-tags: [GAN, AI, generative]   
+categories: [Paper Review, Computer Vision, PMLR2017]
+tags: [PMLR, GAN, Computer Vision]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../../
 ---

@@ -1,8 +1,8 @@
 ---
 title: "[Paper Review] Multi-Scale 3D Gaussian Splatting"
 date: 2024-12-19 20:02:43 +/-0000
-categories: [Paper Review, 3D Vision]
-tags: [AI, 3D]   
+categories: [Paper Review, 3D Vision, CVPR2024]
+tags: [CVPR, 3D Vision, Gaussian Splatting, Anti Aliasing]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---

@@ -2,7 +2,7 @@
 title: "[Paper Review] Transfusion"
 date: 2025-03-01 20:02:43 +/-0000
 categories: [Paper Review, Multi Modal]
-tags: [AI, ml]   
+tags: [Multi-modal, Diffusion]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
@@ -11,7 +11,7 @@ typora-root-url: ../../../
 >
 > Chunting Zhou, Lili Yu
 >
-> CoRR 2024.
+> 2024.
 >
 > [[Arxiv](https://arxiv.org/abs/2408.11039)] [[Github](https://github.com/lucidrains/transfusion-pytorch)]
 

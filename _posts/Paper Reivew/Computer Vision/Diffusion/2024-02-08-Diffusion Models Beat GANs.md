@@ -1,8 +1,8 @@
 ---
 title: "[Paper Review] Diffusion Models Beat GANs on Image Synthesis"
 date: 2024-02-19 12:40:11 +/-0000
-categories: [Paper Review, Computer Vision, Generative model]
-tags: [AI, generative, Diffusion]   
+categories: [Paper Review, Computer Vision, NeurIPS2021]
+tags: [NeurIPS, Computer Vision, Diffusion, Image Generation]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../../
 ---
