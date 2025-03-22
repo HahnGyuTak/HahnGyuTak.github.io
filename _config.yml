@@ -196,6 +196,5 @@ jekyll-archives:
 plugins:
   - jemoji
   - jekyll-paginate
-  - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
