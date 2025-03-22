@@ -5,6 +5,7 @@ permalink: /robots.txt
 
 User-agent: *
 
-Disallow: /norobots/
+Allow: /
 
-Sitemap: {{ '/sitemap.xml' | absolute_url }}
+Sitemap: https://hahngyutak.github.io/sitemap.xml
+
