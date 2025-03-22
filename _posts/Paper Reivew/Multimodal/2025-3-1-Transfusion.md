@@ -7,6 +7,8 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **[논문 리뷰] Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model**
+
 > **Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model**
 >
 > Chunting Zhou, Lili Yu

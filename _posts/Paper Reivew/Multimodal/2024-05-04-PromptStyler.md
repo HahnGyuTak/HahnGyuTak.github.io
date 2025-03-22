@@ -9,7 +9,7 @@ typora-root-url: ../../../
 
 
 
-# **PromptStyler 논문 리뷰**
+# **[논문 리뷰] PromptStyler: Prompt-driven Style Generation for Source-free Domain Generalization**
 
 > 제목 : **PromptStyler: Prompt-driven Style Generation for Source-free Domain Generalization**
 >

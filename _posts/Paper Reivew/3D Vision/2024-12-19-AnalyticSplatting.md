@@ -7,6 +7,8 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **[논문 리뷰] Analytic-Splatting : Anti-Aliased 3D Gaussian Splatting via Analytic Integration**
+
 > **Analytic-Splatting : Anti-Aliased 3D Gaussian Splatting via Analytic Integration**
 >
 > Zhihao Liang

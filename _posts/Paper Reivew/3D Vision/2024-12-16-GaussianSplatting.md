@@ -7,6 +7,8 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **[논문 리뷰] 3D Gaussian Splatting for Real-Time Radiance Field Rendering**
+
 > **3D Gaussian Splatting for Real-Time Radiance Field Rendering**
 >
 > Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
@@ -23,7 +25,7 @@ typora-root-url: ../../../
 
 ![스크린샷 2024-12-11 오후 5.15.29](/assets/img/GaussianSplatting/GS.png)
 
-## Introduction
+## **Introduction**
 
 3D scene 표현에서는 Mesh와 Point 기반 방법들이 GPU환경에 적합하기 때문에 흔히 사용된다. 이와는 다르게 NeRF는 continuous scene 표현을 기반으로 하며, 캡처된 장면의 새로운 view 합성을 위해 volumetric ray-marching을 사용하여 MLP을 최적화한다. 현재까지 가장 효율적인 radiance field 솔루션은 voxel 또는 hash grid 또는 point에 저장된 값을 보간하여 continuous한 representation을 기반으로 구축한다. 이러한 continuous한 방법들은 optimization에 도움되지만, **확률적인(stochastic) sampling에서 많은 비용이 요구되고 noise가 발생할 수 있다.**
 
@@ -52,9 +54,9 @@ typora-root-url: ../../../
 
 
 
-## Related works
+## **Related works**
 
-### 과거 Scene Reconstruction and Rendering
+### **과거 Scene Reconstruction and Rendering**
 
  **Structure-from-Motion (SfM)**: 2006년 SfM는 사진 모음을 사용하여 새로운 시점을 합성할 수 있는 새로운 영역을 가능하게 하였다. SfM은 카메라 보정 중에 sparse point cloud를 추정하며, 초기에는 3D 공간의 간단한 시각화에 사용되었다.
 
@@ -64,7 +66,7 @@ typora-root-url: ../../../
 
 
 
-### Neural Rendering and NeRF
+### **Neural Rendering and NeRF**
 
 딥러닝 기술이 View synthetic에 도입이 되었지만 여전히 MVS 기반 geometry를 사용한다는 단점이 있다. 또한 CNN을 최종 렌더링에 사용하는 것은 temporal flickering이 발생한다.
 
@@ -80,7 +82,7 @@ typora-root-url: ../../../
 
 
 
-### Point-Based Rendering
+### **Point-Based Rendering**
 
 Point-based 렌더링은 연결되지 않은 unstructured geometry sample인 **포인트 클라우드**를 효율적으로 렌더링하는 방법이다. 최근 연구들은 원형 또는 타원 디스크, 타원체 등 픽셀값보다 큰 범위의 포인트 요소를 splatting한다.
 
@@ -118,7 +120,7 @@ NeRF는 비어있거나 채워진 공간을 implicit하게 나타내는 continuo
 
 
 
-## Overview
+## **Overview**
 
 ![스크린샷 2024-12-13 오전 4.14.26](/assets/img/GaussianSplatting/overview.png)
 
@@ -138,7 +140,7 @@ NeRF는 비어있거나 채워진 공간을 implicit하게 나타내는 continuo
 
 
 
-## Differentiable 3D Gaussian Splatting
+## **Differentiable 3D Gaussian Splatting**
 
 SfM 기법을 통해 얻은 희소 point cloud 데이터는 위치정보는 있지만 표면 방향 정보(normal)는 포함하고 있지 않다. 이 input을 통해 high-quality의 Novel View Synthesis의 Scene representation을 얻는 것이 목표이다. 이를 위해서 미분 가능한 volumetric representation이지만 구조화되지 않고 빠른 렌더링이 가능한 3D Gaussian을 선택하였다. 2D splats에 쉽게 투영할 수 있어 렌더링을 위한 빠른 $\alpha$-blending이 가능하다. 
 
@@ -197,13 +199,13 @@ $$
 
 
 
-## Optimization with Adaptive Density Control of 3D Gaussians
+## **Optimization with Adaptive Density Control of 3D Gaussians**
 
 Method의 핵심인 Optimization이다. 최종적으로 Free-view 합성을 위하여 scene을 정확하게 표현하는 high-density 3D Gaussian 집합을 생성한다.
 
 
 
-### 1. Optimization
+### **1. Optimization**
 
 학습은 렌더링과 데이터셋의 Ground truth와 결과 이미지의 비교를 반복하며 3D Gaussian을 최적화한다.
 
@@ -223,7 +225,7 @@ Method의 핵심인 Optimization이다. 최종적으로 Free-view 합성을 위�
   $$
   
 
-### 2. Adaptive Control of Gaussians
+### **2. Adaptive Control of Gaussians**
 
 SfM의 초기 sparse point 집합으로 시작한 다음, 단위 volume에 대해 Gaussian 수와 density를 적응적으로 제어하는 방법을 적용한다.
 
@@ -250,7 +252,7 @@ Gaussian 수 증가를 완화하는 방법은 3000iter 마다 $\alpha$를 0으�
 
 
 
-## Fast Differentiable Rasterizer for Gaussians
+## **Fast Differentiable Rasterizer for Gaussians**
 
 효율적인 optimizing을 위해 $16 \times 16$ tile로 나누는 Tile-based Rasterization을 도입한다. 분할한 타일에 대하여 Culling을 진행하여 카메라 view에 보이는 Gaussian만을 유지한다. 남은 Gaussian들은 view space depth와 tile ID를 결합한 Key를 기준으로 정렬한다. 
 
@@ -258,7 +260,7 @@ Gaussian 수 증가를 완화하는 방법은 3000iter 마다 $\alpha$를 0으�
 
 
 
-## Evaluation	
+## **Evaluation**	
 
 ![스크린샷 2024-12-13 오후 8.21.04](/assets/img/GaussianSplatting/eval1.png)
 
@@ -278,7 +280,7 @@ metric은 SSIM, PSNR, LPIPS로 하였으며, 학습시간, 렌더링 속도, Mem
 
 
 
-### Ablations
+### **Ablations**
 
 **Initialization from SfM**
 
@@ -312,7 +314,7 @@ Anisotropic을 통해 3D Gaussian에서 surface를 정렬하는 기능이 크게
 
 
 
-## Limitations
+## **Limitations**
 
 언급된 limitation은 다음과 같다
 

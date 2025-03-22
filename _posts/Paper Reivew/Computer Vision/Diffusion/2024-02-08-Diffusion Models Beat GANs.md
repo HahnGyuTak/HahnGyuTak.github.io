@@ -9,7 +9,7 @@ typora-root-url: ../../../../
 
 
 
-# **Diffusion Models Beat GANs on Image Synthesis 논문 리뷰**
+# **[논문 리뷰] Diffusion Models Beat GANs on Image Synthesis**
 
 논문 링크 [arxiv](https://arxiv.org/abs/2105.05233)
 

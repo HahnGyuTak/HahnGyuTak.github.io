@@ -7,6 +7,8 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **[논문 리뷰] Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering**
+
 > **Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering**
 >
 > Zhiwen Yan, Weng Fei Low, Yu Chen, Gim Hee Lee

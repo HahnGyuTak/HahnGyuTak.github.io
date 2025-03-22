@@ -8,7 +8,7 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
-# **Score-based model 논문 리뷰**
+# **[논문 리뷰] Generative Modeling by Estimating Gradients of the Data Distribution** - Score-based model
 
 [arxiv : Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600) 
 

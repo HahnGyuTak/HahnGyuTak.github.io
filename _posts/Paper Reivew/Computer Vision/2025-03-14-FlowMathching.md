@@ -7,6 +7,8 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
 
+# **[논문 리뷰] Flow Matching in Latent Space**
+
 > **Flow Matching in Latent Space**
 >
 > Quan Dao, Hao Phung

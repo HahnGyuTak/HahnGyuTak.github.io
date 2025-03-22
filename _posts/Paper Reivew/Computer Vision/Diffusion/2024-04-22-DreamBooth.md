@@ -9,7 +9,7 @@ typora-root-url: ../../../../
 
 
 
-# **DreamBooth 논문 리뷰**
+# **[논문 리뷰] DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation** 
 
 DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation : [arxiv](https://arxiv.org/abs/2208.12242) 
 

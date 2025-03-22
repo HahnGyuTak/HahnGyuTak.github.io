@@ -7,7 +7,7 @@ use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../../
 ---
 
-# **WassersteinGAN(wGAN) 논문 리뷰**
+# **[논문 리뷰] WassersteinGAN**-wGAN
 
 [[논문 링크]](https://arxiv.org/abs/1701.07875)
 
