@@ -2,7 +2,7 @@
 title: "[Paper Review] Transfusion"
 date: 2025-03-01 20:02:43 +/-0000
 categories: [Paper Review, Multi Modal]
-tags: [Multi-modal, Diffusion]   
+tags: [Multi-modal, Diffusion, VLM, Meta]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
