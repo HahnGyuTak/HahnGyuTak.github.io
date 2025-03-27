@@ -89,15 +89,22 @@ Point-based 렌더링은 연결되지 않은 unstructured geometry sample인 **�
 NeRF와 Point-based $\alpha$-blending은 본질적으로 동일한 이미지 형성 모델을 사용한다.
 
 렌더링된 pixel의 색상인 $C$는 ray(광선)을 따라 volumetric 렌더링을 통해 다음과 같이 얻어진다.
+
+
 $$
 C = \sum_{i=1}^N T_i (1 - \exp(-\delta_i \sigma_i)) c_i \quad \text{with} \quad T_i = \exp\left(-\sum_{j=1}^{i-1} \delta_j \sigma_j\right)
 $$
+
+
 $\sigma$ : density(밀도), $T$ : transmittance(투과율), $c$ : color, $\delta$ : 간격
 
 위 식은 불투명도를 의미하는 $\alpha$를 통해 다음과 같이 된다.
+
+
 $$
 C = \sum_{i=1}^{N}T_i\alpha_i c_i, \; \alpha_i = 1-\text{exp}(-\sigma_i\delta_i), \; T_i = \prod_{j=1}^{i-1}(1-\alpha_j)
 $$
+
 
 
 일반적으로 neural point-based 방식에서도 위 식을 따라 픽셀 색상을 계산한다.
@@ -158,10 +165,14 @@ Blending process에서 이 $G$는 Opacity $\alpha$와 곱해진다.
 
 
 
-Rendering을 위해서는 3D Gaussian을 2D로 투영해야한다. Viewing transformation $W$가 주어졌을 때, 이미지 좌표의 공분산 행렬 $\Sigma^`$는 다음과 같이 얻어진다.
+Rendering을 위해서는 3D Gaussian을 2D로 투영해야한다. Viewing transformation $W$가 주어졌을 때, 이미지 좌표의 공분산 행렬 $\Sigma^` $는 다음과 같이 얻어진다.
+
+
 $$
 \Sigma^` = JW \; \Sigma \; W^TJ^T
 $$
+
+
 
 > $W$ :  World좌표계 -> Camera 좌표계 변환 matrix (Viewing Transformation)
 > $J$ : Projective Transformation의 선형 근사치의 Jacobian matrix
@@ -220,10 +231,14 @@ Method의 핵심인 Optimization이다. 최종적으로 Free-view 합성을 위�
 * 공분산 $\Sigma$ : 지수 활성화 함수, 가까운 3 지점과의 거리의 평균과 같은 축을 가진 isotropic Gaussian으로 초기화 
 
 * Loss Function : D-SSIM이 결합된 L1 loss,  ($\lambda$는 0.2)
+  
+  
   $$
   \mathcal{L} = (1-\lambda)\mathcal{L}_1 + \lambda\mathcal{L}_{\text{D-SSIM}}
   $$
   
+
+
 
 ### **2. Adaptive Control of Gaussians**
 
