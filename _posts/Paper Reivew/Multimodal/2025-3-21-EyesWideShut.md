@@ -23,7 +23,7 @@ CVPR2024에서 Highlight를 받은 논문이다.
 
 
 
-## **Instroduction**
+## **Introduction**
 
 ![스크린샷 2025-03-21 오후 7.09.32](/assets/img/2025-3-21-EyesWideShut/figure1.png)
 
