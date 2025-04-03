@@ -215,7 +215,7 @@ $$
 
 마지막으로, 샘플 $\hat{z}$ 는 pertained VAE decoder $D$로 디코딩되어 출력 이미지 ${\hat{x}} = D({\hat{z}})$를 생성한다.
 
-## **2. Conditional generation with classifier-free guidance for velocity field**
+### **2. Conditional generation with classifier-free guidance for velocity field**
 
 GAN과 Diffusion에서 처럼 Flow matching의 ODE sampler에 class label $c$를 통합한다. 
 
