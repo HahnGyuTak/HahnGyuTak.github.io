@@ -209,7 +209,7 @@ $$
 
 
 $$
-\hat{\theta} = \arg\min_\theta \mathbb{E}{t,zt} \left[ \|z_1 - z_0 - v\theta(zt, c, t)\|^2_2 \right].
+\hat{\theta} = \arg\min_\theta \mathbb{E}{t,zt} \left[ \|z_1 - z_0 - v_\theta(zt, c, t)\|^2_2 \right].
 $$
 
 
