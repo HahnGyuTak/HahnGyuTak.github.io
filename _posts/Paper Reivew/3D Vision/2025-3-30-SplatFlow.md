@@ -2,7 +2,7 @@
 title: "[Paper Review] SplatFlow"
 date: 2025-04-2 17:00:43 +/-0000
 categories: [Paper Review, 3D Vision, CVPR2025]
-tags: [CVPR, Computer Vision, 3D Vision, Gaussian Splatting, 3D Generation, 3D Editing]   
+tags: [CVPR, Computer Vision, Rectified Flow, 3D Vision, Gaussian Splatting, 3D Generation, 3D Editing]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---

@@ -2,7 +2,7 @@
 title: "[Paper Review] Flow Matching in Latent Space"
 date: 2025-03-14 10:17:11 +/-0000
 categories: [Paper Review, Computer Vision, CVPR2023]
-tags: [CVPR, Computer Vision, Flow Matching, Image Generation]   
+tags: [CVPR, Computer Vision, Rectified Flow, Image Generation]   
 use_math: true  # TAG names should always be lowercase
 typora-root-url: ../../../
 ---
