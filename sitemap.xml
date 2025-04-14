@@ -1,32 +1,171 @@
----
-layout: null
----
-
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
-        {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% else %}
-        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-        {% endif %}
-
-        {% if post.sitemap.changefreq == null %}
-        <changefreq>weekly</changefreq>
-        {% else %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-        {% endif %}
-
-        {% if post.sitemap.priority == null %}
-        <priority>0.5</priority>
-        {% else %}
-        <priority>{{ post.sitemap.priority }}</priority>
-        {% endif %}
-
-    </url>
-    {% endfor %}
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<script/>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Escaping-Plato-s-Cave/</loc>
+<lastmod>2025-04-14T16:14:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/AnyGPT/</loc>
+<lastmod>2025-04-09T18:21:01+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/SplatFlow/</loc>
+<lastmod>2025-04-02T17:00:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/UniReal/</loc>
+<lastmod>2025-03-26T23:56:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/EyesWideShut/</loc>
+<lastmod>2025-03-21T18:21:01+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/CtrlD/</loc>
+<lastmod>2025-03-18T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/FlowMathching/</loc>
+<lastmod>2025-03-14T10:17:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Transfusion/</loc>
+<lastmod>2025-03-01T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/AnalyticSplatting/</loc>
+<lastmod>2024-12-21T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Multi-ScaleGaussianSplatting/</loc>
+<lastmod>2024-12-19T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/GaussianSplatting/</loc>
+<lastmod>2024-12-16T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/ReAct/</loc>
+<lastmod>2024-07-17T18:14:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/PromptStyler/</loc>
+<lastmod>2024-05-04T18:14:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/DreamBooth/</loc>
+<lastmod>2024-04-25T17:58:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/TADA/</loc>
+<lastmod>2024-04-06T20:27:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/SAGAN/</loc>
+<lastmod>2024-04-03T21:41:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Score_based_model/</loc>
+<lastmod>2024-03-30T10:17:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/WassersteinGAN/</loc>
+<lastmod>2024-03-01T15:12:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Diffusion-Models-Beat-GANs/</loc>
+<lastmod>2024-02-19T12:40:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Pix2pix/</loc>
+<lastmod>2024-02-07T15:12:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/DDIM/</loc>
+<lastmod>2024-02-01T12:40:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/DCGAN/</loc>
+<lastmod>2024-01-23T20:30:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/DDPM/</loc>
+<lastmod>2024-01-15T16:30:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/GAN/</loc>
+<lastmod>2024-01-09T16:30:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/Transformer/</loc>
+<lastmod>2023-08-14T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/VAE/</loc>
+<lastmod>2023-07-12T14:45:11+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/StarGAN/</loc>
+<lastmod>2023-04-30T20:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://hahnGyuTak.github.io/posts/wGAN/</loc>
+<lastmod>2023-01-29T18:02:43+09:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
 </urlset>
