@@ -76,6 +76,20 @@ tail_includes:
       <!-- .d-flex -->
     </div>
     <!-- .post-meta -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {"@type":"WebPage","@id":"{{ page.url | absolute_url }}"},
+      "url": "{{ page.url | absolute_url }}",
+      "headline": {{ page.title | jsonify }},{% if page.description or page.excerpt %}
+      "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | jsonify }},{% endif %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.lastmod | default: page.date | date_to_xmlschema }}"{% if page.image %},
+      "image": "{{ page.image.path | default: page.image | absolute_url }}"{% endif %}
+    }
+    </script>
   </header>
 
   <div class="content">

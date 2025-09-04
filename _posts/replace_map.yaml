@@ -1,0 +1,281 @@
+# _scripts/replace_map.yaml
+# rule: 위에서 아래 순서대로 적용
+- pattern: "대조 학습"    # 정규식(필수)
+  replace: "contrastive learning"
+
+- pattern: "대조 손실"
+  replace: "contrastive loss"
+
+- pattern: "손실"
+  replace: "loss"
+
+- pattern: "쌍"
+  replace: "pair"
+
+- pattern: "제로[ -]?샷" # 정규식(:띄어쓰기 또는 하이픈 허용)
+  replace: "zero-shot"
+
+- pattern: "파인튜닝"
+  replace: "fine-tuning"
+
+- pattern: "미세조정"
+  replace: "fine-tuning"
+
+- pattern: "사전학습"
+  replace: "pre-training"
+
+- pattern: "사전 훈련"
+  replace: "pre-training"
+
+- pattern: "사전 훈련된"
+  replace: "pre-trained"
+
+- pattern: "사전학습된"
+  replace: "pre-trained"
+
+- pattern: "소프트맥스"
+  replace: "softmax"
+
+- pattern: "시그모이드"
+  replace: "sigmoid"
+
+- pattern: "긍정 쌍"
+  replace: "positive pair"
+
+- pattern: "부정 쌍"
+  replace: "negative pair"
+
+- pattern: "로짓"
+  replace: "logit"
+
+- pattern: "이미지 캡셔닝"
+  replace: "Image captioning"
+
+- pattern: "시각[ -]?언어" # 정규식(:띄어쓰기 또는 하이픈 허용)
+  replace: "Vision-language"
+
+- pattern: "다운스트림"
+  replace: "downstream"
+
+- pattern: "과제"
+  replace: "task"
+
+- pattern: "특성 추출기"
+  replace: "feature extractor"
+
+- pattern: "특징 추출기"
+  replace: "feature extractor"
+
+- pattern: "자동[ ]?회귀" # 정규식(:띄어쓰기 허용)
+  replace: "Autoregressive"
+
+- pattern: "자기[ -]?주의" # 정규식(:띄어쓰기 또는 하이픈 허용)
+  replace: "self-attention"
+
+- pattern: "교차[ -]?주의" # 정규식(:띄어쓰기 또는 하이픈 허용)
+  replace: "cross-attention"
+
+- pattern: "어텐션"
+  replace: "attention"
+
+- pattern: "트랜스포머"
+  replace: "Transformer"
+
+- pattern: "비전 트랜스포머"
+  replace: "ViT"
+
+- pattern: "합성곱"
+  replace: "convolution"
+
+- pattern: "컨볼루션"
+  replace: "convolution"
+
+- pattern: "잠재 공간"
+  replace: "latent space"
+
+- pattern: "잠재 벡터"
+  replace: "latent vector"
+
+- pattern: "\\b층" # 정규식(:단어 경계, '층' 앞에 다른 글자가 오지 않음)
+  replace: " layer"
+
+- pattern: "시각 토큰"
+  replace: "visual token"
+
+- pattern: "텍스트 토큰"
+  replace: "text token"
+
+- pattern: "토큰"
+  replace: "token"
+
+- pattern: "자연어 처리"
+  replace: "NLP"
+
+- pattern: "학습 가능한"
+  replace: "learnable한"
+
+- pattern: "마스킹"
+  replace: "masking"
+
+- pattern: "마스크"
+  replace: "mask" 
+
+- pattern: "비지도 학습"
+  replace: "unsupervised learning"
+
+- pattern: "지도 학습"
+  replace: "supervised learning"
+
+- pattern: "자기지도 학습"
+  replace: "self-supervised learning"
+
+- pattern: "지식 증류"
+  replace: "knowledge distillation"
+
+- pattern: "그래디언트"
+  replace: "gradient"
+
+- pattern: "벤치마크"
+  replace: "benchmark"
+
+- pattern: "제거 실험"
+  replace: "ablation study"
+
+- pattern: "퓨샷"
+  replace: "few-shot"
+
+# ===== Representation / Embedding =====
+- pattern: "표현 학습"
+  replace: "representation learning"
+- pattern: "임베딩"
+  replace: "embedding"
+- pattern: "표현"
+  replace: "representation"
+
+# ===== Architectures / Blocks =====
+- pattern: "인코더"
+  replace: "encoder"
+- pattern: "디코더"
+  replace: "decoder"
+- pattern: "피드[ -]?포워드( 네트워크)?"
+  replace: "feed-forward network"
+- pattern: "완전[ ]?연결( 계층| 레이어)?"
+  replace: "fully connected layer"
+- pattern: "잔차 연결"
+  replace: "residual connection"
+- pattern: "스킵 연결"
+  replace: "skip connection"
+- pattern: "다중[ -]?헤드 어텐션"
+  replace: "multi-head attention"
+- pattern: "위치 인코딩"
+  replace: "positional encoding"
+
+# ===== Training / Optimization =====
+- pattern: "최적화기|옵티마이저"
+  replace: "optimizer"
+- pattern: "학습률"
+  replace: "learning rate"
+- pattern: "가중치 감쇠"
+  replace: "weight decay"
+- pattern: "워[m|무]업"
+  replace: "warmup"
+- pattern: "스케줄러"
+  replace: "scheduler"
+- pattern: "에폭"
+  replace: "epoch"
+- pattern: "스텝"
+  replace: "step"
+- pattern: "배치[ ]?크기"
+  replace: "batch size"
+- pattern: "미니[ -]?배치"
+  replace: "mini-batch"
+- pattern: "그래디언트 클리핑"
+  replace: "gradient clipping"
+- pattern: "그래디언트 누적"
+  replace: "gradient accumulation"
+- pattern: "라벨 스무딩"
+  replace: "label smoothing"
+- pattern: "드롭아웃"
+  replace: "dropout"
+
+  # ===== Objectives / Info Theory =====
+- pattern: "목적[ ]?함수"
+  replace: "objective function"
+- pattern: "교차 엔트로피"
+  replace: "cross-entropy"
+- pattern: "엔트로피"
+  replace: "entropy"
+- pattern: "KL[ -]?발산"
+  replace: "KL divergence"
+- pattern: "가능도"
+  replace: "likelihood"
+- pattern: "로그 가능도"
+  replace: "log-likelihood"
+- pattern: "우도"
+  replace: "likelihood"
+- pattern: "로그 우도"
+  replace: "log-likelihood"
+- pattern: "마르코프"
+  replace: "Markov"
+
+  # ===== Learning Paradigms =====
+- pattern: "전이 학습"
+  replace: "transfer learning"
+- pattern: "도메인 적응"
+  replace: "domain adaptation"
+- pattern: "도메인 일반화"
+  replace: "domain generalization"
+- pattern: "인[ -]?컨텍스트 학습"
+  replace: "in-context learning"
+
+# ===== Generative / Diffusion / Flow =====
+- pattern: "변분 오토인코더"
+  replace: "VAE"
+- pattern: "정규화 흐름"
+  replace: "normalizing flow"
+- pattern: "스코어 매칭"
+  replace: "score matching"
+- pattern: "플로우 매칭"
+  replace: "flow matching"
+- pattern: "확산 모델"
+  replace: "diffusion model"
+- pattern: "샘플러"
+  replace: "sampler"
+- pattern: "분류기[ -]?없는 가이던스"
+  replace: "classifier-free guidance"
+
+# ===== Metrics =====
+- pattern: "정확도"
+  replace: "accuracy"
+- pattern: "F1[ ]?점수"
+  replace: "F1 score"
+
+# ===== Vision =====
+- pattern: "의미[적]? 분할" # 정규식(:띄어쓰기 허용, '의미 분할' 또는 '의미적 분할' 매칭)
+  replace: "semantic segmentation"
+- pattern: "자세 추정"
+  replace: "pose estimation"
+- pattern: "객체 검출"
+  replace: "object detection"
+- pattern: "포즈 추정"
+  replace: "pose estimation"
+
+# ===== NLP / Tokenization =====
+- pattern: "토크나이저"
+  replace: "tokenizer"
+- pattern: "어휘[ ]?집합"
+  replace: "vocabulary"
+- pattern: "어텐션[ ]?마스크|주의[ ]?마스크" # 정규식(:띄어쓰기 허용, '어텐션 마스크' 또는 '주의 마스크' 매칭)
+  replace: "attention mask"
+- pattern: "인과[ ]?마스크"
+  replace: "causal mask"
+
+  # ===== Misc =====
+- pattern: "온도[ ]?파라미터"
+  replace: "temperature"
+- pattern: "바이어스"
+  replace: "bias"
+- pattern: "파라미터"
+- pattern: "하이퍼[ -]?파라미터"
+  replace: "hyperparameter"
+
