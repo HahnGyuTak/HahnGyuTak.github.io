@@ -99,6 +99,9 @@
 - pattern: "\\b층" # 정규식(:단어 경계, '층' 앞에 다른 글자가 오지 않음)
   replace: " layer"
 
+- pattern: "레이어" # 정규식(:단어 경계, '층' 앞에 다른 글자가 오지 않음)
+  replace: "layer"
+
 - pattern: "시각 토큰"
   replace: "visual token"
 
@@ -144,6 +147,15 @@
 - pattern: "퓨샷"
   replace: "few-shot"
 
+- pattern: "샘플링"
+  replace: "sampling"
+
+- pattern: "샘플러"
+  replace: "sampler"
+
+- pattern: "비전"
+  replace: "vision"
+
 # ===== Representation / Embedding =====
 - pattern: "표현 학습"
   replace: "representation learning"
@@ -153,10 +165,10 @@
   replace: "representation"
 
 # ===== Architectures / Blocks =====
-- pattern: "인코더"
-  replace: "encoder"
-- pattern: "디코더"
-  replace: "decoder"
+- pattern: "\b인코더"
+  replace: " encoder"
+- pattern: "\b디코더"
+  replace: " decoder"
 - pattern: "피드[ -]?포워드( 네트워크)?"
   replace: "feed-forward network"
 - pattern: "완전[ ]?연결( 계층| 레이어)?"
@@ -229,6 +241,8 @@
   replace: "in-context learning"
 
 # ===== Generative / Diffusion / Flow =====
+- pattern: "오토인코더"
+  replace: "AutoEncoder"
 - pattern: "변분 오토인코더"
   replace: "VAE"
 - pattern: "정규화 흐름"
@@ -275,7 +289,6 @@
   replace: "temperature"
 - pattern: "바이어스"
   replace: "bias"
-- pattern: "파라미터"
 - pattern: "하이퍼[ -]?파라미터"
   replace: "hyperparameter"
 
