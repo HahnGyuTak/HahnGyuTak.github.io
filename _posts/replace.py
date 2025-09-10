@@ -59,7 +59,8 @@ def load_rules(yaml_path: Path):
             rx = re.compile(pat, flags)
         except re.error as e:
             raise ValueError(f"정규식 컴파일 오류 (pattern: {pat}): {e}")
-        rules.append((rx, repl))
+        # Keep original display pattern for logging
+        rules.append((rx, repl, pattern))
     return rules
 
 def apply_rules_inplace(md_path: Path, map_path: Path):
@@ -68,11 +69,21 @@ def apply_rules_inplace(md_path: Path, map_path: Path):
 
     masked, masks = _mask_segments(text)
     s = masked
-    for rx, repl in rules:
-        s = rx.sub(repl, s)
+    performed = []  # list of (display_pattern, replace, count)
+    for rx, repl, disp_pat in rules:
+        s, n = rx.subn(repl, s)
+        if n > 0:
+            performed.append((disp_pat, repl, n))
     s = _unmask(s, masks)
 
     md_path.write_text(s, encoding="utf-8")
+
+    # Print each unique replacement exactly once
+    if performed:
+        print("[replacements]")
+        for pat, repl, cnt in performed:
+            # e.g., 패턴 -> 치환 (3회)
+            print(f"- '{pat}' -> '{repl}' ({cnt}회)")
 
 def main():
     if len(sys.argv) != 2:

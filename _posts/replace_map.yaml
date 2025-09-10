@@ -6,6 +6,9 @@
 - pattern: "대조 손실"
   replace: "contrastive loss"
 
+- pattern: "비전 트랜스포머"
+  replace: "ViT"
+
 - pattern: "손실"
   replace: "loss"
 
@@ -81,8 +84,7 @@
 - pattern: "트랜스포머"
   replace: "Transformer"
 
-- pattern: "비전 트랜스포머"
-  replace: "ViT"
+
 
 - pattern: "합성곱"
   replace: "convolution"
@@ -155,6 +157,18 @@
 
 - pattern: "비전"
   replace: "vision"
+
+- pattern: "맵"
+  replace: "map"
+
+- pattern: "패치"
+  replace: "patch"
+
+- pattern: "다  . " # 정규식(:띄어쓰기 포함, '다  . ' 매칭)
+  replace: "다. "
+
+- pattern: "다 . " # 정규식(:띄어쓰기 포함, '다 . ' 매칭)
+  replace: "다. "
 
 # ===== Representation / Embedding =====
 - pattern: "표현 학습"
