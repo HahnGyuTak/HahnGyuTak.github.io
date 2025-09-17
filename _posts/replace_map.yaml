@@ -1,5 +1,12 @@
 # _scripts/replace_map.yaml
 # rule: 위에서 아래 순서대로 적용
+
+- pattern: "특징"
+  replace: "feature"
+
+- pattern: "특징맵"
+  replace: "feature map"
+
 - pattern: "대조 학습"    # 정규식(필수)
   replace: "contrastive learning"
 
@@ -14,6 +21,9 @@
 
 - pattern: "쌍"
   replace: "pair"
+
+- pattern: "로그-우도"
+  replace: "log-likelihood"
 
 - pattern: "제로[ -]?샷" # 정규식(:띄어쓰기 또는 하이픈 허용)
   replace: "zero-shot"
@@ -62,6 +72,18 @@
 
 - pattern: "과제"
   replace: "task"
+
+- pattern: "시각 특징"
+  replace: "시각 feature"
+
+- pattern: "프로젝터"
+  replace: "projector"
+
+- pattern: "텍스트 특징"
+  replace: "텍스트 feature"
+
+- pattern: "시각-언어"
+  replace: "vision-language"
 
 - pattern: "특성 추출기"
   replace: "feature extractor"
@@ -131,7 +153,7 @@
 - pattern: "지도 학습"
   replace: "supervised learning"
 
-- pattern: "자기지도 학습"
+- pattern: "자기[ ]?지도 학습" 
   replace: "self-supervised learning"
 
 - pattern: "지식 증류"
@@ -169,6 +191,9 @@
 
 - pattern: "다 . " # 정규식(:띄어쓰기 포함, '다 . ' 매칭)
   replace: "다. "
+
+- pattern: ";=;" # 정규식(:띄어쓰기 포함, ';=;' 매칭)
+  replace: "="
 
 # ===== Representation / Embedding =====
 - pattern: "표현 학습"
