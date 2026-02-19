@@ -138,9 +138,7 @@ $$
 
 ### **Diffusion Training with Text Embeddings**
 
-
-
-![screenshot-1486340](/assets/img/2026-02-19-DiffusionBridge/screenshot-1486340.png)
+![screenshot-1491313](/assets/img/2026-02-19-DiffusionBridge/screenshot-1491313.png)
 
 이 절의 핵심은 “텍스트 embedding만으로 diffusion 모델을 학습해 텍스트 embedding 분포의 구조를 학습한다”는 설계이다.  
 
@@ -184,7 +182,7 @@ $$
 ### **Decoder Training**
 이 절에서 논문은 디코더를 “텍스트 embedding을 prefix 입력으로 받아 캡션을 autoregressive로 생성”하도록 학습한다.
 
- ![screenshot-1486363](/assets/img/2026-02-19-DiffusionBridge/screenshot-1486363.png)
+![screenshot-1491330](/assets/img/2026-02-19-DiffusionBridge/screenshot-1491330.png)
 
 #### **Diffusion-Augmented Text Embeddings**
 역확산을 거친 embedding이 원본과 완전히 같지 않을 수 있고, 또한 “**하나의 vision embedding이 하나의 텍스트 embedding으로 일대일 매핑되지 않을 수 있다**”는 이유로 디코더 학습에 증강 embedding을 포함한다.
@@ -221,6 +219,9 @@ $$
 이 구성은 “CLIP embedding을 GPT-2 hidden size에 맞추고, 디코더가 잘 쓰는 형태(프리픽스 token열)로 변환하며, 소프트 프롬프트로 캡셔닝 모드 컨텍스트를 준다”는 목적에 맞는 전형적인 어댑터 설계로 해석된다.
 
 ### **Inference Process**
+
+ ![screenshot-1486363](/assets/img/2026-02-19-DiffusionBridge/screenshot-1486363.png)
+
 추론의 핵심은 **이미지 embedding을 역확산 과정의 중간 시점 $M$에 삽입**하는 것이다. 논문은 $T > M > 0$에서, $t=M$부터 역확산을 시작해 이미지 embedding을 텍스트 분포로 점진적으로 정제하며, 이 과정을 **diffusion-bridging**이라 부른다. 
 
 이 설계의 직관은 다음 한 줄로 정리된다.
