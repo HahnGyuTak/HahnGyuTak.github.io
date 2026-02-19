@@ -1,6 +1,5 @@
 ---
-title: "[Paper Review] DiffusionBridge
-Scalable Knowledge Distillation from Diffusion Models"
+title: "[Paper Review] DiffusionBridge"
 date: 2026-02-19 16:10:43 +/-0000
 categories: [Paper Review, Multi Modal, CVPR2025]
 tags: [Multi-modal, CLIP, Diffusion, VLM, CVPR]    
@@ -18,7 +17,7 @@ typora-root-url: ../../../
 >
 > CVPR 2025
 >
-> [[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_Diffusion_Bridge_Leveraging_Diffusion_Model_to_Reduce_the_Modality_Gap_CVPR_2025_paper.html)] [[Github](https://github.com/mongeoroo/diffusion-bridge/tree/master?tab=readme-ov-file)]
+> ßß[[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_Diffusion_Bridge_Leveraging_Diffusion_Model_to_Reduce_the_Modality_Gap_CVPR_2025_paper.html)] [[Github](https://github.com/mongeoroo/diffusion-bridge/tree/master?tab=readme-ov-file)]
 
 
 
