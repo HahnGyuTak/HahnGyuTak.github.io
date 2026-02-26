@@ -144,10 +144,13 @@ $$
 
 논문은 CLIP 텍스트 embedding $e^{text}$를 전처리해 $z_0$를 만든다. 최종 전처리식은 다음과 같다. 
 
+
 $$
 z_0 = C \times \frac{e^{text}-\bar e^{text}}{\|e^{text}-\bar e^{text}\|_2}
 \tag{6}
 $$
+
+
 * $e^{text}$ : CLIP 텍스트 인코더가 만든 텍스트 embedding
 * $\bar e^{text}$ : 학습 텍스트 embedding들의 평균 벡터(centering용)
 * $C$ : 스케일링 상수 (논문은 실험에서 $C=5$를 사용)
@@ -212,9 +215,9 @@ $$
 #### **Decoder 입력 어댑터: projection layer, prefix projector, soft prompts**
 논문 구현 상세는 디코더 측 입력 모듈을 다음처럼 둔다고 적는다.
 
-- projection layer: CLIP embedding 512차원을 768차원으로 투영한다  
-- prefix projector: 2층 fully connected로 구성한다(히든 768)  
-- learnable soft prompts: 길이 10으로 둔다 
+- projection layer: CLIP embedding 512차원을 768차원으로 투영 
+- prefix projector: 2층 fully connected로 구성
+- learnable soft prompts
 
 이 구성은 “CLIP embedding을 GPT-2 hidden size에 맞추고, 디코더가 잘 쓰는 형태(프리픽스 token열)로 변환하며, 소프트 프롬프트로 캡셔닝 모드 컨텍스트를 준다”는 목적에 맞는 전형적인 어댑터 설계로 해석된다.
 
@@ -292,10 +295,7 @@ MSCOCO→Flickr30K, Flickr30K→MSCOCO 설정의 성능을 비교하며, Diffusi
 
 > 보충자료의 plug-and-play 실험은 이 보완성을 실제로 보여준다. Diffusion Bridge와 ViECap을 결합하면 두 방향(MSCOCO→Flickr30K, Flickr30K→MSCOCO) 모두에서 여러 지표가 개선되었다고 보고한다.
 
-#### **Computational Cost**
-이 실험/분석의 목적은 “diffusion을 추가했을 때 계산 비용이 과도하지 않은가”를 보이는 데 있다. 
 
-보충자료는 baseline(확산 없음) 대비 inference에서 1.63 GFLOPs와 0.27초가 추가되며, DDIM sampling을 12 step만 사용해 비용을 관리 가능하게 했다고 보고한다.
 
 
 
