@@ -1,0 +1,228 @@
+status	base_path	upstream_path	merge_assessment
+D	.browserslistrc	.browserslistrc	자동 병합: 원본 측 변경
+D	.commitlintrc.json	.commitlintrc.json	자동 병합: 원본 측 변경
+A	.devcontainer/devcontainer.json	.devcontainer/devcontainer.json	자동 병합: 원본 측 변경
+A	.devcontainer/post-create.sh	.devcontainer/post-create.sh	자동 병합: 원본 측 변경
+M	.github/DISCUSSION_TEMPLATE/general.yml	.github/DISCUSSION_TEMPLATE/general.yml	Git 충돌
+A	.github/DISCUSSION_TEMPLATE/ideas.yml	.github/DISCUSSION_TEMPLATE/ideas.yml	자동 병합: 원본 측 변경
+D	.github/FUNDING.yml	.github/FUNDING.yml	자동 병합: 양쪽 변경
+M	.github/ISSUE_TEMPLATE/bug_report.yml	.github/ISSUE_TEMPLATE/bug_report.yml	Git 충돌
+A	.github/codeql/codeql-config.yml	.github/codeql/codeql-config.yml	자동 병합: 원본 측 변경
+M	.github/dependabot.yml	.github/dependabot.yml	Git 충돌
+M	.github/workflows/cd.yml	.github/workflows/cd.yml	Git 충돌
+M	.github/workflows/ci.yml	.github/workflows/ci.yml	Git 충돌
+M	.github/workflows/codeql.yml	.github/workflows/codeql.yml	Git 충돌
+M	.github/workflows/commitlint.yml	.github/workflows/commitlint.yml	Git 충돌
+A	.github/workflows/lint-js.yml	.github/workflows/lint-js.yml	자동 병합: 원본 측 변경
+A	.github/workflows/lint-scss.yml	.github/workflows/lint-scss.yml	자동 병합: 원본 측 변경
+A	.github/workflows/pr-filter.yml	.github/workflows/pr-filter.yml	자동 병합: 원본 측 변경
+A	.github/workflows/publish.yml	.github/workflows/publish.yml	자동 병합: 원본 측 변경
+A	.github/workflows/scripts/pr-filter.js	.github/workflows/scripts/pr-filter.js	자동 병합: 원본 측 변경
+M	.github/workflows/stale.yml	.github/workflows/stale.yml	Git 충돌
+R087	.github/workflows/pages-deploy.yml.hook	.github/workflows/starter/pages-deploy.yml	Git 충돌
+D	.github/workflows/style-lint.yml	.github/workflows/style-lint.yml	자동 병합: 양쪽 변경
+M	.gitignore	.gitignore	Git 충돌
+M	.husky/commit-msg	.husky/commit-msg	자동 병합: 원본 측 변경
+A	.markdownlint.json	.markdownlint.json	자동 병합: 원본 측 변경
+D	.prettierrc	.prettierrc	자동 병합: 원본 측 변경
+M	.stylelintrc.json	.stylelintrc.json	자동 병합: 원본 측 변경
+D	.versionrc.json	.versionrc.json	자동 병합: 원본 측 변경
+A	.vscode/extensions.json	.vscode/extensions.json	자동 병합: 원본 측 변경
+A	.vscode/settings.json	.vscode/settings.json	자동 병합: 원본 측 변경
+A	.vscode/tasks.json	.vscode/tasks.json	자동 병합: 원본 측 변경
+M	Gemfile	Gemfile	Git 충돌
+M	README.md	README.md	Git 충돌
+M	_config.yml	_config.yml	Git 충돌
+M	_data/contact.yml	_data/contact.yml	자동 병합: 양쪽 변경
+M	_data/locales/ar.yml	_data/locales/ar.yml	자동 병합: 원본 측 변경
+M	_data/locales/bg-BG.yml	_data/locales/bg-BG.yml	자동 병합: 원본 측 변경
+A	_data/locales/ca-ES.yml	_data/locales/ca-ES.yml	자동 병합: 원본 측 변경
+M	_data/locales/cs-CZ.yml	_data/locales/cs-CZ.yml	자동 병합: 원본 측 변경
+A	_data/locales/da-DK.yml	_data/locales/da-DK.yml	자동 병합: 원본 측 변경
+M	_data/locales/de-DE.yml	_data/locales/de-DE.yml	자동 병합: 원본 측 변경
+A	_data/locales/dv‑MV.yml	_data/locales/dv‑MV.yml	자동 병합: 원본 측 변경
+M	_data/locales/el-GR.yml	_data/locales/el-GR.yml	자동 병합: 원본 측 변경
+M	_data/locales/en.yml	_data/locales/en.yml	자동 병합: 양쪽 변경
+M	_data/locales/es-ES.yml	_data/locales/es-ES.yml	자동 병합: 원본 측 변경
+A	_data/locales/fa-IR.yml	_data/locales/fa-IR.yml	자동 병합: 원본 측 변경
+M	_data/locales/fi-FI.yml	_data/locales/fi-FI.yml	자동 병합: 원본 측 변경
+M	_data/locales/fr-FR.yml	_data/locales/fr-FR.yml	자동 병합: 원본 측 변경
+M	_data/locales/hu-HU.yml	_data/locales/hu-HU.yml	자동 병합: 원본 측 변경
+M	_data/locales/id-ID.yml	_data/locales/id-ID.yml	자동 병합: 원본 측 변경
+M	_data/locales/it-IT.yml	_data/locales/it-IT.yml	자동 병합: 원본 측 변경
+A	_data/locales/ja-JP.yml	_data/locales/ja-JP.yml	자동 병합: 원본 측 변경
+M	_data/locales/ko-KR.yml	_data/locales/ko-KR.yml	자동 병합: 원본 측 변경
+A	_data/locales/ku-IQ.yml	_data/locales/ku-IQ.yml	자동 병합: 원본 측 변경
+M	_data/locales/my-MM.yml	_data/locales/my-MM.yml	자동 병합: 원본 측 변경
+A	_data/locales/nl-NL.yml	_data/locales/nl-NL.yml	자동 병합: 원본 측 변경
+A	_data/locales/ps‑AF.yml	_data/locales/ps‑AF.yml	자동 병합: 원본 측 변경
+M	_data/locales/pt-BR.yml	_data/locales/pt-BR.yml	자동 병합: 원본 측 변경
+M	_data/locales/ru-RU.yml	_data/locales/ru-RU.yml	자동 병합: 원본 측 변경
+M	_data/locales/sl-SI.yml	_data/locales/sl-SI.yml	자동 병합: 원본 측 변경
+M	_data/locales/sv-SE.yml	_data/locales/sv-SE.yml	자동 병합: 원본 측 변경
+M	_data/locales/th.yml	_data/locales/th.yml	자동 병합: 원본 측 변경
+M	_data/locales/tr-TR.yml	_data/locales/tr-TR.yml	자동 병합: 원본 측 변경
+M	_data/locales/uk-UA.yml	_data/locales/uk-UA.yml	자동 병합: 원본 측 변경
+A	_data/locales/ur-PK.yml	_data/locales/ur-PK.yml	자동 병합: 원본 측 변경
+M	_data/locales/vi-VN.yml	_data/locales/vi-VN.yml	자동 병합: 원본 측 변경
+M	_data/locales/zh-CN.yml	_data/locales/zh-CN.yml	자동 병합: 원본 측 변경
+M	_data/locales/zh-TW.yml	_data/locales/zh-TW.yml	자동 병합: 원본 측 변경
+A	_data/media.yml	_data/media.yml	자동 병합: 원본 측 변경
+M	_data/origin/basic.yml	_data/origin/basic.yml	자동 병합: 원본 측 변경
+M	_data/origin/cors.yml	_data/origin/cors.yml	자동 병합: 원본 측 변경
+M	_data/share.yml	_data/share.yml	자동 병합: 원본 측 변경
+A	_includes/analytics/cloudflare.html	_includes/analytics/cloudflare.html	자동 병합: 원본 측 변경
+A	_includes/analytics/fathom.html	_includes/analytics/fathom.html	자동 병합: 원본 측 변경
+A	_includes/analytics/goatcounter.html	_includes/analytics/goatcounter.html	자동 병합: 원본 측 변경
+A	_includes/analytics/google.html	_includes/analytics/google.html	자동 병합: 원본 측 변경
+A	_includes/analytics/matomo.html	_includes/analytics/matomo.html	자동 병합: 원본 측 변경
+A	_includes/analytics/umami.html	_includes/analytics/umami.html	자동 병합: 원본 측 변경
+A	_includes/comment.html	_includes/comment.html	자동 병합: 원본 측 변경
+D	_includes/comments.html	_includes/comments.html	자동 병합: 원본 측 변경
+M	_includes/comments/disqus.html	_includes/comments/disqus.html	자동 병합: 원본 측 변경
+M	_includes/comments/giscus.html	_includes/comments/giscus.html	자동 병합: 원본 측 변경
+M	_includes/comments/utterances.html	_includes/comments/utterances.html	자동 병합: 원본 측 변경
+M	_includes/datetime.html	_includes/datetime.html	자동 병합: 원본 측 변경
+A	_includes/embed/audio.html	_includes/embed/audio.html	자동 병합: 원본 측 변경
+A	_includes/embed/bilibili.html	_includes/embed/bilibili.html	자동 병합: 원본 측 변경
+A	_includes/embed/spotify.html	_includes/embed/spotify.html	자동 병합: 원본 측 변경
+M	_includes/embed/twitch.html	_includes/embed/twitch.html	자동 병합: 원본 측 변경
+A	_includes/embed/video.html	_includes/embed/video.html	자동 병합: 원본 측 변경
+M	_includes/embed/youtube.html	_includes/embed/youtube.html	자동 병합: 원본 측 변경
+M	_includes/favicons.html	_includes/favicons.html	자동 병합: 원본 측 변경
+M	_includes/footer.html	_includes/footer.html	자동 병합: 양쪽 변경
+D	_includes/google-analytics.html	_includes/google-analytics.html	자동 병합: 원본 측 변경
+M	_includes/head.html	_includes/head.html	자동 병합: 양쪽 변경
+M	_includes/js-selector.html	_includes/js-selector.html	자동 병합: 원본 측 변경
+M	_includes/jsdelivr-combine.html	_includes/jsdelivr-combine.html	자동 병합: 원본 측 변경
+M	_includes/lang.html	_includes/lang.html	자동 병합: 원본 측 변경
+M	_includes/language-alias.html	_includes/language-alias.html	자동 병합: 원본 측 변경
+A	_includes/media-url.html	_includes/media-url.html	자동 병합: 원본 측 변경
+D	_includes/mermaid.html	_includes/mermaid.html	자동 병합: 원본 측 변경
+D	_includes/mode-toggle.html	_includes/mode-toggle.html	자동 병합: 원본 측 변경
+D	_includes/no-linenos.html	_includes/no-linenos.html	자동 병합: 원본 측 변경
+M	_includes/notification.html	_includes/notification.html	자동 병합: 원본 측 변경
+A	_includes/pageviews/goatcounter.html	_includes/pageviews/goatcounter.html	자동 병합: 원본 측 변경
+A	_includes/post-edit.html	_includes/post-edit.html	자동 병합: 원본 측 변경
+M	_includes/post-paginator.html	_includes/post-paginator.html	자동 병합: 원본 측 변경
+M	_includes/post-sharing.html	_includes/post-sharing.html	자동 병합: 원본 측 변경
+A	_includes/post-summary.html	_includes/post-summary.html	자동 병합: 원본 측 변경
+M	_includes/refactor-content.html	_includes/refactor-content.html	자동 병합: 원본 측 변경
+M	_includes/related-posts.html	_includes/related-posts.html	자동 병합: 원본 측 변경
+M	_includes/search-loader.html	_includes/search-loader.html	자동 병합: 원본 측 변경
+M	_includes/search-results.html	_includes/search-results.html	자동 병합: 원본 측 변경
+M	_includes/sidebar.html	_includes/sidebar.html	Git 충돌
+A	_includes/toc-status.html	_includes/toc-status.html	자동 병합: 원본 측 변경
+M	_includes/toc.html	_includes/toc.html	자동 병합: 원본 측 변경
+M	_includes/topbar.html	_includes/topbar.html	자동 병합: 원본 측 변경
+M	_includes/update-list.html	_includes/update-list.html	자동 병합: 원본 측 변경
+D	_javascript/_copyright	_javascript/_copyright	자동 병합: 원본 측 변경
+M	_javascript/categories.js	_javascript/categories.js	자동 병합: 원본 측 변경
+M	_javascript/commons.js	_javascript/commons.js	자동 병합: 원본 측 변경
+M	_javascript/home.js	_javascript/home.js	자동 병합: 원본 측 변경
+M	_javascript/misc.js	_javascript/misc.js	자동 병합: 원본 측 변경
+R052	_javascript/modules/plugins.js	_javascript/modules/components.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/back-to-top.js	_javascript/modules/components/back-to-top.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/category-collapse.js	_javascript/modules/components/category-collapse.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/clipboard.js	_javascript/modules/components/clipboard.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/img-loading.js	_javascript/modules/components/img-loading.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/img-popup.js	_javascript/modules/components/img-popup.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/locale-datetime.js	_javascript/modules/components/locale-datetime.js	자동 병합: 원본 측 변경
+A	_javascript/modules/components/mermaid.js	_javascript/modules/components/mermaid.js	자동 병합: 원본 측 변경
+A	_javascript/modules/components/mode-toggle.js	_javascript/modules/components/mode-toggle.js	자동 병합: 원본 측 변경
+D	_javascript/modules/components/mode-watcher.js	_javascript/modules/components/mode-watcher.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/search-display.js	_javascript/modules/components/search-display.js	자동 병합: 원본 측 변경
+D	_javascript/modules/components/sidebar.js	_javascript/modules/components/sidebar.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/toc.js	_javascript/modules/components/toc.js	자동 병합: 원본 측 변경
+A	_javascript/modules/components/toc/toc-desktop.js	_javascript/modules/components/toc/toc-desktop.js	자동 병합: 원본 측 변경
+A	_javascript/modules/components/toc/toc-mobile.js	_javascript/modules/components/toc/toc-mobile.js	자동 병합: 원본 측 변경
+M	_javascript/modules/components/tooltip-loader.js	_javascript/modules/components/tooltip-loader.js	자동 병합: 원본 측 변경
+M	_javascript/modules/layouts/basic.js	_javascript/modules/layouts/basic.js	자동 병합: 원본 측 변경
+M	_javascript/modules/layouts/sidebar.js	_javascript/modules/layouts/sidebar.js	자동 병합: 원본 측 변경
+M	_javascript/page.js	_javascript/page.js	자동 병합: 원본 측 변경
+M	_javascript/post.js	_javascript/post.js	자동 병합: 원본 측 변경
+A	_javascript/pwa/app.js	_javascript/pwa/app.js	자동 병합: 원본 측 변경
+A	_javascript/pwa/sw.js	_javascript/pwa/sw.js	자동 병합: 원본 측 변경
+A	_javascript/theme.js	_javascript/theme.js	자동 병합: 원본 측 변경
+M	_layouts/compress.html	_layouts/compress.html	자동 병합: 원본 측 변경
+M	_layouts/default.html	_layouts/default.html	Git 충돌
+M	_layouts/home.html	_layouts/home.html	자동 병합: 원본 측 변경
+M	_layouts/post.html	_layouts/post.html	Git 충돌
+M	_posts/2019-08-08-text-and-typography.md	_posts/2019-08-08-text-and-typography.md	Git 충돌
+M	_posts/2019-08-08-write-a-new-post.md	_posts/2019-08-08-write-a-new-post.md	Git 충돌
+M	_posts/2019-08-09-getting-started.md	_posts/2019-08-09-getting-started.md	Git 충돌
+M	_posts/2019-08-11-customize-the-favicon.md	_posts/2019-08-11-customize-the-favicon.md	Git 충돌
+A	_sass/abstracts/_breakpoints.scss	_sass/abstracts/_breakpoints.scss	자동 병합: 원본 측 변경
+A	_sass/abstracts/_index.scss	_sass/abstracts/_index.scss	자동 병합: 원본 측 변경
+A	_sass/abstracts/_mixins.scss	_sass/abstracts/_mixins.scss	자동 병합: 원본 측 변경
+R060	_sass/addon/module.scss	_sass/abstracts/_placeholders.scss	자동 병합: 원본 측 변경
+R076	_sass/addon/variables.scss	_sass/abstracts/_variables.scss	자동 병합: 원본 측 변경
+D	_sass/addon/commons.scss	_sass/addon/commons.scss	자동 병합: 원본 측 변경
+A	_sass/base/_base.scss	_sass/base/_base.scss	자동 병합: 원본 측 변경
+A	_sass/base/_index.scss	_sass/base/_index.scss	자동 병합: 원본 측 변경
+A	_sass/base/_reset.scss	_sass/base/_reset.scss	자동 병합: 원본 측 변경
+R051	_sass/addon/syntax.scss	_sass/base/_syntax.scss	자동 병합: 원본 측 변경
+A	_sass/base/_typography.scss	_sass/base/_typography.scss	자동 병합: 원본 측 변경
+D	_sass/colors/syntax-dark.scss	_sass/colors/syntax-dark.scss	자동 병합: 원본 측 변경
+D	_sass/colors/syntax-light.scss	_sass/colors/syntax-light.scss	자동 병합: 원본 측 변경
+D	_sass/colors/typography-dark.scss	_sass/colors/typography-dark.scss	자동 병합: 원본 측 변경
+D	_sass/colors/typography-light.scss	_sass/colors/typography-light.scss	자동 병합: 원본 측 변경
+A	_sass/components/_buttons.scss	_sass/components/_buttons.scss	자동 병합: 원본 측 변경
+A	_sass/components/_index.scss	_sass/components/_index.scss	자동 병합: 원본 측 변경
+A	_sass/components/_popups.scss	_sass/components/_popups.scss	자동 병합: 원본 측 변경
+A	_sass/layout/_footer.scss	_sass/layout/_footer.scss	자동 병합: 원본 측 변경
+A	_sass/layout/_index.scss	_sass/layout/_index.scss	자동 병합: 원본 측 변경
+A	_sass/layout/_panel.scss	_sass/layout/_panel.scss	자동 병합: 원본 측 변경
+A	_sass/layout/_sidebar.scss	_sass/layout/_sidebar.scss	자동 병합: 원본 측 변경
+A	_sass/layout/_topbar.scss	_sass/layout/_topbar.scss	자동 병합: 원본 측 변경
+D	_sass/layout/post.scss	_sass/layout/post.scss	자동 병합: 원본 측 변경
+A	_sass/main.bundle.scss	_sass/main.bundle.scss	자동 병합: 원본 측 변경
+M	_sass/main.scss	_sass/main.scss	자동 병합: 원본 측 변경
+R092	_sass/layout/archives.scss	_sass/pages/_archives.scss	자동 병합: 원본 측 변경
+R087	_sass/layout/categories.scss	_sass/pages/_categories.scss	자동 병합: 원본 측 변경
+R076	_sass/layout/category-tag.scss	_sass/pages/_category-tag.scss	자동 병합: 원본 측 변경
+R066	_sass/layout/home.scss	_sass/pages/_home.scss	자동 병합: 원본 측 변경
+A	_sass/pages/_index.scss	_sass/pages/_index.scss	자동 병합: 원본 측 변경
+A	_sass/pages/_post.scss	_sass/pages/_post.scss	자동 병합: 원본 측 변경
+A	_sass/pages/_search.scss	_sass/pages/_search.scss	자동 병합: 원본 측 변경
+R071	_sass/layout/tags.scss	_sass/pages/_tags.scss	자동 병합: 원본 측 변경
+A	_sass/themes/_dark.scss	_sass/themes/_dark.scss	자동 병합: 원본 측 변경
+A	_sass/themes/_light.scss	_sass/themes/_light.scss	자동 병합: 원본 측 변경
+D	_sass/variables-hook.scss	_sass/variables-hook.scss	자동 병합: 원본 측 변경
+M	assets/404.html	assets/404.html	자동 병합: 원본 측 변경
+M	assets/css/jekyll-theme-chirpy.scss	assets/css/jekyll-theme-chirpy.scss	자동 병합: 원본 측 변경
+M	assets/feed.xml	assets/feed.xml	Git 충돌
+D	assets/img/favicons/android-chrome-192x192.png	assets/img/favicons/android-chrome-192x192.png	Git 충돌
+D	assets/img/favicons/android-chrome-512x512.png	assets/img/favicons/android-chrome-512x512.png	Git 충돌
+M	assets/img/favicons/apple-touch-icon.png	assets/img/favicons/apple-touch-icon.png	Git 충돌
+D	assets/img/favicons/browserconfig.xml	assets/img/favicons/browserconfig.xml	Git 충돌
+D	assets/img/favicons/favicon-16x16.png	assets/img/favicons/favicon-16x16.png	Git 충돌
+D	assets/img/favicons/favicon-32x32.png	assets/img/favicons/favicon-32x32.png	Git 충돌
+A	assets/img/favicons/favicon-96x96.png	assets/img/favicons/favicon-96x96.png	자동 병합: 원본 측 변경
+M	assets/img/favicons/favicon.ico	assets/img/favicons/favicon.ico	Git 충돌
+A	assets/img/favicons/favicon.svg	assets/img/favicons/favicon.svg	자동 병합: 원본 측 변경
+D	assets/img/favicons/mstile-150x150.png	assets/img/favicons/mstile-150x150.png	Git 충돌
+M	assets/img/favicons/site.webmanifest	assets/img/favicons/site.webmanifest	Git 충돌
+A	assets/img/favicons/web-app-manifest-192x192.png	assets/img/favicons/web-app-manifest-192x192.png	자동 병합: 원본 측 변경
+A	assets/img/favicons/web-app-manifest-512x512.png	assets/img/favicons/web-app-manifest-512x512.png	자동 병합: 원본 측 변경
+A	assets/js/data/mathjax.js	assets/js/data/mathjax.js	자동 병합: 원본 측 변경
+M	assets/js/data/search.json	assets/js/data/search.json	자동 병합: 원본 측 변경
+D	assets/js/data/swcache.js	assets/js/data/swcache.js	자동 병합: 원본 측 변경
+A	assets/js/data/swconf.js	assets/js/data/swconf.js	자동 병합: 원본 측 변경
+D	assets/js/pwa/app.js	assets/js/pwa/app.js	자동 병합: 원본 측 변경
+D	assets/js/pwa/sw.js	assets/js/pwa/sw.js	자동 병합: 원본 측 변경
+D	assets/js/pwa/unregister.js	assets/js/pwa/unregister.js	자동 병합: 원본 측 변경
+M	assets/lib	assets/lib	자동 병합: 원본 측 변경
+M	docs/CHANGELOG.md	docs/CHANGELOG.md	Git 충돌
+M	docs/SECURITY.md	docs/SECURITY.md	Git 충돌
+A	eslint.config.js	eslint.config.js	자동 병합: 원본 측 변경
+M	jekyll-theme-chirpy.gemspec	jekyll-theme-chirpy.gemspec	자동 병합: 원본 측 변경
+M	package.json	package.json	자동 병합: 원본 측 변경
+A	purgecss.js	purgecss.js	자동 병합: 원본 측 변경
+M	rollup.config.js	rollup.config.js	자동 병합: 원본 측 변경
+R059	tools/init	tools/init.sh	자동 병합: 원본 측 변경
+D	tools/release	tools/release	자동 병합: 원본 측 변경
+A	tools/release.sh	tools/release.sh	자동 병합: 원본 측 변경
+D	tools/run	tools/run	자동 병합: 원본 측 변경
+A	tools/run.sh	tools/run.sh	자동 병합: 원본 측 변경
+R095	tools/test	tools/test.sh	자동 병합: 원본 측 변경

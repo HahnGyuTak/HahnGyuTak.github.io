@@ -1,0 +1,442 @@
+[
+  {
+    "name": "AnalyticSplatting",
+    "details": 0,
+    "errors": [],
+    "images": 7,
+    "math": 74,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Analytic-Splatting | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "AnyGPT",
+    "details": 4,
+    "errors": [],
+    "images": 6,
+    "math": 15,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "BERT",
+    "details": 0,
+    "errors": [],
+    "images": 8,
+    "math": 83,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] BERT | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "CoIBA",
+    "details": 1,
+    "errors": [],
+    "images": 11,
+    "math": 240,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] CoIBA | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "CtrlD",
+    "details": 0,
+    "errors": [],
+    "images": 9,
+    "math": 58,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Ctrl-D | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DCGAN",
+    "details": 1,
+    "errors": [],
+    "images": 10,
+    "math": 26,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DCGAN | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DDIM",
+    "details": 1,
+    "errors": [],
+    "images": 2,
+    "math": 158,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DDIM | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DDPM",
+    "details": 0,
+    "errors": [],
+    "images": 2,
+    "math": 153,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DDPM | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DINO",
+    "details": 5,
+    "errors": [],
+    "images": 16,
+    "math": 113,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DINO | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Diffusion-Models-Beat-GANs",
+    "details": 1,
+    "errors": [],
+    "images": 11,
+    "math": 79,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Diffusion Models Beat GANs on Image Synthesis | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DiffusionBridge",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 50,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DiffusionBridge | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DiffusionLLM",
+    "details": 1,
+    "errors": [],
+    "images": 0,
+    "math": 5,
+    "scrollWidth": 1265,
+    "title": "DiffusionLLM의 연구 동향 | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "DreamBooth",
+    "details": 0,
+    "errors": [],
+    "images": 3,
+    "math": 20,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] DreamBooth | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Escaping-Plato-s-Cave",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 45,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Escaping Plato's Cave: Towards the Alignment of 3D and Text Latent Spaces | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "EyesWideShut",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 2,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Flamingo",
+    "details": 3,
+    "errors": [],
+    "images": 11,
+    "math": 40,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] 🦩 Flamingo: a Visual Language Model for Few-Shot Learning | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "FlowMathching",
+    "details": 0,
+    "errors": [],
+    "images": 1,
+    "math": 98,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Flow Matching in Latent Space | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "GAN",
+    "details": 0,
+    "errors": [],
+    "images": 3,
+    "math": 219,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] GAN | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "GaussianSplatting",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 59,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] 3D Gaussian Splatting | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "LLaMA",
+    "details": 0,
+    "errors": [],
+    "images": 0,
+    "math": 0,
+    "scrollWidth": 1265,
+    "title": "LLaMA, LLaVA, ... | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Multi-ScaleGaussianSplatting",
+    "details": 0,
+    "errors": [],
+    "images": 13,
+    "math": 54,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Multi-Scale 3D Gaussian Splatting | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Pix2pix",
+    "details": 1,
+    "errors": [],
+    "images": 11,
+    "math": 32,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Pix2pix | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "PromptStyler",
+    "details": 0,
+    "errors": [],
+    "images": 12,
+    "math": 89,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] PromptStyler | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "ReAct",
+    "details": 0,
+    "errors": [],
+    "images": 12,
+    "math": 49,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] REACT : Learning Customized Visual Models with Retrieval-Augmented Knowledge | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "ResCLIP",
+    "details": 3,
+    "errors": [],
+    "images": 10,
+    "math": 79,
+    "scrollWidth": 1265,
+    "title": "[Paper Review with Code] ResCLIP: Residual Attention for Training-free Dense Vision-language Inference | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "SAGAN",
+    "details": 1,
+    "errors": [],
+    "images": 12,
+    "math": 106,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] SAGAN - Self Attention GAN | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "SD3",
+    "details": 2,
+    "errors": [],
+    "images": 19,
+    "math": 301,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Stable Diffusion 3 | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Score_based_model",
+    "details": 2,
+    "errors": [],
+    "images": 8,
+    "math": 141,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Score-based Generative model | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "SigLIP",
+    "details": 0,
+    "errors": [],
+    "images": 6,
+    "math": 72,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] SigLIP | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "SplatFlow",
+    "details": 2,
+    "errors": [],
+    "images": 11,
+    "math": 116,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] SplatFlow | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "StarGAN",
+    "details": 0,
+    "errors": [],
+    "images": 13,
+    "math": 0,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] StarGAN | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "TADA",
+    "details": 0,
+    "errors": [],
+    "images": 11,
+    "math": 83,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] TADA : Timestep-Awara Data Augmentation for Diffusion models | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Transformer",
+    "details": 0,
+    "errors": [],
+    "images": 11,
+    "math": 9,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Transfomer - Attention Is All You Need | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "Transfusion",
+    "details": 0,
+    "errors": [],
+    "images": 7,
+    "math": 31,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Transfusion | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "UMM-Transferability",
+    "details": 4,
+    "errors": [],
+    "images": 21,
+    "math": 75,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] UMM Transferability | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "UniReal",
+    "details": 0,
+    "errors": [],
+    "images": 14,
+    "math": 10,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] UniReal: Universal Image Generation and Editing via Learning Real-world Dynamics | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "VAE",
+    "details": 0,
+    "errors": [],
+    "images": 9,
+    "math": 0,
+    "scrollWidth": 1265,
+    "title": "[개념 정리] VAE | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "VAR",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 157,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "VIRAL",
+    "details": 0,
+    "errors": [],
+    "images": 12,
+    "math": 116,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Visual Representation Alignment for MLLMs | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "VLVAE",
+    "details": 0,
+    "errors": [],
+    "images": 10,
+    "math": 41,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Vision-Language-Vision Auto-Encoder:Scalable Knowledge Distillation from Diffusion Models | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "ViTCNN",
+    "details": 1,
+    "errors": [],
+    "images": 14,
+    "math": 35,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] Do Vision Transformers See Like Convolutional Neural Networks? | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "WassersteinGAN",
+    "details": 5,
+    "errors": [],
+    "images": 6,
+    "math": 164,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] WassersteinGAN | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "WaveNet",
+    "details": 0,
+    "errors": [],
+    "images": 5,
+    "math": 61,
+    "scrollWidth": 1265,
+    "title": "[Paper Review] WaveNet | ImTak",
+    "width": 1265
+  },
+  {
+    "name": "wGAN",
+    "details": 0,
+    "errors": [],
+    "images": 8,
+    "math": 0,
+    "scrollWidth": 1265,
+    "title": "[개념 정리] WassersteinGAN | ImTak",
+    "width": 1265
+  }
+]

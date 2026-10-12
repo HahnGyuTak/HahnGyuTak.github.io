@@ -34,6 +34,17 @@ jobs:
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build theme assets
+        run: |
+          npm ci --ignore-scripts
+          npm run build
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -52,8 +63,8 @@ jobs:
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
-            \-\-disable-external=true \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3.0.0
