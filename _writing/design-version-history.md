@@ -8,6 +8,7 @@
 | --- | --- | --- | --- |
 | 변경 전 | `design/before-2026-10-13` | `a2d9cac` | Chirpy 7.6.0의 기존 디자인. UniCompress·UMM Transferability 글과 최신 SEO 수정이 포함된 기준점이다. |
 | 사용자 지정 디자인 | `design/2026-10-13` | `8c2986f` | 아래 디자인 변경을 하나의 독립적인 커밋으로 저장한 버전이다. |
+| 카테고리 폭·날짜 정렬 | `design/2026-10-13.1` | `e91025a` | 트리를 처음부터 본문 최대 폭으로 표시하고 날짜를 오른쪽 끝에 정렬한다. 스크롤바 공간을 미리 확보하여 폴더를 펼쳐도 가로 위치가 유지된다. |
 
 사용자 지정 디자인에 포함된 변경:
 
@@ -27,7 +28,7 @@
 저장소 루트에서 먼저 `git status --short`로 다른 작업을 확인하고, 필요한 변경을 별도 커밋이나 stash로 보관한 다음 진행한다.
 
 ```bash
-git revert --no-commit design/2026-10-13
+git revert --no-commit design/2026-10-13.1 design/2026-10-13
 npm run build
 git add -- _sass/vendors/_bootstrap.scss assets/js/dist/categories.min.js assets/js/dist/commons.min.js assets/js/dist/home.min.js assets/js/dist/misc.min.js assets/js/dist/page.min.js assets/js/dist/post.min.js
 git diff --cached --check
@@ -42,6 +43,12 @@ git commit -m "revert(ui): restore the previous blog design"
 ```
 
 사용자가 복원본의 푸시를 승인하면 `git push origin main`을 실행하고 GitHub Pages 배포 결과를 확인한다.
+
+카테고리 폭·날짜 정렬 수정만 이전 상태로 되돌리려면 위의 첫 `revert` 명령 대신 다음 명령을 사용한다. 나머지 사용자 지정 디자인은 유지된다. 이후 로컬 빌드·렌더링을 확인하고 복원 커밋을 저장하는 절차는 동일하다.
+
+```bash
+git revert --no-commit design/2026-10-13.1
+```
 
 ## 버전 비교와 후속 수정
 
