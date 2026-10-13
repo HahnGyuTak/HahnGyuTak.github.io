@@ -61,6 +61,9 @@ jobs:
           JEKYLL_ENV: "production"
 
       - name: Test site
+        run: python3 tools/check-seo.py _site
+
+      - name: Check HTML links
         run: |
           bundle exec htmlproofer _site \
             --disable-external \
