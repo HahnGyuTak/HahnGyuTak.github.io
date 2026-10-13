@@ -1,10 +1,14 @@
 /* File tree by syndicatefx/GRxBXNg (MIT): assets/licenses/ui-components.txt. */
+:root:has(#category-tree) {
+  scrollbar-gutter: stable;
+}
+
 #category-tree {
   --tree-border: #cccccc;
   --tree-folder: linear-gradient(to bottom, #5dcffe, #5dcffe 20%, #02aef4 20%, #5dcffe 30%, #77d7fe 60%);
   --tree-file: #dddddd;
 
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 1rem;
@@ -129,10 +133,12 @@
   .tree-post-title { min-width: 0; }
 
   .tree-post-date {
+    justify-self: end;
     padding-top: 0.25rem;
     color: var(--text-muted-color);
     font-size: 0.75rem;
     font-variant-numeric: tabular-nums;
+    text-align: right;
     white-space: nowrap;
   }
 }
