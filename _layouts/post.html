@@ -13,7 +13,13 @@ script_includes:
 
 {% include toc-status.html %}
 
-<article class="px-1" data-toc="{{ enable_toc }}">
+{% if page.categories contains 'Paper Review' %}
+  <div id="review-progress" role="progressbar" aria-label="리뷰 읽기 진행도" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span></span>
+  </div>
+{% endif %}
+
+<article class="px-1" data-toc="{{ enable_toc }}"{% if page.categories contains 'Paper Review' %} data-paper-review{% endif %}>
   <header>
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}

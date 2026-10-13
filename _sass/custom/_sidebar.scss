@@ -1,0 +1,382 @@
+/* Magic UI and CodePen adaptations: assets/licenses/ui-components.txt. */
+#sidebar {
+  isolation: isolate;
+
+  > :not(.sidebar-grid) { position: relative; z-index: 1; }
+
+  .sidebar-grid {
+    position: fixed;
+    inset: 0;
+    width: inherit;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+
+    .grid-highlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--sidebar-grid-highlight, rgb(0 0 0 / 9%));
+      transform: translate(var(--grid-x, 0), var(--grid-y, 0));
+      opacity: 0;
+      transition: opacity 180ms;
+    }
+
+    &.is-hovered .grid-highlight { opacity: 1; }
+  }
+
+  &:has(.sidebar-bottom:hover, .sidebar-theme:hover) .grid-highlight {
+    opacity: 0;
+    transition: none;
+  }
+
+  .site-subtitle { min-height: 1.5em; }
+
+  .tagline-typing {
+    display: inline-block;
+    min-width: 1ch;
+    min-height: 1em;
+
+    &.is-typing::after {
+      content: '|';
+      display: inline-block;
+      width: 0.5ch;
+      margin-left: 0.1rem;
+      animation: tagline-caret 700ms step-end infinite;
+    }
+  }
+
+  .sidebar-theme {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  /* jh3y's expanding control adapted to System / Custom. */
+  .theme-control {
+    position: relative;
+    width: 100%;
+    max-width: 224px;
+    height: 38px;
+    margin: 0;
+    min-width: 0;
+    border: 1px solid var(--btn-border-color);
+    padding: 2px;
+    background: var(--resource-surface);
+    border-radius: 100px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 8%), 0 8px 16px rgb(0 0 0 / 5%);
+  }
+
+  .theme-track {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 32px;
+
+    .theme-source-label {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      margin: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: var(--resource-text);
+      opacity: 0.6;
+      z-index: 1;
+      cursor: pointer;
+      transition: color 220ms, opacity 220ms;
+    }
+
+    > input:checked + .theme-source-label { color: var(--resource-surface); opacity: 1; }
+
+    input:focus-visible + .theme-source-label { outline: 2px solid var(--link-color); outline-offset: 3px; border-radius: 100px; }
+  }
+
+  .theme-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    border-radius: 100px;
+    background: var(--resource-text);
+    translate: 0 0;
+    transition: translate 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .theme-control:has(#theme-custom:checked) .theme-indicator { translate: 100% 0; }
+
+  .theme-custom-region {
+    position: relative;
+    height: 100%;
+    min-width: 0;
+    z-index: 1;
+
+    .theme-custom-label {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      translate: -50% -50%;
+      transition: top 220ms, translate 220ms, scale 220ms, opacity 220ms;
+    }
+  }
+
+  .theme-custom-panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    scale: 0.75;
+    transform-origin: center bottom;
+    pointer-events: none;
+    transition: opacity 220ms, scale 220ms;
+  }
+
+  .sidebar-theme[data-custom='true'] {
+    .theme-custom-label {
+      top: 0;
+      height: auto;
+      translate: -50% calc(-100% - 5px);
+      scale: 0.85;
+      opacity: 1;
+    }
+
+    .theme-custom-panel {
+      opacity: 1;
+      scale: 1;
+      pointer-events: auto;
+    }
+  }
+
+  /* Greg Vissing's original colors, gradients and shadows at sidebar scale. */
+  .minimal-theme-switch {
+    --switch-size: var(--switch-height, 32px);
+    --switch-inset: calc(var(--switch-size) * 0.05);
+    --switch-thumb: calc(var(--switch-size) * 0.9);
+    --switch-icon: calc(var(--switch-size) * 0.6);
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin: 0;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0 calc(var(--switch-size) * 0.025) calc(var(--switch-size) * 0.075) rgb(0 0 0 / 40%),
+      inset 0 calc(var(--switch-size) * -0.025) calc(var(--switch-size) * 0.075) rgb(255 255 255 / 40%);
+    cursor: pointer;
+    transition: background 300ms;
+
+    &::after {
+      content: '';
+      width: var(--switch-thumb);
+      height: var(--switch-thumb);
+      position: absolute;
+      top: var(--switch-inset);
+      left: var(--switch-inset);
+      background: linear-gradient(180deg, #ffcc89, #d8860b);
+      border-radius: 180px;
+      box-shadow: 0 calc(var(--switch-size) * 0.025) calc(var(--switch-size) * 0.05) rgb(0 0 0 / 20%);
+      transition: left 300ms, transform 300ms, background 300ms, width 300ms;
+    }
+
+    svg {
+      position: absolute;
+      width: var(--switch-icon);
+      height: var(--switch-icon);
+      top: calc(var(--switch-size) * 0.2);
+      z-index: 1;
+      transition: fill 300ms;
+
+      &.sun { left: calc(var(--switch-size) * 0.2); fill: #ffffff; }
+
+      &.moon { right: calc(var(--switch-size) * 0.2); fill: #7e7e7e; }
+    }
+
+    &:active::after { width: calc(var(--switch-size) * 1.3); }
+  }
+
+  #mode-toggle:checked + .minimal-theme-switch {
+    background: #242424;
+
+    &::after {
+      left: calc(100% - var(--switch-inset));
+      transform: translateX(-100%);
+      background: linear-gradient(180deg, #777777, #3a3a3a);
+    }
+
+    .sun { fill: #7e7e7e; }
+
+    .moon { fill: #ffffff; }
+  }
+
+  #mode-toggle:focus-visible + .minimal-theme-switch { outline: 2px solid var(--link-color); outline-offset: 4px; }
+
+  .sidebar-bottom { padding-inline: 2rem; }
+
+  /* wprod's layered Liquid Glass container, scaled to the contact dock. */
+  .sidebar-contact-glass {
+    --contact-glass-tint: rgb(255 255 255 / 25%);
+    --contact-glass-highlight: rgb(255 255 255 / 75%);
+    --contact-glass-icon: #444739;
+    --contact-glass-hover: rgb(255 255 255 / 30%);
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 224px;
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 6px 6px rgb(0 0 0 / 20%), 0 0 20px rgb(0 0 0 / 10%);
+
+    .contact-glass-filter,
+    .contact-glass-overlay,
+    .contact-glass-specular {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .contact-glass-filter {
+      z-index: 0;
+      backdrop-filter: blur(4px);
+      filter: url('#sidebar-contact-lens') saturate(120%) brightness(1.15);
+    }
+
+    .contact-glass-overlay { z-index: 1; background: var(--contact-glass-tint); }
+
+    .contact-glass-specular {
+      z-index: 2;
+      box-shadow: inset 1px 1px 0 var(--contact-glass-highlight), inset 0 0 5px var(--contact-glass-highlight);
+    }
+
+    .contact-glass-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 4px;
+      padding: 4px;
+    }
+
+    .contact-glass-link {
+      display: inline-flex;
+      flex: 0 0 40px;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      border-radius: 50%;
+      color: var(--contact-glass-icon);
+      background: transparent;
+      transition: background 200ms, transform 200ms ease-out;
+
+      i {
+        font-size: 19px;
+        line-height: 1;
+        filter: drop-shadow(0 0 3px rgb(255 255 255 / 25%));
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--link-color);
+        outline-offset: -2px;
+        background: var(--contact-glass-hover);
+      }
+
+      &:active { transform: scale(0.95); }
+    }
+  }
+
+  .contact-glass-defs { position: absolute; pointer-events: none; }
+}
+
+:root[data-bs-theme='dark'] {
+  --sidebar-grid-highlight: rgb(255 255 255 / 12%);
+
+  #sidebar .sidebar-contact-glass {
+    --contact-glass-tint: rgb(255 255 255 / 8%);
+    --contact-glass-highlight: rgb(255 255 255 / 28%);
+    --contact-glass-icon: #eeeeef;
+    --contact-glass-hover: rgb(255 255 255 / 12%);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #sidebar .contact-glass-link:hover {
+    background: var(--contact-glass-hover);
+    transform: scale(1.1);
+  }
+}
+
+#sidebar-desktop-toggle { display: none; }
+
+@media (min-width: 992px) {
+  #sidebar { transition: transform 200ms ease; }
+
+  #main-wrapper { transition: margin-left 200ms ease; }
+
+  #topbar #sidebar-desktop-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    color: var(--text-muted-color);
+  }
+
+  #topbar #breadcrumb { margin-right: auto; min-width: 0; }
+
+  :root[data-sidebar-collapsed] {
+    #sidebar { transform: translateX(-100%); }
+
+    #main-wrapper { margin-left: 0; }
+  }
+}
+
+@media (hover: none) {
+  #sidebar .theme-control { --switch-height: 38px; height: 44px; }
+
+  #sidebar .theme-track { min-height: 38px; }
+
+  article[data-paper-review] .content a.paper-resource-button .resource-icon { height: 40px; }
+}
+
+@keyframes tagline-caret {
+  0%, 100% { opacity: 1; }
+
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #sidebar,
+  #main-wrapper,
+  #sidebar .sidebar-theme *,
+  #sidebar .sidebar-theme *::after,
+  #sidebar .contact-glass-link,
+  #sidebar .grid-highlight,
+  #sidebar .tagline-typing::after,
+  #post-list .magic-card::before,
+  #post-list .magic-card::after,
+  article[data-paper-review] .review-detail > summary,
+  article[data-paper-review] .paper-resource-button * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

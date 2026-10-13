@@ -1,0 +1,245 @@
+/* Adapted UI sources and MIT notices: assets/licenses/ui-components.txt. */
+:root {
+  --sidebar-grid: rgb(0 0 0 / 7%);
+  --detail-stroke: #262626;
+  --detail-hover: #f6f6f6;
+  --detail-open: #eeeeee;
+  --resource-surface: #ffffff;
+  --resource-text: #121212;
+  --resource-accent: #181717;
+  --reading-accent: #262626;
+}
+
+:root[data-bs-theme='dark'] {
+  --sidebar-grid: rgb(255 255 255 / 6%);
+  --detail-stroke: #a6a6ad;
+  --detail-hover: #29292e;
+  --detail-open: #303036;
+  --resource-surface: #26262b;
+  --resource-text: #eeeeef;
+  --reading-accent: #b7b7bd;
+}
+
+#sidebar {
+  background-image:
+    linear-gradient(var(--sidebar-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--sidebar-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+
+  .sidebar-theme {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-shrink: 0;
+    padding: 1rem 2rem 0.75rem;
+  }
+
+}
+
+/* Magic Card: monochrome spotlight follows the pointer without blocking links. */
+#post-list .magic-card {
+  --magic-x: 50%;
+  --magic-y: 50%;
+
+  position: relative;
+  isolation: isolate;
+  border-radius: 10px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    z-index: 2;
+  }
+
+  &::before {
+    background: radial-gradient(240px circle at var(--magic-x) var(--magic-y), rgb(0 0 0 / 9%), transparent 75%);
+  }
+
+  &::after {
+    padding: 1.5px;
+    background: radial-gradient(240px circle at var(--magic-x) var(--magic-y), rgb(0 0 0 / 70%), transparent 75%);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask-composite: exclude;
+  }
+
+  &:focus-within::before,
+  &:focus-within::after {
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #post-list .magic-card:hover::before,
+  #post-list .magic-card:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  body[sidebar-display] { overflow-x: clip; }
+}
+
+/* Scope reading progress to review content, ending before comments/navigation. */
+#review-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  z-index: 1040;
+
+  > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--reading-accent);
+    transform: scaleX(var(--review-progress, 0));
+    transform-origin: left;
+  }
+}
+
+/* connah99's accordion, adapted to rich Markdown, images, and nested details. */
+article[data-paper-review] .content {
+  .review-detail {
+    margin: 1.4rem 0;
+    width: 100%;
+
+    > summary {
+      position: relative;
+      padding: 12px 12px 12px 52px;
+      border: 3px solid var(--detail-stroke);
+      border-radius: 10px;
+      font-weight: 600;
+      list-style: none;
+      cursor: pointer;
+      transition: background-color 250ms;
+      line-height: 1.6;
+      min-height: 52px;
+
+      &::-webkit-details-marker { display: none; }
+
+      &:hover { background: var(--detail-hover); }
+
+      &::before {
+        content: '\25B8';
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        background: var(--detail-stroke);
+        border-radius: 50%;
+        color: var(--main-bg);
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+
+    > .review-detail-content {
+      border: 3px solid var(--detail-stroke);
+      border-top: 0;
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+
+      > :first-child { margin-top: 0; }
+
+      > :last-child { margin-bottom: 0; }
+    }
+
+    &[open] > summary {
+      background: var(--detail-open);
+      border-radius: 10px 10px 0 0;
+
+      &::before { content: '\25BE'; }
+    }
+  }
+
+  .paper-resources {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  a.paper-resource-button {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 5%);
+    background: var(--resource-surface);
+    color: var(--resource-text);
+    border: 0;
+    margin: 0;
+    font-size: 0.78rem;
+
+    &[data-resource='arxiv'] { --resource-accent: #b31b1b; }
+
+    &[data-resource='github'] { --resource-accent: #181717; }
+
+    &[data-resource='project'] { --resource-accent: #000000; }
+
+    .resource-decor {
+      position: absolute;
+      inset: 0;
+      background: var(--resource-accent);
+      transform: translateX(-100%);
+      transition: transform 300ms;
+      pointer-events: none;
+    }
+
+    .resource-content {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resource-icon {
+      width: 34px;
+      height: 32px;
+      background: var(--resource-accent);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+
+      svg { width: 16px; height: 16px; fill: currentcolor; }
+    }
+
+    .resource-label {
+      display: inline-block;
+      transition: color 200ms;
+      padding: 2px 0.8rem 2px 0.55rem;
+      white-space: nowrap;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .resource-label { color: #ffffff; }
+
+      &[data-resource='arxiv'] { --resource-accent: #b31b1b; }
+
+      &[data-resource='github'] { --resource-accent: #181717; }
+
+      &[data-resource='project'] { --resource-accent: #000000; }
+
+      .resource-decor { transform: translateX(0); }
+    }
+  }
+}

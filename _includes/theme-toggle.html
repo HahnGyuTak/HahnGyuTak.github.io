@@ -1,0 +1,20 @@
+<!-- Dynamic selector: jh3y/vEEZxOM; sun/moon switch: gvissing/OJvxoJq (MIT). -->
+<div class="sidebar-theme w-100" data-custom="false">
+  <fieldset class="theme-control" aria-label="테마 제어 방식">
+    <div class="theme-track">
+      <span class="theme-indicator" aria-hidden="true"></span>
+      <input class="visually-hidden" type="radio" name="theme-source" id="theme-system" value="system" checked>
+      <label for="theme-system" class="theme-source-label">System</label>
+      <div class="theme-custom-region">
+        <input class="visually-hidden" type="radio" name="theme-source" id="theme-custom" value="custom">
+        <label for="theme-custom" class="theme-source-label theme-custom-label">Custom</label>
+        <div class="theme-custom-panel" aria-hidden="true" inert>
+          <input type="checkbox" id="mode-toggle" class="visually-hidden" aria-label="다크 모드로 전환">
+          <label for="mode-toggle" class="minimal-theme-switch">
+            {% include theme-toggle-icons.html %}
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>

@@ -1,1 +1,6 @@
 <!-- A placeholder to allow defining custom metadata -->
+<script>
+  try {
+    document.documentElement.toggleAttribute('data-sidebar-collapsed', localStorage.getItem('sidebar-collapsed') === 'true');
+  } catch { /* Use the default layout when storage is unavailable. */ }
+</script>

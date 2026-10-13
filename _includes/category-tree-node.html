@@ -1,0 +1,44 @@
+{% assign child_categories = '' | split: '' %}
+{% if include.level == 1 %}
+  {% for tree_post in include.posts %}
+    {% assign next_category_name = tree_post.categories[include.level] %}
+    {% if next_category_name %}
+      {% unless child_categories contains next_category_name %}
+        {% assign child_categories = child_categories | push: next_category_name %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign child_categories = child_categories | sort %}
+{% capture category_url %}/categories/{{ include.name | slugify | url_encode }}/{% endcapture %}
+
+<li>
+  <details data-category="{{ include.name | escape }}"{% if include.level == 1 %} open{% endif %}>
+    <summary{% if include.level == 1 %} class="top-level"{% endif %}>
+      <span class="tree-folder-name">{{ include.name | escape }}</span>
+      <span class="tree-count">{{ include.posts | size }}</span>
+      <a class="tree-category-link" href="{{ category_url | relative_url }}" aria-label="{{ include.name | escape }} 카테고리 전체 글 목록" title="{{ include.name | escape }} 전체 글 목록">↗</a>
+    </summary>
+    <ul>
+      {% for child_category in child_categories %}
+        {% assign child_posts = '' | split: '' %}
+        {% for tree_post in include.posts %}
+          {% if tree_post.categories[include.level] == child_category %}
+            {% assign child_posts = child_posts | push: tree_post %}
+          {% endif %}
+        {% endfor %}
+        {% assign child_level = include.level | plus: 1 %}
+        {% include category-tree-node.html name=child_category posts=child_posts level=child_level %}
+      {% endfor %}
+      {% assign sorted_posts = include.posts | sort: 'date' | reverse %}
+      {% for tree_post in sorted_posts %}
+        {% if include.level > 1 or tree_post.categories[include.level] == nil %}
+          <li class="tree-post-row">
+            <a class="tree-post" href="{{ tree_post.url | relative_url }}"><span class="tree-post-title">{{ tree_post.title | escape }}</span></a>
+            <time class="tree-post-date" datetime="{{ tree_post.date | date_to_xmlschema }}" title="업로드: {{ tree_post.date | date: '%Y-%m-%d %H:%M' }}">{{ tree_post.date | date: '%Y-%m-%d' }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </details>
+</li>

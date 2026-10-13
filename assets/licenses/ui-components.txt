@@ -1,0 +1,55 @@
+Third-party UI design/code adaptations
+
+Magic Card, Interactive Grid Pattern, Typing Animation, Scroll Progress concepts
+Copyright (c) Magic UI
+https://github.com/magicuidesign/magicui
+
+Dynamic Toggle (System / Custom selector)
+Copyright (c) Jhey Tompkins (jh3y)
+https://codepen.io/jh3y/pen/vEEZxOM
+
+CSS Minimal Dark Mode Toggle Button (sun/moon artwork and slider)
+Copyright (c) Greg Vissing (gvissing)
+https://codepen.io/gvissing/pen/OJvxoJq
+
+Liquid Glass Apple (sidebar contact dock)
+Copyright (c) Witters Amand (wprod)
+https://codepen.io/wprod/pen/raVpwJL
+
+File tree (categories)
+Copyright (c) Paulo Nunes (syndicatefx)
+https://codepen.io/syndicatefx/pen/GRxBXNg
+
+Accordion (details/summary)
+Copyright (c) connah99
+https://codepen.io/connah99/pen/JjVGmpe
+
+Button (sliding color fill)
+Copyright (c) 2026 Creatlydev (Samir Yangua Ruiz)
+https://uiverse.io/Creatlydev/pretty-grasshopper-57
+
+MIT License (applies to the adaptations listed above)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+arXiv / GitHub icons: Simple Icons, CC0-1.0
+https://github.com/simple-icons/simple-icons
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Project icon: Startpage SVG supplied by the blog owner.
