@@ -1,8 +1,18 @@
 /* Magic UI and CodePen adaptations: assets/licenses/ui-components.txt. */
 #sidebar {
+  --sidebar-glass-highlight: rgb(255 255 255 / 75%);
+  --sidebar-glass-text: #444739;
+  --sidebar-glass-shadow: 0 6px 6px rgb(0 0 0 / 20%), 0 0 20px rgb(0 0 0 / 10%);
+  --sidebar-button-surface: linear-gradient(145deg, var(--resource-surface), var(--detail-hover));
+  --sidebar-button-shadow: var(--sidebar-glass-shadow), inset 1px 1px 0 var(--sidebar-glass-highlight),
+    inset 0 0 5px var(--sidebar-glass-highlight);
+
   isolation: isolate;
 
-  > :not(.sidebar-grid) { position: relative; z-index: 1; }
+  > .profile-wrapper,
+  > nav,
+  > .sidebar-theme,
+  > .sidebar-bottom { position: relative; z-index: 1; }
 
   .sidebar-grid {
     position: fixed;
@@ -27,12 +37,52 @@
     &.is-hovered .grid-highlight { opacity: 1; }
   }
 
-  &:has(.sidebar-bottom:hover, .sidebar-theme:hover) .grid-highlight {
+  &:has(.sidebar-background-picker:hover, .sidebar-nav-glass:hover, .sidebar-bottom:hover, .sidebar-theme:hover) .grid-highlight {
     opacity: 0;
     transition: none;
   }
 
   .site-subtitle { min-height: 1.5em; }
+
+  ul li.nav-item {
+    padding-inline: 2rem;
+    opacity: 1;
+
+    &:not(:first-child) { margin-top: 0.5rem; }
+
+    a.nav-link.sidebar-nav-glass {
+      min-height: 44px;
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--sidebar-glass-highlight);
+      border-radius: 2rem;
+      color: var(--sidebar-glass-text);
+      background: var(--sidebar-button-surface);
+      box-shadow: var(--sidebar-button-shadow);
+      transition: background 200ms, transform 200ms ease-out;
+
+      i {
+        margin-right: 1rem;
+        font-size: 19px;
+        line-height: 1;
+        opacity: 1;
+        filter: drop-shadow(0 0 3px rgb(255 255 255 / 25%));
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--link-color);
+        outline-offset: 3px;
+      }
+
+      &:active { transform: scale(0.97); }
+    }
+
+    &.active a.nav-link.sidebar-nav-glass {
+      color: var(--sidebar-active-color);
+      background: var(--detail-open);
+
+      span { font-weight: 700; }
+    }
+  }
 
   .tagline-typing {
     display: inline-block;
@@ -62,11 +112,11 @@
     height: 38px;
     margin: 0;
     min-width: 0;
-    border: 1px solid var(--btn-border-color);
+    border: 1px solid var(--sidebar-glass-highlight);
     padding: 2px;
-    background: var(--resource-surface);
+    background: var(--sidebar-button-surface);
     border-radius: 100px;
-    box-shadow: 0 2px 3px rgb(0 0 0 / 8%), 0 8px 16px rgb(0 0 0 / 5%);
+    box-shadow: var(--sidebar-button-shadow);
   }
 
   .theme-track {
@@ -86,14 +136,14 @@
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.2px;
-      color: var(--resource-text);
+      color: var(--sidebar-glass-text);
       opacity: 0.6;
       z-index: 1;
       cursor: pointer;
       transition: color 220ms, opacity 220ms;
     }
 
-    > input:checked + .theme-source-label { color: var(--resource-surface); opacity: 1; }
+    > input:checked + .theme-source-label { opacity: 1; font-weight: 700; }
 
     input:focus-visible + .theme-source-label { outline: 2px solid var(--link-color); outline-offset: 3px; border-radius: 100px; }
   }
@@ -105,12 +155,14 @@
     bottom: 0;
     width: 50%;
     border-radius: 100px;
-    background: var(--resource-text);
+    border: 1px solid var(--sidebar-glass-highlight);
+    background: var(--detail-open);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), inset 0 1px 1px var(--sidebar-glass-highlight);
     translate: 0 0;
-    transition: translate 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: translate 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms;
   }
 
-  .theme-control:has(#theme-custom:checked) .theme-indicator { translate: 100% 0; }
+  .theme-control:has(#theme-custom:checked) .theme-indicator { translate: 100% 0; opacity: 0; }
 
   .theme-custom-region {
     position: relative;
@@ -131,7 +183,10 @@
 
   .theme-custom-panel {
     position: absolute;
-    inset: 0;
+    inset-block: 0;
+    left: 50%;
+    width: 80%;
+    translate: -50% 0;
     opacity: 0;
     scale: 0.75;
     transform-origin: center bottom;
@@ -142,7 +197,14 @@
   .sidebar-theme[data-custom='true'] {
     .theme-custom-label {
       top: 0;
+      width: auto;
       height: auto;
+      padding: 1px 6px;
+      border: 1px solid var(--sidebar-glass-highlight);
+      border-radius: 100px;
+      background: var(--sidebar-button-surface);
+      box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+      white-space: nowrap;
       translate: -50% calc(-100% - 5px);
       scale: 0.85;
       opacity: 1;
@@ -155,7 +217,7 @@
     }
   }
 
-  /* Greg Vissing's original colors, gradients and shadows at sidebar scale. */
+  /* Keep Greg Vissing's sun / moon artwork and thumb accents in the shared surface. */
   .minimal-theme-switch {
     --switch-size: var(--switch-height, 32px);
     --switch-inset: calc(var(--switch-size) * 0.05);
@@ -167,10 +229,10 @@
     position: relative;
     display: block;
     margin: 0;
-    background: #ebebeb;
+    background: var(--detail-open);
     border-radius: 200px;
-    box-shadow: inset 0 calc(var(--switch-size) * 0.025) calc(var(--switch-size) * 0.075) rgb(0 0 0 / 40%),
-      inset 0 calc(var(--switch-size) * -0.025) calc(var(--switch-size) * 0.075) rgb(255 255 255 / 40%);
+    box-shadow: inset 0 calc(var(--switch-size) * 0.025) calc(var(--switch-size) * 0.075) rgb(0 0 0 / 16%),
+      inset 0 calc(var(--switch-size) * -0.025) calc(var(--switch-size) * 0.075) var(--sidebar-glass-highlight);
     cursor: pointer;
     transition: background 300ms;
 
@@ -193,72 +255,55 @@
       height: var(--switch-icon);
       top: calc(var(--switch-size) * 0.2);
       z-index: 1;
-      transition: fill 300ms;
+      overflow: visible;
+      fill: currentcolor;
+      stroke: currentcolor;
+      stroke-width: 0.6px;
+      stroke-linejoin: round;
+      transition: color 300ms;
 
-      &.sun { left: calc(var(--switch-size) * 0.2); fill: #ffffff; }
+      path,
+      rect { vector-effect: non-scaling-stroke; }
 
-      &.moon { right: calc(var(--switch-size) * 0.2); fill: #7e7e7e; }
+      &.sun { left: calc(var(--switch-size) * 0.2); color: #ffffff; }
+
+      &.moon { right: calc(var(--switch-size) * 0.2); color: #7e7e7e; }
     }
 
     &:active::after { width: calc(var(--switch-size) * 1.3); }
   }
 
   #mode-toggle:checked + .minimal-theme-switch {
-    background: #242424;
-
     &::after {
       left: calc(100% - var(--switch-inset));
       transform: translateX(-100%);
       background: linear-gradient(180deg, #777777, #3a3a3a);
     }
 
-    .sun { fill: #7e7e7e; }
+    .sun { color: #7e7e7e; }
 
-    .moon { fill: #ffffff; }
+    .moon { color: #ffffff; }
   }
 
   #mode-toggle:focus-visible + .minimal-theme-switch { outline: 2px solid var(--link-color); outline-offset: 4px; }
 
   .sidebar-bottom { padding-inline: 2rem; }
 
-  /* wprod's layered Liquid Glass container, scaled to the contact dock. */
+  /* Contact links share the navigation's opaque surface and raised glass edges. */
   .sidebar-contact-glass {
-    --contact-glass-tint: rgb(255 255 255 / 25%);
-    --contact-glass-highlight: rgb(255 255 255 / 75%);
-    --contact-glass-icon: #444739;
-    --contact-glass-hover: rgb(255 255 255 / 30%);
+    --contact-glass-icon: var(--sidebar-glass-text);
+    --contact-glass-hover: var(--detail-hover);
 
     position: relative;
     display: flex;
     width: 100%;
     max-width: 224px;
     margin-bottom: 0.5rem;
+    border: 1px solid var(--sidebar-glass-highlight);
     border-radius: 2rem;
     overflow: hidden;
-    background: transparent;
-    box-shadow: 0 6px 6px rgb(0 0 0 / 20%), 0 0 20px rgb(0 0 0 / 10%);
-
-    .contact-glass-filter,
-    .contact-glass-overlay,
-    .contact-glass-specular {
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      pointer-events: none;
-    }
-
-    .contact-glass-filter {
-      z-index: 0;
-      backdrop-filter: blur(4px);
-      filter: url('#sidebar-contact-lens') saturate(120%) brightness(1.15);
-    }
-
-    .contact-glass-overlay { z-index: 1; background: var(--contact-glass-tint); }
-
-    .contact-glass-specular {
-      z-index: 2;
-      box-shadow: inset 1px 1px 0 var(--contact-glass-highlight), inset 0 0 5px var(--contact-glass-highlight);
-    }
+    background: var(--sidebar-button-surface);
+    box-shadow: var(--sidebar-button-shadow);
 
     .contact-glass-content {
       position: relative;
@@ -301,21 +346,24 @@
     }
   }
 
-  .contact-glass-defs { position: absolute; pointer-events: none; }
 }
 
 :root[data-bs-theme='dark'] {
   --sidebar-grid-highlight: rgb(255 255 255 / 12%);
 
-  #sidebar .sidebar-contact-glass {
-    --contact-glass-tint: rgb(255 255 255 / 8%);
-    --contact-glass-highlight: rgb(255 255 255 / 28%);
-    --contact-glass-icon: #eeeeef;
-    --contact-glass-hover: rgb(255 255 255 / 12%);
+  #sidebar {
+    --sidebar-glass-highlight: rgb(255 255 255 / 28%);
+    --sidebar-glass-text: #eeeeef;
   }
+
 }
 
 @media (hover: hover) and (pointer: fine) {
+  #sidebar ul li.nav-item a.nav-link.sidebar-nav-glass:hover {
+    background: var(--detail-hover);
+    transform: scale(1.03);
+  }
+
   #sidebar .contact-glass-link:hover {
     background: var(--contact-glass-hover);
     transform: scale(1.1);
@@ -369,6 +417,7 @@
   #main-wrapper,
   #sidebar .sidebar-theme *,
   #sidebar .sidebar-theme *::after,
+  #sidebar .sidebar-nav-glass,
   #sidebar .contact-glass-link,
   #sidebar .grid-highlight,
   #sidebar .tagline-typing::after,

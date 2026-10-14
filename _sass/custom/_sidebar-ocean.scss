@@ -1,0 +1,118 @@
+/* TIDES by Chathura Jayasanka (MIT): assets/licenses/ui-components.txt. */
+#sidebar {
+  .sidebar-ocean {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: none;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sidebar-ocean-stage,
+  .sidebar-ocean-controls { display: none; }
+
+  > .sidebar-ocean-controls {
+    position: relative;
+    flex-shrink: 0;
+    padding: 0 2rem 12px;
+    z-index: 1;
+  }
+
+  .ocean-time-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 2px 10px;
+    border: 1px solid var(--sidebar-glass-highlight);
+    border-radius: 2rem;
+    color: var(--sidebar-glass-text);
+    background: var(--sidebar-button-surface);
+    box-shadow: var(--sidebar-button-shadow);
+
+    > span {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+  }
+
+  #sidebar-ocean-time {
+    --ocean-time-track: linear-gradient(90deg, #3a4a8a, #6fa8d4 25%, #ffd27f 55%, #ff7e54 78%, #1a2244);
+
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    appearance: none;
+    background: transparent;
+    cursor: grab;
+
+    &::-webkit-slider-runnable-track {
+      height: 3px;
+      border-radius: 3px;
+      background: var(--ocean-time-track);
+    }
+
+    &::-moz-range-track {
+      height: 3px;
+      border-radius: 3px;
+      background: var(--ocean-time-track);
+    }
+
+    &::-webkit-slider-thumb {
+      width: 16px;
+      height: 16px;
+      margin-top: -6.5px;
+      appearance: none;
+      border: 1px solid rgb(0 0 0 / 20%);
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    }
+
+    &::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgb(0 0 0 / 20%);
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    }
+
+    &:active { cursor: grabbing; }
+
+    &:focus-visible { outline: 2px solid var(--link-color); outline-offset: 2px; border-radius: 4px; }
+  }
+
+  .swatch-ocean {
+    background: radial-gradient(circle at 50% 38%, #ffecca 2px, transparent 3px),
+      linear-gradient(#4a5c9c 0%, #ffca78 48%, #cea476 50%, #224e62 70%, #103d50);
+  }
+}
+
+:root[data-sidebar-background='ocean'] #sidebar {
+  background-color: #4a5c9c;
+
+  .sidebar-ocean,
+  .sidebar-ocean-controls { display: block; }
+
+  > nav { flex-shrink: 0; }
+
+  nav > ul { margin-bottom: 0; }
+
+  .sidebar-ocean-stage { display: block; height: 112px; }
+
+  .site-title { color: #ffffff; text-shadow: 0 1px 6px rgb(0 0 0 / 35%); }
+
+  .site-subtitle { color: rgb(255 255 255 / 80%); text-shadow: 0 1px 4px rgb(0 0 0 / 35%); }
+}
+
+@media (hover: none) {
+  #sidebar .ocean-time-bar { min-height: 44px; }
+
+  #sidebar #sidebar-ocean-time { height: 38px; }
+}

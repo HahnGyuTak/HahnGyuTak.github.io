@@ -1,0 +1,817 @@
+/* Sidebar-only patterns; original authors and MIT notices: assets/licenses/ui-components.txt. */
+#sidebar {
+  /* Bookshelf and stars retain their original night palettes in every site theme. */
+  --shelf-background: #111111;
+  --shelf-book: #222222;
+  --shelf-dark-book: #333333;
+  --shelf-edge: #2e2e2e;
+  --shelf-shadow: #1a1a1a;
+  --notebook-line: #3f87a6;
+  --notebook-paper: #ebf8e1a2;
+  --notebook-margin: #c73030;
+  --stars-bottom: #1b2735;
+  --stars-top: #090a0f;
+  --star-color: #ffffff;
+
+  background-image: none;
+  background-size: auto;
+
+  .sidebar-wallpaper {
+    position: fixed;
+    inset: 0;
+    display: none;
+    width: inherit;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > .sidebar-background-picker {
+    position: absolute;
+    top: 4px;
+    inset-inline: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    height: 32px;
+    padding-inline: 0;
+
+    label {
+      display: grid;
+      place-items: center;
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .background-swatch {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgb(0 0 0 / 18%);
+      border-radius: 50%;
+      box-shadow: 0 2px 3px rgb(0 0 0 / 15%), inset 0 1px 1px rgb(255 255 255 / 75%);
+      transition: transform 160ms;
+    }
+
+    input:checked + label .background-swatch {
+      outline: 2px solid var(--resource-text);
+      outline-offset: 3px;
+    }
+
+    input:focus-visible + label .background-swatch {
+      outline: 2px solid var(--link-color);
+      outline-offset: 3px;
+    }
+
+    label:hover .background-swatch { transform: translateY(-1px); }
+  }
+
+  .swatch-plain { background: #ffffff; }
+
+  .swatch-grid {
+    background-color: #f6f8fa;
+    background-image: linear-gradient(#c7cbd0 1px, transparent 1px), linear-gradient(90deg, #c7cbd0 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  .swatch-bookshelf {
+    background-image: linear-gradient(to top, #d2b48c 15%, transparent 15%),
+      linear-gradient(90deg, #b22222 18%, #111111 18% 24%, #008080 24% 45%, #111111 45% 52%, #ff6347 52% 75%, #111111 75%);
+  }
+
+  .swatch-notebook {
+    background-image: linear-gradient(90deg, transparent 20%, #c73030 20% 26%, transparent 26%),
+      repeating-linear-gradient(to bottom, #edf4e7 0 3px, #729aaa 3px 4px);
+  }
+
+  .swatch-stars {
+    background-color: #101723;
+    background-image: radial-gradient(circle at 25% 30%, #ffffff 1px, transparent 1.2px),
+      radial-gradient(circle at 70% 55%, #ffffff 1px, transparent 1.2px),
+      radial-gradient(circle at 35% 80%, #ffffff 0.6px, transparent 1px);
+  }
+}
+
+/* The plain choice inherits Chirpy's original --sidebar-bg in both color modes. */
+:root:not([data-sidebar-background]) #sidebar,
+:root[data-sidebar-background='grid'] #sidebar {
+  background-image: linear-gradient(var(--sidebar-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--sidebar-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+:root[data-sidebar-background]:not([data-sidebar-background='grid']) #sidebar .sidebar-grid { display: none; }
+
+/* escannord's ruled notebook with a red margin, retained at its original 25px spacing. */
+:root[data-sidebar-background='notebook'] #sidebar {
+  background-image: linear-gradient(var(--notebook-line) 10%, var(--notebook-paper) 10%),
+    linear-gradient(to right, transparent 10%, var(--notebook-margin) 10% 10.2%, transparent 10.5%);
+  background-size: 100% 25px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+}
+
+/* Cobp's original dark bookshelf and moving flashlight. */
+:root[data-sidebar-background='bookshelf'] #sidebar .sidebar-wallpaper {
+  display: block;
+  background-color: var(--shelf-background);
+  background-image: linear-gradient(
+      to top,
+      var(--shelf-book) 5%,
+      var(--shelf-background) 6%,
+      var(--shelf-background) 7%,
+      transparent 7%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 30%, transparent 80%),
+    linear-gradient(to right, var(--shelf-book), var(--shelf-edge) 5%, transparent 5%),
+    linear-gradient(
+      to right,
+      transparent 6%,
+      var(--shelf-book) 6%,
+      var(--shelf-edge) 9%,
+      transparent 9%
+    ),
+    linear-gradient(
+      to right,
+      transparent 27%,
+      var(--shelf-book) 27%,
+      var(--shelf-edge) 34%,
+      transparent 34%
+    ),
+    linear-gradient(
+      to right,
+      transparent 51%,
+      var(--shelf-book) 51%,
+      var(--shelf-edge) 57%,
+      transparent 57%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 35%, transparent 35%),
+    linear-gradient(
+      to right,
+      transparent 42%,
+      var(--shelf-book) 42%,
+      var(--shelf-edge) 44%,
+      transparent 44%
+    ),
+    linear-gradient(
+      to right,
+      transparent 45%,
+      var(--shelf-book) 45%,
+      var(--shelf-edge) 47%,
+      transparent 47%
+    ),
+    linear-gradient(
+      to right,
+      transparent 48%,
+      var(--shelf-book) 48%,
+      var(--shelf-edge) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      transparent 87%,
+      var(--shelf-book) 87%,
+      var(--shelf-edge) 91%,
+      transparent 91%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 37.5%, transparent 37.5%),
+    linear-gradient(
+      to right,
+      transparent 14%,
+      var(--shelf-book) 14%,
+      var(--shelf-edge) 20%,
+      transparent 20%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 40%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 10%,
+      var(--shelf-book) 10%,
+      var(--shelf-edge) 13%,
+      transparent 13%
+    ),
+    linear-gradient(
+      to right,
+      transparent 21%,
+      var(--shelf-book) 21%,
+      var(--shelf-shadow) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to right,
+      transparent 58%,
+      var(--shelf-book) 58%,
+      var(--shelf-edge) 64%,
+      transparent 64%
+    ),
+    linear-gradient(
+      to right,
+      transparent 92%,
+      var(--shelf-book) 92%,
+      var(--shelf-edge) 95%,
+      transparent 95%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 48%, transparent 48%),
+    linear-gradient(
+      to right,
+      transparent 96%,
+      var(--shelf-book) 96%,
+      var(--shelf-shadow) 99%,
+      transparent 99%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 68.5%,
+      transparent 76%,
+      var(--shelf-background) 76%,
+      var(--shelf-background) 77.5%,
+      transparent 77.5%,
+      transparent 86%,
+      var(--shelf-background) 86%,
+      var(--shelf-background) 87.5%,
+      transparent 87.5%
+    ),
+    linear-gradient(
+      to right,
+      transparent 35%,
+      var(--shelf-book) 35%,
+      var(--shelf-edge) 41%,
+      transparent 41%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 68%, transparent 68%),
+    linear-gradient(
+      to right,
+      transparent 78%,
+      var(--shelf-dark-book) 78%,
+      var(--shelf-dark-book) 80%,
+      transparent 80%,
+      transparent 82%,
+      var(--shelf-dark-book) 82%,
+      var(--shelf-dark-book) 83%,
+      transparent 83%
+    ),
+    linear-gradient(
+      to right,
+      transparent 66%,
+      var(--shelf-book) 66%,
+      var(--shelf-edge) 85%,
+      transparent 85%
+    );
+  background-size: 300px 150px;
+  background-position: center bottom;
+}
+
+:root[data-sidebar-background='bookshelf'] #sidebar .sidebar-wallpaper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: var(--shelf-background);
+  background-image: linear-gradient(
+      to top,
+      #d2b48c 5%,
+      var(--shelf-background) 6%,
+      var(--shelf-background) 7%,
+      transparent 7%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 30%, transparent 30%),
+    linear-gradient(to right, #b22222, #871a1a 5%, transparent 5%),
+    linear-gradient(
+      to right,
+      transparent 6%,
+      #ff6347 6%,
+      #ff3814 9%,
+      transparent 9%
+    ),
+    linear-gradient(
+      to right,
+      transparent 27%,
+      #556b2f 27%,
+      #39481f 34%,
+      transparent 34%
+    ),
+    linear-gradient(
+      to right,
+      transparent 51%,
+      #fa8072 51%,
+      #f85441 57%,
+      transparent 57%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 35%, transparent 35%),
+    linear-gradient(
+      to right,
+      transparent 42%,
+      #008080 42%,
+      #004d4d 44%,
+      transparent 44%
+    ),
+    linear-gradient(
+      to right,
+      transparent 45%,
+      #008080 45%,
+      #004d4d 47%,
+      transparent 47%
+    ),
+    linear-gradient(
+      to right,
+      transparent 48%,
+      #008080 48%,
+      #004d4d 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      transparent 87%,
+      #778899 87%,
+      #4f5d6a 91%,
+      transparent 91%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 37.5%, transparent 37.5%),
+    linear-gradient(
+      to right,
+      transparent 14%,
+      #bdb76b 14%,
+      #989244 20%,
+      transparent 20%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 40%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 10%,
+      #808000 10%,
+      #4d4d00 13%,
+      transparent 13%
+    ),
+    linear-gradient(
+      to right,
+      transparent 21%,
+      #8b4513 21%,
+      #5e2f0d 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to right,
+      transparent 58%,
+      #8b4513 58%,
+      #5e2f0d 64%,
+      transparent 64%
+    ),
+    linear-gradient(
+      to right,
+      transparent 92%,
+      #2f4f4f 92%,
+      #1c2f2f 95%,
+      transparent 95%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 48%, transparent 48%),
+    linear-gradient(
+      to right,
+      transparent 96%,
+      #2f4f4f 96%,
+      #1c2f2f 99%,
+      transparent 99%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 68.5%,
+      transparent 76%,
+      var(--shelf-background) 76%,
+      var(--shelf-background) 77.5%,
+      transparent 77.5%,
+      transparent 86%,
+      var(--shelf-background) 86%,
+      var(--shelf-background) 87.5%,
+      transparent 87.5%
+    ),
+    linear-gradient(
+      to right,
+      transparent 35%,
+      #cd5c5c 35%,
+      #bc3a3a 41%,
+      transparent 41%
+    ),
+    linear-gradient(to bottom, var(--shelf-background) 68%, transparent 68%),
+    linear-gradient(
+      to right,
+      transparent 78%,
+      #bc8f8f 78%,
+      #bc8f8f 80%,
+      transparent 80%,
+      transparent 82%,
+      #bc8f8f 82%,
+      #bc8f8f 83%,
+      transparent 83%
+    ),
+    linear-gradient(
+      to right,
+      transparent 66%,
+      #a52a2a 66%,
+      #7c2020 85%,
+      transparent 85%
+    );
+  background-size: 300px 150px;
+  background-position: center bottom;
+  opacity: 1;
+  clip-path: circle(150px at center center);
+  animation: sidebar-books-flashlight 20s ease infinite;
+}
+
+:root[data-sidebar-background='bookshelf'] #sidebar .sidebar-wallpaper::after {
+  content: "";
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: calc(50% + 59px);
+  bottom: 100px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #ffffff 50%, transparent 50%),
+    radial-gradient(circle, #ffffff 50%, transparent 50%);
+  background-size: 10px 10px;
+  background-position:
+    left center,
+    right center;
+  animation: sidebar-books-eyes 20s infinite;
+}
+
+@keyframes sidebar-books-flashlight {
+  0% {
+    clip-path: circle(150px at -25% 10%);
+  }
+
+  38% {
+    clip-path: circle(150px at 60% 20%);
+  }
+
+  39% {
+    opacity: 1;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  40% {
+    opacity: 0;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  41% {
+    opacity: 1;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  42% {
+    opacity: 0;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  54% {
+    opacity: 0;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  55% {
+    opacity: 1;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  59% {
+    opacity: 1;
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  64% {
+    clip-path: circle(150px at 45% 78%);
+  }
+
+  68% {
+    clip-path: circle(150px at 85% 89%);
+  }
+
+  72% {
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  74% {
+    clip-path: circle(150px at 60% 86%);
+  }
+
+  100% {
+    clip-path: circle(150px at 150% 50%);
+  }
+}
+
+@keyframes sidebar-books-eyes {
+  0%,
+  38% {
+    opacity: 0;
+  }
+
+  39% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  40% {
+    transform: scaleY(0);
+    filter: none;
+    background-image: radial-gradient(circle, #ffffff 50%, transparent 50%),
+      radial-gradient(circle, #ffffff 50%, transparent 50%);
+  }
+
+  41% {
+    opacity: 1;
+    transform: scaleY(1);
+    background-image: radial-gradient(circle, #ff0000 50%, transparent 50%),
+      radial-gradient(circle, #ff0000 50%, transparent 50%);
+    filter: drop-shadow(0 0 4px #ff8686);
+  }
+
+  42%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* jaykdoe's three parallax layers; points beyond the sidebar are omitted. */
+:root[data-sidebar-background='stars'] #sidebar {
+  background-image: radial-gradient(ellipse at bottom, var(--stars-bottom) 0%, var(--stars-top) 100%);
+
+  .sidebar-wallpaper { display: block; }
+
+  .sidebar-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--star-size);
+    height: var(--star-size);
+    background: transparent;
+    box-shadow: var(--star-shadows);
+    animation: sidebar-stars-rise var(--star-duration) linear infinite;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2000px;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      box-shadow: var(--star-shadows);
+    }
+  }
+
+  .stars-small {
+    --star-size: 1px;
+    --star-duration: 50s;
+    --star-shadows:
+      367px 1734px var(--star-color),
+      137px 1114px var(--star-color),
+      34px 382px var(--star-color),
+      169px 1907px var(--star-color),
+      332px 1216px var(--star-color),
+      80px 712px var(--star-color),
+      326px 1605px var(--star-color),
+      322px 1797px var(--star-color),
+      62px 729px var(--star-color),
+      126px 946px var(--star-color),
+      300px 737px var(--star-color),
+      89px 701px var(--star-color),
+      24px 1152px var(--star-color),
+      246px 1048px var(--star-color),
+      45px 1116px var(--star-color),
+      247px 786px var(--star-color),
+      251px 458px var(--star-color),
+      13px 1767px var(--star-color),
+      22px 885px var(--star-color),
+      374px 1309px var(--star-color),
+      18px 1409px var(--star-color),
+      264px 911px var(--star-color),
+      123px 33px var(--star-color),
+      183px 646px var(--star-color),
+      73px 1201px var(--star-color),
+      184px 1990px var(--star-color),
+      323px 1035px var(--star-color),
+      386px 575px var(--star-color),
+      148px 687px var(--star-color),
+      186px 1627px var(--star-color),
+      171px 97px var(--star-color),
+      330px 257px var(--star-color),
+      383px 1428px var(--star-color),
+      234px 1888px var(--star-color),
+      53px 1990px var(--star-color),
+      61px 223px var(--star-color),
+      108px 172px var(--star-color),
+      30px 1839px var(--star-color),
+      273px 796px var(--star-color),
+      44px 1908px var(--star-color),
+      254px 293px var(--star-color),
+      196px 316px var(--star-color),
+      146px 1162px var(--star-color),
+      313px 1341px var(--star-color),
+      168px 1014px var(--star-color),
+      345px 1355px var(--star-color),
+      22px 719px var(--star-color),
+      224px 323px var(--star-color),
+      7px 271px var(--star-color),
+      229px 613px var(--star-color),
+      318px 256px var(--star-color),
+      19px 422px var(--star-color),
+      337px 1605px var(--star-color),
+      29px 1148px var(--star-color),
+      120px 1304px var(--star-color),
+      234px 232px var(--star-color),
+      300px 1629px var(--star-color),
+      220px 1614px var(--star-color),
+      325px 1070px var(--star-color),
+      370px 204px var(--star-color),
+      294px 1471px var(--star-color),
+      42px 585px var(--star-color),
+      97px 567px var(--star-color),
+      110px 975px var(--star-color),
+      11px 964px var(--star-color),
+      21px 1728px var(--star-color),
+      51px 198px var(--star-color),
+      225px 920px var(--star-color),
+      56px 495px var(--star-color),
+      294px 196px var(--star-color),
+      381px 1999px var(--star-color),
+      332px 793px var(--star-color),
+      233px 149px var(--star-color),
+      315px 231px var(--star-color),
+      284px 1781px var(--star-color),
+      204px 1161px var(--star-color),
+      44px 982px var(--star-color),
+      115px 385px var(--star-color),
+      192px 1513px var(--star-color),
+      78px 1129px var(--star-color),
+      94px 23px var(--star-color),
+      243px 982px var(--star-color),
+      43px 1972px var(--star-color),
+      153px 526px var(--star-color),
+      208px 1667px var(--star-color),
+      186px 1794px var(--star-color),
+      351px 1199px var(--star-color),
+      75px 1240px var(--star-color),
+      127px 1119px var(--star-color),
+      276px 591px var(--star-color),
+      171px 361px var(--star-color),
+      94px 1480px var(--star-color),
+      253px 1355px var(--star-color),
+      275px 1847px var(--star-color),
+      28px 1184px var(--star-color),
+      10px 344px var(--star-color),
+      292px 1328px var(--star-color),
+      127px 1352px var(--star-color),
+      284px 1829px var(--star-color),
+      381px 820px var(--star-color),
+      295px 756px var(--star-color),
+      389px 616px var(--star-color),
+      386px 1847px var(--star-color),
+      357px 1071px var(--star-color),
+      307px 1567px var(--star-color),
+      310px 1323px var(--star-color),
+      257px 632px var(--star-color),
+      157px 346px var(--star-color),
+      50px 1901px var(--star-color),
+      215px 194px var(--star-color),
+      367px 800px var(--star-color),
+      122px 1371px var(--star-color),
+      79px 482px var(--star-color),
+      336px 1878px var(--star-color),
+      188px 944px var(--star-color),
+      325px 1259px var(--star-color),
+      53px 1381px var(--star-color),
+      107px 1670px var(--star-color),
+      389px 802px var(--star-color),
+      49px 392px var(--star-color),
+      335px 1009px var(--star-color),
+      52px 1190px var(--star-color),
+      119px 1549px var(--star-color),
+      2px 1709px var(--star-color),
+      122px 387px var(--star-color),
+      27px 1971px var(--star-color),
+      319px 717px var(--star-color),
+      386px 355px var(--star-color),
+      273px 1538px var(--star-color),
+      209px 307px var(--star-color),
+      151px 555px var(--star-color),
+      18px 992px var(--star-color),
+      315px 1101px var(--star-color),
+      194px 323px var(--star-color),
+      40px 840px var(--star-color),
+      176px 1753px var(--star-color),
+      367px 1494px var(--star-color),
+      363px 1111px var(--star-color),
+      375px 617px var(--star-color),
+      186px 1569px var(--star-color),
+      320px 1853px var(--star-color),
+      300px 539px var(--star-color),
+      141px 281px var(--star-color),
+      40px 456px var(--star-color),
+      323px 778px var(--star-color),
+      272px 443px var(--star-color);
+  }
+
+  .stars-medium {
+    --star-size: 2px;
+    --star-duration: 100s;
+    --star-shadows:
+      11px 1117px var(--star-color),
+      270px 279px var(--star-color),
+      258px 1404px var(--star-color),
+      286px 561px var(--star-color),
+      393px 1765px var(--star-color),
+      147px 881px var(--star-color),
+      218px 52px var(--star-color),
+      171px 745px var(--star-color),
+      137px 244px var(--star-color),
+      137px 1080px var(--star-color),
+      72px 1475px var(--star-color),
+      102px 121px var(--star-color),
+      97px 274px var(--star-color),
+      52px 1872px var(--star-color),
+      111px 289px var(--star-color),
+      237px 557px var(--star-color),
+      302px 252px var(--star-color),
+      207px 748px var(--star-color),
+      255px 1402px var(--star-color),
+      74px 1772px var(--star-color),
+      251px 1790px var(--star-color),
+      96px 1688px var(--star-color),
+      221px 1795px var(--star-color),
+      274px 387px var(--star-color),
+      174px 376px var(--star-color),
+      70px 564px var(--star-color),
+      43px 1870px var(--star-color),
+      18px 1932px var(--star-color),
+      355px 939px var(--star-color),
+      383px 758px var(--star-color),
+      379px 488px var(--star-color),
+      214px 465px var(--star-color),
+      179px 905px var(--star-color),
+      6px 290px var(--star-color),
+      87px 1459px var(--star-color),
+      88px 1455px var(--star-color),
+      54px 649px var(--star-color),
+      181px 842px var(--star-color),
+      3px 857px var(--star-color),
+      292px 1201px var(--star-color),
+      104px 1683px var(--star-color),
+      314px 739px var(--star-color);
+  }
+
+  .stars-large {
+    --star-size: 3px;
+    --star-duration: 150s;
+    --star-shadows:
+      200px 981px var(--star-color),
+      132px 1039px var(--star-color),
+      254px 1072px var(--star-color),
+      264px 297px var(--star-color),
+      52px 1299px var(--star-color),
+      235px 1082px var(--star-color),
+      299px 1086px var(--star-color),
+      250px 1415px var(--star-color),
+      170px 1641px var(--star-color),
+      56px 1129px var(--star-color),
+      324px 1895px var(--star-color),
+      326px 1605px var(--star-color),
+      261px 969px var(--star-color),
+      241px 217px var(--star-color),
+      142px 967px var(--star-color),
+      387px 896px var(--star-color),
+      256px 1427px var(--star-color),
+      345px 1769px var(--star-color),
+      192px 1921px var(--star-color),
+      287px 1272px var(--star-color);
+  }
+}
+
+@keyframes sidebar-stars-rise {
+  from { transform: translateY(0); }
+
+  to { transform: translateY(-2000px); }
+}
+
+:root[data-bs-theme='dark'] #sidebar {
+  --notebook-line: #3a5660;
+  --notebook-paper: #243031a2;
+  --notebook-margin: #935351;
+
+  .background-swatch { border-color: rgb(255 255 255 / 35%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #sidebar .background-swatch,
+  #sidebar .sidebar-wallpaper::before,
+  #sidebar .sidebar-wallpaper::after,
+  #sidebar .sidebar-stars { animation: none !important; transition: none !important; }
+
+  :root[data-sidebar-background='bookshelf'] #sidebar .sidebar-wallpaper::before {
+    clip-path: none;
+    opacity: 1;
+  }
+
+  :root[data-sidebar-background='bookshelf'] #sidebar .sidebar-wallpaper::after { display: none; }
+}

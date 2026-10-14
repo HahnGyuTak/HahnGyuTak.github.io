@@ -1,7 +1,14 @@
 /** Typing Animation / Interactive Grid Pattern adapted from Magic UI (MIT). */
+import { initSidebarOcean } from './sidebar-ocean';
+import { initSidebarPool } from './sidebar-pool';
+import { initSidebarGhost } from './sidebar-ghost';
+
 export function initSidebarDesign() {
   const sidebar = document.getElementById('sidebar');
   if (!sidebar) return;
+  initSidebarOcean(sidebar);
+  initSidebarPool(sidebar);
+  initSidebarGhost(sidebar);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const typing = sidebar.querySelector('.tagline-typing');
   if (typing && !reducedMotion.matches) {
@@ -43,13 +50,30 @@ export function initSidebarDesign() {
   let frame = 0;
   let x = 0;
   let y = 0;
+  const root = document.documentElement;
+  const choices = sidebar.querySelectorAll('input[name="sidebar-background"]');
+  const backgrounds = new Set([...choices].map((choice) => choice.value));
+  if (!backgrounds.has(root.dataset.sidebarBackground)) root.dataset.sidebarBackground = 'grid';
+  const clearHighlight = () => {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    grid.classList.remove('is-hovered');
+  };
+  for (const choice of choices) {
+    choice.checked = choice.value === root.dataset.sidebarBackground;
+    choice.addEventListener('change', () => {
+      if (!choice.checked) return;
+      root.dataset.sidebarBackground = choice.value;
+      clearHighlight();
+      try { localStorage.setItem('sidebar-background', choice.value); } catch { /* Session only. */ }
+    });
+  }
   sidebar.addEventListener('pointermove', (event) => {
     if (!finePointer.matches) return;
     // Keep the grid highlight from appearing as an extra hover spot in glass controls.
-    if (event.target.closest('.sidebar-bottom, .sidebar-theme')) {
-      cancelAnimationFrame(frame);
-      frame = 0;
-      grid.classList.remove('is-hovered');
+    if (root.dataset.sidebarBackground !== 'grid' ||
+        event.target.closest('.sidebar-background-picker, .sidebar-nav-glass, .sidebar-bottom, .sidebar-theme')) {
+      clearHighlight();
       return;
     }
     const bounds = sidebar.getBoundingClientRect();
@@ -63,9 +87,5 @@ export function initSidebarDesign() {
       frame = 0;
     });
   });
-  sidebar.addEventListener('pointerleave', () => {
-    cancelAnimationFrame(frame);
-    frame = 0;
-    grid.classList.remove('is-hovered');
-  });
+  sidebar.addEventListener('pointerleave', clearHighlight);
 }

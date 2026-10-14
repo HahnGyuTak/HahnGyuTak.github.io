@@ -1,0 +1,31 @@
+<!-- Ghost Jam by Vanessa Victorino: assets/licenses/ui-components.txt. -->
+<div class="sidebar-ghost-region">
+  <div class="ghost-stage">
+    <i class="fas fa-ghost ghost-fallback" role="img" aria-label="유령"></i>
+    <img
+      class="ghost-dancer"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      data-src="https://res.cloudinary.com/dgwef8ttm/image/upload/v1791324727/ghost-dancing_gsctoo.gif"
+      width="480"
+      height="480"
+      alt="춤추는 유령"
+      decoding="async"
+      hidden
+    >
+  </div>
+  <div class="ghost-player">
+    <button type="button" class="ghost-play" aria-label="Ghost Jam 재생" aria-pressed="false" title="Ghost Jam 재생">
+      <i class="fas fa-play" aria-hidden="true"></i>
+    </button>
+    <div class="ghost-track">
+      <div class="ghost-track-info">
+        <span class="ghost-state" role="status" aria-live="polite">READY</span>
+        <span class="ghost-time" aria-hidden="true">0:00 / --:--</span>
+      </div>
+      <div class="ghost-progress" role="progressbar" aria-label="Ghost Jam 재생 진행" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0:00 / --:--">
+        <span class="ghost-progress-fill"></span>
+      </div>
+    </div>
+  </div>
+  <audio class="ghost-audio" preload="none" loop data-src="https://assets.codepen.io/11990995/Technotronic_Pump-Up-the-Jam-trimmed.wav"></audio>
+</div>

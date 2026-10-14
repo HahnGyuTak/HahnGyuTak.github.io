@@ -2,5 +2,9 @@
 <script>
   try {
     document.documentElement.toggleAttribute('data-sidebar-collapsed', localStorage.getItem('sidebar-collapsed') === 'true');
+    const sidebarBackground = localStorage.getItem('sidebar-background');
+    if (['plain', 'grid', 'bookshelf', 'notebook', 'stars', 'ocean', 'pool', 'ghost'].includes(sidebarBackground)) {
+      document.documentElement.dataset.sidebarBackground = sidebarBackground;
+    }
   } catch { /* Use the default layout when storage is unavailable. */ }
 </script>

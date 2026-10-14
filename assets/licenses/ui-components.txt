@@ -12,13 +12,42 @@ CSS Minimal Dark Mode Toggle Button (sun/moon artwork and slider)
 Copyright (c) Greg Vissing (gvissing)
 https://codepen.io/gvissing/pen/OJvxoJq
 
-Liquid Glass Apple (sidebar contact dock)
+Liquid Glass Apple (sidebar navigation and contact dock)
 Copyright (c) Witters Amand (wprod)
 https://codepen.io/wprod/pen/raVpwJL
 
 File tree (categories)
 Copyright (c) Paulo Nunes (syndicatefx)
 https://codepen.io/syndicatefx/pen/GRxBXNg
+
+Bookshelf / flashlight pattern (sidebar wallpaper)
+Copyright (c) 2026 Cobp (Fabio Cobb)
+https://uiverse.io/Cobp/great-fish-97
+
+Notebook pattern (sidebar wallpaper)
+Copyright (c) 2026 escannord
+https://uiverse.io/escannord/big-shrimp-86
+
+Parallax star field (sidebar wallpaper)
+Copyright (c) 2026 jaykdoe
+https://uiverse.io/jaykdoe/tasty-dragon-12
+
+TIDES - A Cinematic Canvas Ocean (sidebar wallpaper and time slider)
+Copyright (c) 2026 Chathura Jayasanka
+https://codepen.io/Chathura-Jayasanka/pen/emBMYWJ
+
+Realistic Interactive Pool Water (sidebar water region)
+Copyright (c) Temple (tmpl)
+https://codepen.io/tmpl/pen/YPZQxeN
+
+Ghost Jam (sidebar ghost stage and player code/style)
+Copyright (c) Vanessa Victorino (grauconejo13)
+https://codepen.io/editor/grauconejo13/pen/01a1120b-8069-772e-9139-f4f217333ef3
+
+Three.js 0.180.0 (local dependency of the pool effect)
+Copyright (c) 2010-2025 three.js authors
+https://github.com/mrdoob/three.js
+Full MIT notice: assets/licenses/three.txt
 
 Accordion (details/summary)
 Copyright (c) connah99
@@ -53,3 +82,9 @@ https://github.com/simple-icons/simple-icons
 https://creativecommons.org/publicdomain/zero/1.0/
 
 Project icon: Startpage SVG supplied by the blog owner.
+
+Ghost Jam external media references, retained from the original Pen:
+GIF: https://res.cloudinary.com/dgwef8ttm/image/upload/v1791324727/ghost-dancing_gsctoo.gif
+Audio: Technotronic - Pump Up the Jam (excerpt)
+https://assets.codepen.io/11990995/Technotronic_Pump-Up-the-Jam-trimmed.wav
+The code's MIT notice above does not license these third-party media assets.

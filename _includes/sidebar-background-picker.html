@@ -1,0 +1,21 @@
+<!-- Only the sidebar wallpaper changes; foreground controls follow the site theme. -->
+<div class="sidebar-background-picker" role="radiogroup" aria-label="사이드바 배경">
+  {% assign sidebar_backgrounds = 'plain|기본 배경,grid|격자 배경,bookshelf|책장 배경,notebook|노트 배경,stars|별빛 배경,ocean|바다 배경,pool|수영장 배경,ghost|유령 배경' | split: ',' %}
+  {% for background in sidebar_backgrounds %}
+    {% assign background_parts = background | split: '|' %}
+    {% assign background_id = background_parts[0] %}
+    {% assign background_name = background_parts[1] %}
+    <input
+      type="radio"
+      class="visually-hidden"
+      name="sidebar-background"
+      id="sidebar-background-{{ background_id }}"
+      value="{{ background_id }}"
+      aria-label="{{ background_name }}"
+      {% if background_id == 'grid' %}checked{% endif %}
+    >
+    <label for="sidebar-background-{{ background_id }}" title="{{ background_name }}">
+      <span class="background-swatch swatch-{{ background_id }}" aria-hidden="true">{% if background_id == 'ghost' %}<i class="fas fa-ghost"></i>{% endif %}</span>
+    </label>
+  {% endfor %}
+</div>

@@ -21,11 +21,6 @@
 }
 
 #sidebar {
-  background-image:
-    linear-gradient(var(--sidebar-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--sidebar-grid) 1px, transparent 1px);
-  background-size: 28px 28px;
-
   .sidebar-theme {
     display: flex;
     align-items: center;

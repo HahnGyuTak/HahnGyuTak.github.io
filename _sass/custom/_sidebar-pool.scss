@@ -1,0 +1,47 @@
+/* Realistic Interactive Pool Water by Temple (MIT): assets/licenses/ui-components.txt. */
+#sidebar {
+  .sidebar-pool-region { display: none; }
+
+  .sidebar-pool-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    cursor: crosshair;
+
+    &:focus-visible { outline: 2px solid var(--link-color); outline-offset: -3px; border-radius: inherit; }
+
+    &[hidden] { display: none; }
+  }
+
+  .swatch-pool {
+    background-color: #438f91;
+    background-image: radial-gradient(ellipse at 30% 40%, rgb(216 255 249 / 75%), transparent 60%),
+      repeating-linear-gradient(0deg, transparent 0 3px, rgb(25 78 80 / 40%) 3px 4px),
+      repeating-linear-gradient(90deg, transparent 0 3px, rgb(25 78 80 / 40%) 3px 4px);
+  }
+}
+
+:root[data-sidebar-background='pool'] #sidebar {
+  > nav { display: flex; flex-shrink: 0; }
+
+  nav > ul { flex-shrink: 0; margin-bottom: 16px; }
+
+  .sidebar-pool-region {
+    position: relative;
+    display: block;
+    flex: 1;
+    min-height: 140px;
+    margin: 0 2rem 12px;
+    border: 1px solid var(--sidebar-glass-highlight);
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #438f91;
+    background-image: radial-gradient(ellipse at 30% 40%, rgb(216 255 249 / 45%), transparent 60%),
+      repeating-linear-gradient(0deg, transparent 0 7px, rgb(25 78 80 / 35%) 7px 8px),
+      repeating-linear-gradient(90deg, transparent 0 7px, rgb(25 78 80 / 35%) 7px 8px);
+    box-shadow: var(--sidebar-glass-shadow);
+  }
+}
