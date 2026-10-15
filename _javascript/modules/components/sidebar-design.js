@@ -2,6 +2,7 @@
 import { initSidebarOcean } from './sidebar-ocean';
 import { initSidebarPool } from './sidebar-pool';
 import { initSidebarGhost } from './sidebar-ghost';
+import { initSidebarBackgroundOrbit } from './sidebar-background-orbit';
 
 export function initSidebarDesign() {
   const sidebar = document.getElementById('sidebar');
@@ -9,6 +10,7 @@ export function initSidebarDesign() {
   initSidebarOcean(sidebar);
   initSidebarPool(sidebar);
   initSidebarGhost(sidebar);
+  initSidebarBackgroundOrbit(sidebar);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const typing = sidebar.querySelector('.tagline-typing');
   if (typing && !reducedMotion.matches) {

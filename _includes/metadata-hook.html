@@ -6,5 +6,9 @@
     if (['plain', 'grid', 'bookshelf', 'notebook', 'stars', 'ocean', 'pool', 'ghost'].includes(sidebarBackground)) {
       document.documentElement.dataset.sidebarBackground = sidebarBackground;
     }
+    const sidebarRotation = Number(localStorage.getItem('sidebar-background-rotation'));
+    if (Number.isFinite(sidebarRotation)) {
+      document.documentElement.style.setProperty('--sidebar-background-rotation', ((sidebarRotation % 360 + 360) % 360) + 'deg');
+    }
   } catch { /* Use the default layout when storage is unavailable. */ }
 </script>

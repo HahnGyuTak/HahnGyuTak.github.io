@@ -8,16 +8,18 @@
     <span class="sidebar-stars stars-large"></span>
   </div>
   <div class="sidebar-grid" aria-hidden="true"><span class="grid-highlight"></span></div>
-  {% include sidebar-background-picker.html %}
   <header class="profile-wrapper">
-    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {%- if site.avatar != empty and site.avatar -%}
-        {%- capture avatar_url -%}
-          {% include media-url.html src=site.avatar %}
-        {%- endcapture -%}
-        <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {%- endif -%}
-    </a>
+    <div class="sidebar-avatar-orbit">
+      <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+        {%- if site.avatar != empty and site.avatar -%}
+          {%- capture avatar_url -%}
+            {% include media-url.html src=site.avatar %}
+          {%- endcapture -%}
+          <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        {%- endif -%}
+      </a>
+      {% include sidebar-background-picker.html %}
+    </div>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0" aria-label="{{ site.tagline | escape }}"><span class="tagline-typing" aria-hidden="true" data-text="{{ site.tagline | escape }}">{{ site.tagline }}</span></p>
