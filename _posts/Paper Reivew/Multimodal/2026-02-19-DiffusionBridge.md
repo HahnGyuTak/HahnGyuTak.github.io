@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] DiffusionBridge"
+description: "텍스트 embedding으로 학습한 diffusion prior를 이용해 CLIP의 이미지·텍스트 modality gap을 줄이는 Diffusion Bridge의 학습과 zero-shot 이미지 캡셔닝 과정을 정리한다."
 date: 2026-02-19 16:10:43 +/-0000
 categories: [Paper Review, Multi Modal, CVPR2025]
 tags: [Multi-modal, CLIP, Diffusion, VLM, CVPR]    

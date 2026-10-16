@@ -66,6 +66,9 @@
       {{- title | append: ' | ' -}}
     {%- endunless -%}
     {{- site.title -}}
+    {%- if page.layout == 'home' and paginator.page > 1 -%}
+      {{- ' | 글 목록 ' | append: paginator.page -}}
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}

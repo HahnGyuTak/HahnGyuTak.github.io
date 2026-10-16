@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] UniCompress"
+description: "UniCompress가 local·global image token을 압축하고 복원해 이미지 이해와 생성에 함께 사용하는 구조, 학습 과정과 압축률에 따른 실험을 정리한다."
 date: 2026-10-13 11:50:00 +0900
 categories: [Paper Review, Multi Modal, CVPR2026]
 tags: [Multi-modal, Token Compression, Pruning, Visual Understanding, Image Generation, Autoregressive, Image Tokenizer]

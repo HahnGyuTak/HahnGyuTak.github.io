@@ -1,5 +1,6 @@
 ---
 title: "[Paper Review] UMM Transferability"
+description: "통합 멀티모달 모델에서 이미지 이해와 생성 사이의 능력 전달을 살펴본다. 시각 표현과 transformer의 공유 구조, counting·공간 관계·문자 인식 실험과 학습 전략을 정리한다."
 date: 2026-10-12 19:33:53 +0900
 categories: [Paper Review, Multi Modal, ECCV2026]
 tags: [UMM, Multi-modal, Transfer Learning, Image Generation, Visual Understanding, LoRA, Discrete Diffusion]
