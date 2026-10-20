@@ -111,6 +111,26 @@ def check(build, origin):
     post_urls = expected - {origin + "/", origin + "/archives/"}
     errors.extend(check_internal_links(build, origin, post_urls, robots))
 
+    # The independent posts sitemap must describe exactly the same public posts.
+    posts_sitemap = ET.parse(build / "sitemap-posts.xml").getroot()
+    if posts_sitemap.tag != root.tag:
+        errors.append("Posts sitemap must be a namespaced urlset")
+    post_entries = posts_sitemap.findall("s:url", namespace)
+    post_locations = [entry.findtext("s:loc", default="", namespaces=namespace) for entry in post_entries]
+    if len(post_locations) != len(set(post_locations)):
+        errors.append("Posts sitemap contains duplicate URLs")
+    errors.extend(f"Missing posts sitemap URL: {url}" for url in sorted(post_urls - set(post_locations)))
+    errors.extend(f"Unexpected posts sitemap URL: {url}" for url in sorted(set(post_locations) - post_urls))
+    if origin + "/sitemap-posts.xml" not in (robots.site_maps() or []):
+        errors.append("robots.txt does not advertise the posts sitemap")
+    original_dates = {
+        url: entry.findtext("s:lastmod", namespaces=namespace)
+        for entry, url in zip(entries, urls)
+    }
+    for entry, url in zip(post_entries, post_locations):
+        if entry.findtext("s:lastmod", namespaces=namespace) != original_dates.get(url):
+            errors.append(f"Posts sitemap lastmod differs from main sitemap: {url}")
+
     for entry, url in zip(entries, urls):
         parsed = urlsplit(url)
         if not url.startswith(origin + "/") or parsed.query or parsed.fragment:
@@ -154,7 +174,7 @@ def main():
         parser.exit(1, f"SEO check failed: {error}\n")
     if errors:
         parser.exit(1, "\n".join(errors) + "\n")
-    print(f"SEO check passed: {posts} posts, {count} sitemap URLs; canonical URLs, robots rules, and HTML discovery paths valid.")
+    print(f"SEO check passed: {posts} posts, {count} main sitemap URLs; posts sitemap, canonical URLs, robots rules, and HTML discovery paths valid.")
 
 
 if __name__ == "__main__":
