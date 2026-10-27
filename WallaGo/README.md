@@ -34,3 +34,8 @@ npx wrangler pages deploy /tmp/wallbaduk-pages --project-name wallbaduk --branch
 
 Wrangler의 Cloudflare 로그인이 필요하다. GitHub 소스 반영과 Cloudflare 배포는
 별도 작업이며, 현재는 직접 업로드 방식으로 배포한다.
+
+패키징은 지정한 Pages 도메인의 루트용 `robots.txt`와 `sitemap.xml`도 생성한다.
+사이트맵에는 대표 소개 페이지 하나만 포함하며, 스토어 도메인이나 기존 블로그의
+URL은 넣지 않는다. 저장소 루트의 GitHub Pages용 검색 파일은 변경하지 않는다.
+공개 후 두 파일이 HTML fallback이 아닌 텍스트와 XML로 열리는지 확인한다.

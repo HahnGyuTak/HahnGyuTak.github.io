@@ -6,6 +6,7 @@ import json
 import shutil
 from pathlib import Path
 from urllib.parse import urlsplit
+from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_FILES = [
@@ -52,13 +53,23 @@ def package(output: Path, base_url: str) -> None:
     (output / '_headers').write_text(
         '/*\n  Referrer-Policy: strict-origin-when-cross-origin\n'
     )
+    # These files belong at the Pages domain root, not the GitHub blog root.
+    (output / 'robots.txt').write_text(
+        f'User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n'
+    )
+    (output / 'sitemap.xml').write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f'  <url><loc>{escape(base_url)}/</loc></url>\n'
+        '</urlset>\n'
+    )
     assert 'hahngyutak.github.io' not in html.lower()
     assert 'figmacapture' not in html
     data = json.loads((output / 'assets/replay.json').read_text())
     assert len(data['frames']) == 9
     print(json.dumps({
         'output': str(output), 'baseUrl': base_url,
-        'files': len(PUBLIC_FILES) + 1,
+        'files': len(PUBLIC_FILES) + 3,
         'bytes': sum(p.stat().st_size for p in output.rglob('*') if p.is_file()),
         'replayFrames': len(data['frames']),
     }, ensure_ascii=False))
