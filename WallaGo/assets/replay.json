@@ -1,0 +1,1361 @@
+{
+  "schemaVersion": 1,
+  "boardSize": 7,
+  "source": {
+    "kind": "historical_recorded_online",
+    "gameIndex": 16,
+    "totalTurns": 30,
+    "startTurnIndex": 22,
+    "participants": "human_or_bot_unverified",
+    "rules": "OnlineGameState.apply / EndEvaluator",
+    "note": "Selected candidate 1. Anonymous historical online record; participant type unverified."
+  },
+  "frames": [
+    {
+      "step": 0,
+      "turnNumber": 22,
+      "actor": null,
+      "action": null,
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A"
+        },
+        "turn": "B",
+        "phase": "move",
+        "revision": 48,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 1,
+      "turnNumber": 23,
+      "actor": "B",
+      "action": {
+        "from": [
+          5,
+          2
+        ],
+        "to": [
+          4,
+          3
+        ],
+        "wall": "left"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 4,
+            "col": 3
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B"
+        },
+        "turn": "A",
+        "phase": "move",
+        "revision": 50,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 2,
+      "turnNumber": 24,
+      "actor": "A",
+      "action": {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          3
+        ],
+        "wall": "bottom"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 4,
+            "col": 3
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A"
+        },
+        "turn": "B",
+        "phase": "move",
+        "revision": 52,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 3,
+      "turnNumber": 25,
+      "actor": "B",
+      "action": {
+        "from": [
+          4,
+          3
+        ],
+        "to": [
+          5,
+          2
+        ],
+        "wall": "bottom"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B"
+        },
+        "turn": "A",
+        "phase": "move",
+        "revision": 54,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 4,
+      "turnNumber": 26,
+      "actor": "A",
+      "action": {
+        "from": [
+          3,
+          6
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "wall": "top"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B",
+          "5,6:top": "A",
+          "4,6:bottom": "A"
+        },
+        "turn": "B",
+        "phase": "move",
+        "revision": 56,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 5,
+      "turnNumber": 27,
+      "actor": "B",
+      "action": {
+        "from": [
+          5,
+          2
+        ],
+        "to": [
+          5,
+          4
+        ],
+        "wall": "right"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 5,
+            "col": 4
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 6
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B",
+          "5,6:top": "A",
+          "4,6:bottom": "A",
+          "5,4:right": "B",
+          "5,5:left": "B"
+        },
+        "turn": "A",
+        "phase": "move",
+        "revision": 58,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 6,
+      "turnNumber": 28,
+      "actor": "A",
+      "action": {
+        "from": [
+          5,
+          6
+        ],
+        "to": [
+          4,
+          5
+        ],
+        "wall": "left"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 5,
+            "col": 4
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B",
+          "5,6:top": "A",
+          "4,6:bottom": "A",
+          "5,4:right": "B",
+          "5,5:left": "B",
+          "4,5:left": "A",
+          "4,4:right": "A"
+        },
+        "turn": "B",
+        "phase": "move",
+        "revision": 60,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 7,
+      "turnNumber": 29,
+      "actor": "B",
+      "action": {
+        "from": [
+          5,
+          4
+        ],
+        "to": [
+          6,
+          4
+        ],
+        "wall": "right"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 6,
+            "col": 4
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B",
+          "5,6:top": "A",
+          "4,6:bottom": "A",
+          "5,4:right": "B",
+          "5,5:left": "B",
+          "4,5:left": "A",
+          "4,4:right": "A",
+          "6,4:right": "B",
+          "6,5:left": "B"
+        },
+        "turn": "A",
+        "phase": "move",
+        "revision": 62,
+        "lastMoved": null,
+        "result": null
+      }
+    },
+    {
+      "step": 8,
+      "turnNumber": 30,
+      "actor": "A",
+      "action": {
+        "from": [
+          5,
+          1
+        ],
+        "to": [
+          6,
+          2
+        ],
+        "wall": "right"
+      },
+      "state": {
+        "pieces": [
+          {
+            "owner": "A",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 6,
+            "col": 4
+          },
+          {
+            "owner": "B",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "owner": "A",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "owner": "A",
+            "row": 6,
+            "col": 2
+          },
+          {
+            "owner": "B",
+            "row": 1,
+            "col": 4
+          }
+        ],
+        "walls": {
+          "3,5:bottom": "B",
+          "4,5:top": "B",
+          "4,4:top": "A",
+          "3,4:bottom": "A",
+          "2,3:bottom": "B",
+          "3,3:top": "B",
+          "2,2:right": "A",
+          "2,3:left": "A",
+          "1,2:bottom": "B",
+          "2,2:top": "B",
+          "1,3:left": "A",
+          "1,2:right": "A",
+          "1,5:left": "B",
+          "1,4:right": "B",
+          "2,4:left": "A",
+          "2,3:right": "A",
+          "1,4:bottom": "B",
+          "2,4:top": "B",
+          "2,5:top": "A",
+          "1,5:bottom": "A",
+          "2,6:left": "B",
+          "2,5:right": "B",
+          "3,6:top": "A",
+          "2,6:bottom": "A",
+          "2,1:right": "B",
+          "2,2:left": "B",
+          "3,1:top": "A",
+          "2,1:bottom": "A",
+          "4,2:top": "B",
+          "3,2:bottom": "B",
+          "2,0:right": "A",
+          "2,1:left": "A",
+          "1,0:bottom": "B",
+          "2,0:top": "B",
+          "4,0:top": "A",
+          "3,0:bottom": "A",
+          "4,1:left": "B",
+          "4,0:right": "B",
+          "4,2:left": "A",
+          "4,1:right": "A",
+          "5,2:top": "B",
+          "4,2:bottom": "B",
+          "5,1:right": "A",
+          "5,2:left": "A",
+          "4,3:left": "B",
+          "4,2:right": "B",
+          "3,3:bottom": "A",
+          "4,3:top": "A",
+          "5,2:bottom": "B",
+          "6,2:top": "B",
+          "5,6:top": "A",
+          "4,6:bottom": "A",
+          "5,4:right": "B",
+          "5,5:left": "B",
+          "4,5:left": "A",
+          "4,4:right": "A",
+          "6,4:right": "B",
+          "6,5:left": "B",
+          "6,2:right": "A",
+          "6,3:left": "A"
+        },
+        "turn": "B",
+        "phase": "ended",
+        "revision": 64,
+        "lastMoved": null,
+        "result": {
+          "winner": "a",
+          "reason": "separatedRegions",
+          "aCount": 25,
+          "bCount": 24
+        }
+      }
+    }
+  ],
+  "final": {
+    "winner": "A",
+    "aCount": 25,
+    "bCount": 24,
+    "territories": [
+      {
+        "owner": "B",
+        "waveStartMs": 0,
+        "cells": [
+          {
+            "row": 0,
+            "col": 0,
+            "distance": 0
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "distance": 1
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "distance": 2
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "distance": 1
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "distance": 2
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "distance": 3
+          },
+          {
+            "row": 0,
+            "col": 3,
+            "distance": 3
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "distance": 4
+          },
+          {
+            "row": 2,
+            "col": 3,
+            "distance": 5
+          },
+          {
+            "row": 1,
+            "col": 4,
+            "distance": 5
+          },
+          {
+            "row": 0,
+            "col": 4,
+            "distance": 4
+          },
+          {
+            "row": 0,
+            "col": 5,
+            "distance": 5
+          },
+          {
+            "row": 1,
+            "col": 5,
+            "distance": 6
+          },
+          {
+            "row": 1,
+            "col": 6,
+            "distance": 7
+          },
+          {
+            "row": 0,
+            "col": 6,
+            "distance": 6
+          },
+          {
+            "row": 2,
+            "col": 6,
+            "distance": 8
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "distance": 3
+          }
+        ]
+      },
+      {
+        "owner": "A",
+        "waveStartMs": 860,
+        "cells": [
+          {
+            "row": 2,
+            "col": 0,
+            "distance": 0
+          },
+          {
+            "row": 3,
+            "col": 0,
+            "distance": 1
+          },
+          {
+            "row": 3,
+            "col": 1,
+            "distance": 2
+          },
+          {
+            "row": 4,
+            "col": 1,
+            "distance": 3
+          },
+          {
+            "row": 5,
+            "col": 1,
+            "distance": 4
+          },
+          {
+            "row": 6,
+            "col": 1,
+            "distance": 5
+          },
+          {
+            "row": 6,
+            "col": 0,
+            "distance": 4
+          },
+          {
+            "row": 5,
+            "col": 0,
+            "distance": 3
+          },
+          {
+            "row": 4,
+            "col": 0,
+            "distance": 2
+          },
+          {
+            "row": 6,
+            "col": 2,
+            "distance": 6
+          },
+          {
+            "row": 3,
+            "col": 2,
+            "distance": 3
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "distance": 4
+          },
+          {
+            "row": 3,
+            "col": 3,
+            "distance": 4
+          },
+          {
+            "row": 3,
+            "col": 4,
+            "distance": 5
+          },
+          {
+            "row": 2,
+            "col": 4,
+            "distance": 6
+          },
+          {
+            "row": 2,
+            "col": 5,
+            "distance": 7
+          },
+          {
+            "row": 3,
+            "col": 5,
+            "distance": 6
+          },
+          {
+            "row": 3,
+            "col": 6,
+            "distance": 7
+          },
+          {
+            "row": 4,
+            "col": 6,
+            "distance": 8
+          },
+          {
+            "row": 4,
+            "col": 5,
+            "distance": 7
+          },
+          {
+            "row": 5,
+            "col": 5,
+            "distance": 8
+          },
+          {
+            "row": 6,
+            "col": 5,
+            "distance": 9
+          },
+          {
+            "row": 6,
+            "col": 6,
+            "distance": 10
+          },
+          {
+            "row": 5,
+            "col": 6,
+            "distance": 9
+          }
+        ]
+      },
+      {
+        "owner": "A",
+        "waveStartMs": 1800,
+        "cells": [
+          {
+            "row": 4,
+            "col": 2,
+            "distance": 0
+          }
+        ]
+      },
+      {
+        "owner": "B",
+        "waveStartMs": 2340,
+        "cells": [
+          {
+            "row": 4,
+            "col": 3,
+            "distance": 0
+          },
+          {
+            "row": 5,
+            "col": 3,
+            "distance": 1
+          },
+          {
+            "row": 6,
+            "col": 3,
+            "distance": 2
+          },
+          {
+            "row": 6,
+            "col": 4,
+            "distance": 3
+          },
+          {
+            "row": 5,
+            "col": 4,
+            "distance": 2
+          },
+          {
+            "row": 4,
+            "col": 4,
+            "distance": 1
+          },
+          {
+            "row": 5,
+            "col": 2,
+            "distance": 2
+          }
+        ]
+      }
+    ],
+    "wave": {
+      "cellStaggerMs": 40,
+      "resultAtMs": 3200
+    }
+  }
+}

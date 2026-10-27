@@ -1,0 +1,38 @@
+.review-page{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.review-header{max-width:1180px;margin:0 auto;padding:16px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.review-header .text-link{font-size:13px;color:var(--muted)}
+.review-layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.9fr);gap:64px;padding:24px 36px}
+.review-info h1{font-size:36px;line-height:1.3;letter-spacing:-1.5px;margin:14px 0 18px}
+.review-intro{font-size:15px;line-height:1.8;color:#c6c9c0}
+.candidate-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.candidate-card{min-width:0;padding:15px 16px;text-align:left;border:1px solid var(--line);border-radius:5px;background:transparent;transition:border-color .15s,background .15s}
+.candidate-card:hover{border-color:#7b806f}
+.candidate-card[aria-pressed=true]{background:#23271f;border-color:var(--brass)}
+.candidate-card .candidate-number{font-size:11px;color:var(--muted)}
+.candidate-card strong{display:block;margin:6px 0 9px;font-size:15px;font-weight:600}
+.candidate-card .candidate-score{font-size:13px;font-variant-numeric:tabular-nums;color:var(--brass)}
+.candidate-card .candidate-length{float:right;font-size:12px;color:var(--muted)}
+.candidate-detail{padding-top:24px}
+.candidate-detail h2{font-size:19px;font-weight:600;letter-spacing:-.5px;line-height:1.5}
+.candidate-detail>p{font-size:14px;line-height:1.8;color:#c6c9c0;margin-top:8px;word-break:keep-all}
+.candidate-detail .source-note{font-size:11px;color:var(--muted);margin-top:12px}
+.review-note{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;line-height:1.8;color:var(--muted)}
+.review-player{position:sticky;top:18px;align-self:start;display:flex;flex-direction:column;align-items:center;min-width:0}
+.review-device.phone-device{width:min(100%,390px,calc((100svh - 280px)*.527893));min-width:200px}
+.review-device .phone-screen{position:absolute;left:11.54599%;top:5.9917355%;width:76.908023%;height:88.0165289%;overflow:hidden;border-radius:10.687% / 4.9296%;background:#fff;color:#25251f;isolation:isolate}
+.playback-panel{width:100%;max-width:370px;margin-top:10px}
+.view-options{display:flex;justify-content:center;gap:4px;margin-bottom:16px}
+.view-options button{padding:7px 12px;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--muted);font-size:12px}
+.view-options button[aria-pressed=true]{background:#282d24;border-color:var(--line);color:var(--paper)}
+.playback-status{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.playback-status output{color:var(--paper)}
+#review-progress{width:100%;margin:8px 0 10px;accent-color:var(--brass);height:22px;cursor:ew-resize}
+.playback-buttons{display:flex;gap:6px;align-items:stretch}
+.playback-buttons button,.playback-buttons select{min-height:38px;padding:5px 11px;border:1px solid #52584b;border-radius:4px;background:transparent;color:var(--paper);font-size:12px}
+.playback-buttons .play-button{flex:1;background:var(--brass);border-color:var(--brass);color:#191c17;min-width:70px;font-weight:600}
+.playback-buttons button:disabled{opacity:.4;cursor:default}
+.playback-buttons select{max-width:80px;background:var(--ink);padding-inline:5px}
+.playback-hint{margin-top:10px;font-size:11px;line-height:1.6;color:var(--muted);text-align:center}
+@media(max-width:800px){.review-header{padding:20px 24px}.review-layout{gap:24px;padding:28px 24px;grid-template-columns:minmax(0,1fr) minmax(260px,.8fr)}.review-info h1{font-size:30px}.candidate-list{grid-template-columns:1fr;margin-top:22px}.candidate-card{padding:12px 14px}.candidate-card strong{display:inline;margin-left:10px;font-size:14px}.candidate-card .candidate-score{display:block;margin:10px 0 0}.candidate-card .candidate-length{margin-top:-17px}.review-intro{font-size:13px}.desktop-break{display:none}}
+@media(max-width:580px){.review-header{padding:18px 20px}.review-layout{display:flex;flex-direction:column;padding:24px 20px 36px;gap:22px}.review-info h1{font-size:28px;margin:10px 0 14px}.review-info h1 br{display:none}.review-intro{font-size:13px}.candidate-list{grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}.candidate-card strong{display:block;margin:5px 0 8px}.candidate-card .candidate-length{margin-top:-16px}.candidate-card .candidate-score{font-size:12px}.candidate-detail{padding-top:18px}.candidate-detail h2{font-size:17px}.candidate-detail>p{font-size:13px}.review-note{display:none}.review-player{position:static;width:100%}.review-device.phone-device{width:min(100%,310px);min-width:0}.playback-panel{max-width:350px}.view-options button{min-height:40px}.playback-buttons button,.playback-buttons select{min-height:44px}}
+@media(prefers-reduced-motion:reduce){.candidate-card{transition:none}}

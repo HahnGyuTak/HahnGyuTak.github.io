@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#141714">
+  <title>기보 네 판 비교 — Wall바둑</title>
+  <link rel="icon" href="./assets/brand/wallbaduk-app-icon.png">
+  <link rel="stylesheet" href="./landing.css">
+  <link rel="stylesheet" href="./scripts/board-replay.css">
+  <link rel="stylesheet" href="./replays.css">
+  <script type="module" src="./scripts/replays.js"></script>
+</head>
+<body class="review-page">
+  <header class="review-header"><a class="brand" href="./">Wall바둑</a><a class="text-link" href="./">홍보 페이지로</a></header>
+  <main class="review-layout">
+    <div class="review-info">
+      <p class="eyebrow">기보 비교 미리보기</p>
+      <h1>어떤 한 판이 <br>마음에 드나요?</h1>
+      <p class="review-intro">네 판을 번갈아 보세요. 같은 폰 화면에서<br class="desktop-break"> 마지막 8수와 승리 연출을 비교할 수 있습니다.</p>
+      <div class="candidate-list" aria-label="비교할 기보 선택" data-candidates></div>
+      <section class="candidate-detail" aria-live="polite">
+        <h2 data-game-title>기보를 불러오고 있습니다.</h2>
+        <p data-game-description></p>
+        <p class="source-note" data-source></p>
+      </section>
+      <p class="review-note">메인 페이지에는 후보 1이 적용되어 있습니다.<br>다른 후보도 계속 비교해볼 수 있습니다.</p>
+    </div>
+    <section class="review-player" aria-label="선택한 기보 재생">
+      <div class="review-device phone-device">
+        <div class="phone-screen" data-review-board><p class="replay-loading" role="status">기보를 불러오고 있습니다.</p></div>
+        <img class="phone-bezel" src="./assets/phone-bezel.png" width="1533" height="2904" alt="" aria-hidden="true">
+      </div>
+      <div class="playback-panel">
+        <div class="view-options" role="group" aria-label="재생 구간">
+          <button type="button" data-mode="ending" aria-pressed="true">마지막 8수</button>
+          <button type="button" data-mode="full" aria-pressed="false">전체 기보</button>
+        </div>
+        <div class="playback-status"><span data-range-label>마지막 8수</span><output for="review-progress" data-turn-count>—</output></div>
+        <input id="review-progress" type="range" min="0" max="8" value="0" step="1" aria-label="기보 진행" disabled>
+        <div class="playback-buttons">
+          <button type="button" data-prev aria-label="이전 수" disabled>←</button>
+          <button type="button" class="play-button" data-play disabled>재생</button>
+          <button type="button" data-next aria-label="다음 수" disabled>→</button>
+          <button type="button" data-final disabled>결과 보기</button>
+          <select aria-label="재생 속도" data-speed><option value="1500">보통</option><option value="2500">느리게</option><option value="800">빠르게</option></select>
+        </div>
+        <p class="playback-hint" data-playback-hint>재생을 누르거나 슬라이더를 움직여 보세요.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

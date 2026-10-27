@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'ReplayChungju';
+  src: url('../assets/game/ChungjuKimSaeng.otf') format('opentype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.replay-root {
+  width: 100%;
+  height: 100%;
+  color: #171512;
+  background: #fff;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.replay-root *,
+.replay-root *::before,
+.replay-root *::after {
+  box-sizing: border-box;
+}
+
+.replay-app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 18cqw 0 5cqw;
+  overflow: hidden;
+  background: #fff;
+  font-family: 'ReplayChungju', 'Apple SD Gothic Neo', sans-serif;
+  line-height: 1.2;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.replay-header {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.replay-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 6.5cqw;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #12100e;
+  letter-spacing: 0;
+}
+
+.replay-back {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  display: block;
+  width: 10cqw;
+  height: 10cqw;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+
+.replay-match {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+  margin-top: 5.5%;
+  padding: 0 5%;
+  color: #191610;
+  font-size: 4.5cqw;
+  font-weight: 700;
+}
+
+.replay-player {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1.8cqw;
+}
+
+.replay-player-b {
+  justify-content: flex-end;
+}
+
+.replay-avatar {
+  display: block;
+  width: 6.4cqw;
+  height: 6.4cqw;
+  object-fit: contain;
+}
+
+.replay-versus {
+  font-family: inherit;
+  font-size: 4cqw;
+}
+
+.replay-stage {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 3% 0 7%;
+  gap: 8cqw;
+}
+
+.replay-scoreboard {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 3% 2%;
+  gap: 2.3cqw;
+  border: 2px solid #b68f40;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 1px 4px #0008;
+}
+
+.replay-clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2cqw;
+  color: #69f0ae;
+  text-shadow: 0 0 12px #69f0ae99;
+  white-space: nowrap;
+}
+
+.replay-seconds {
+  font-size: 12cqw;
+  line-height: .85;
+}
+
+.replay-seconds-unit {
+  font-size: 6cqw;
+}
+
+.replay-clock-icon {
+  display: block;
+  width: 5.5cqw;
+  height: 5.5cqw;
+  margin-right: .8cqw;
+  object-fit: contain;
+  filter: invert(88%) sepia(25%) saturate(1081%) hue-rotate(85deg) brightness(103%) contrast(88%);
+}
+
+.replay-instruction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8cqw;
+  color: #d4af37;
+  font-size: 4.8cqw;
+  font-weight: 700;
+  white-space: nowrap;
+  text-shadow: 0 0 4px #0008;
+}
+
+.replay-turn-stone {
+  display: block;
+  width: 6cqw;
+  height: 6cqw;
+  object-fit: contain;
+}
+
+.replay-board {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.replay-board-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Flutter: cell = board / (7 + .35 * 2), grid padding = cell * .35. */
+.replay-grid {
+  position: absolute;
+  inset: 4.54545455%;
+}
+
+.replay-cell {
+  position: absolute;
+  width: 14.28571429%;
+  height: 14.28571429%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.replay-cell-a {
+  background: #ffcdd2;
+}
+
+.replay-cell-b {
+  background: #bbdefb;
+}
+
+.replay-cell-visible {
+  opacity: 1;
+}
+
+.replay-walls,
+.replay-stones {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.replay-wall {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  object-fit: fill;
+}
+
+.replay-wall-horizontal {
+  width: 14.28571429%;
+  height: 1.71428571%;
+}
+
+.replay-wall-vertical {
+  width: 1.71428571%;
+  height: 14.28571429%;
+}
+
+.replay-wall-new {
+  animation: replay-wall-appear 160ms ease-out 300ms both;
+}
+
+.replay-piece {
+  position: absolute;
+  display: block;
+  width: 8.57142857%;
+  height: 8.57142857%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  transition: left 300ms ease, top 300ms ease;
+}
+
+.replay-result {
+  position: absolute;
+  inset: 4.54545455%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3cqw;
+  color: #fff;
+  background: #0008;
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  animation: replay-result-appear 180ms ease-out both;
+}
+
+.replay-result[hidden] {
+  display: none;
+}
+
+.replay-winner {
+  display: flex;
+  align-items: center;
+  gap: 2.4cqw;
+}
+
+.replay-winner-stone {
+  width: 10.5cqw;
+  height: 10.5cqw;
+  object-fit: contain;
+}
+
+.replay-victory {
+  font-size: 7.5cqw;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.replay-final-score {
+  display: flex;
+  align-items: center;
+  gap: 1.3cqw;
+  font-size: 6cqw;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.replay-score-stone {
+  width: 8cqw;
+  height: 8cqw;
+  object-fit: contain;
+}
+
+.replay-score-vs {
+  margin-inline: 1.2cqw;
+}
+
+.replay-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes replay-wall-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes replay-result-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .replay-cell,
+  .replay-piece {
+    transition: none;
+  }
+
+  .replay-wall-new,
+  .replay-result {
+    animation: none;
+  }
+}
