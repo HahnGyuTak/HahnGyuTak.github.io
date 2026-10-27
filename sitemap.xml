@@ -7,6 +7,12 @@ permalink: /sitemap.xml
   <url>
     <loc>{{ '/' | absolute_url | xml_escape }}</loc>
   </url>
+  <url>
+    <loc>{{ '/WallaGo/' | absolute_url | xml_escape }}</loc>
+  </url>
+  <url>
+    <loc>{{ '/WallaGo/support_ko.html' | absolute_url | xml_escape }}</loc>
+  </url>
   {% for tab in site.tabs %}
     {% unless tab.sitemap == false %}
     <url>
