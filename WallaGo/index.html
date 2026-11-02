@@ -35,6 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./landing.css">
     <link rel="stylesheet" href="./scripts/board-replay.css">
+    <link rel="stylesheet" href="./skins.css">
     <script type="module" src="./scripts/landing.js"></script>
   </head>
   <body>
@@ -44,6 +45,7 @@
       <nav aria-label="주 메뉴">
         <a class="nav-about" href="#about">게임 소개</a>
         <a class="nav-replay" href="#replay-story">한 판 따라가기</a>
+        <a class="nav-skins" href="#skins">스킨</a>
         <a class="button button-small" href="#download">다운로드</a>
       </nav>
     </header>
@@ -110,6 +112,52 @@
             <button class="text-link replay-restart" type="button" data-replay-restart>처음부터 다시 보기</button>
           </article>
         </div>
+      </section>
+
+      <section class="skins shell" id="skins" aria-labelledby="skins-title">
+        <header class="skins-intro">
+          <p class="eyebrow">04 — 게임말 스킨</p>
+          <h2 id="skins-title">당신의 판,<br>당신의 취향.</h2>
+          <p>말과 벽, 영역까지.<br>마음에 드는 질감으로 한 판을 완성하세요.</p>
+          <a class="text-link" href="#download">앱에서 만나보기</a>
+        </header>
+        <div class="skin-story">
+          <div class="skin-steps">
+            <article class="skin-step" id="skin-theme1" data-skin-step="theme1">
+              <p class="eyebrow">앱 테마</p><h3>기본</h3><p>익숙한 빨강과 파랑.<br>단정한 첫 한 판.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme1/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme1/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+            <article class="skin-step" id="skin-theme4" data-skin-step="theme4">
+              <p class="eyebrow">앱 테마</p><h3>크리스탈</h3><p>빛을 머금은<br>두 가지 크리스탈.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme4/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme4/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+            <article class="skin-step" id="skin-theme2" data-skin-step="theme2">
+              <p class="eyebrow">앱 테마</p><h3>호박·옥</h3><p>따뜻한 호박빛과<br>은은한 옥빛.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme2/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme2/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+            <article class="skin-step" id="skin-theme3" data-skin-step="theme3">
+              <p class="eyebrow">추가 테마 미리보기</p><h3>오닉스 골드</h3><p>짙은 오닉스에<br>금빛을 더한 조합.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme3/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme3/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+            <article class="skin-step" id="skin-theme5" data-skin-step="theme5">
+              <p class="eyebrow">추가 테마 미리보기</p><h3>화염석·빙정석</h3><p>불꽃처럼 선명하게,<br>얼음처럼 차갑게.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme5/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme5/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+            <article class="skin-step" id="skin-theme6" data-skin-step="theme6">
+              <p class="eyebrow">추가 테마 미리보기</p><h3>고려청자·조선백자</h3><p>청자와 백자.<br>차분한 색으로 즐기는 한 판.</p>
+              <div class="skin-pair" aria-hidden="true"><img src="./assets/skins/theme6/playerA.webp" width="128" height="128" loading="lazy" alt=""><img src="./assets/skins/theme6/playerB.webp" width="128" height="128" loading="lazy" alt=""></div>
+            </article>
+          </div>
+          <div class="skin-display">
+            <div class="skin-sticky">
+              <div class="skin-board" data-skin-board aria-label="스킨별 실제 대국 화면"><p class="replay-loading" role="status">테마를 불러오고 있습니다.</p></div>
+              <div class="skin-caption"><output data-skin-name aria-live="polite">기본</output><span data-skin-availability>현재 앱에서 선택 가능</span></div>
+              <div class="skin-choices" role="group" aria-label="미리 볼 스킨" data-skin-choices></div>
+              <p class="skin-scroll-hint">스크롤하거나 테마를 눌러 보세요.</p>
+            </div>
+          </div>
+        </div>
+        <p class="skins-note">추가 테마는 미리보기입니다. 앱에서 선택할 수 있는 테마는 버전에 따라 달라질 수 있습니다.</p>
       </section>
 
       <section class="download shell" id="download" aria-labelledby="download-title">

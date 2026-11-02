@@ -20,7 +20,7 @@ function setReplayStep(step) {
   const turnNumber = replay.state.frame.turnNumber;
   progressInput.setAttribute('aria-valuetext', `${endTurn}수 중 ${turnNumber}수`);
   countOutput.textContent = `${turnNumber} / ${endTurn}수`;
-  hint.textContent = nextStep === totalSteps ? '한 판의 끝. 이제 직접 플레이해보세요.' : '스크롤하며 다음 수를 확인하세요.';
+  hint.textContent = nextStep === totalSteps ? '한 판의 끝. 아래에서 다른 스킨도 만나보세요.' : '스크롤하며 다음 수를 확인하세요.';
   document.querySelectorAll('[data-story-beat]').forEach((beat) => {
     beat.dataset.active = String(Number(beat.dataset.storyBeat) === Math.min(2, Math.floor(nextStep / 3)));
   });
@@ -94,7 +94,10 @@ document.querySelector('[data-year]').textContent = String(new Date().getFullYea
 
 try {
   const { mountBoardReplay } = await import('./board-replay.js');
-  replay = await mountBoardReplay(replayRoot, { dataUrl: './assets/replay.json', assetBase: './assets/game/' });
+  replay = await mountBoardReplay(replayRoot, {
+    dataUrl: './assets/replay.json', assetBase: './assets/game/', onRestart: startReplay,
+    onExit: () => document.querySelector('#download').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth' }),
+  });
   progressInput.max = String(replay.state.totalSteps);
   progressInput.disabled = false;
   currentStep = -1;
@@ -106,3 +109,5 @@ try {
   message.textContent = '대국을 불러오지 못했습니다. 새로고침하면 다시 시도합니다.';
   replayRoot.replaceChildren(message);
 }
+
+import('./skin-showcase.js').then(({ observeSkinShowcase }) => observeSkinShowcase()).catch((error) => console.error('스킨 소개를 불러오지 못했습니다.', error));

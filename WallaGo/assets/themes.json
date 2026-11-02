@@ -1,0 +1,92 @@
+[
+  {
+    "id": "theme1",
+    "name": "기본",
+    "available": true,
+    "assets": {
+      "playerA": "assets/skins/theme1/playerA.webp",
+      "playerB": "assets/skins/theme1/playerB.webp",
+      "wallA_row": "assets/skins/theme1/wallA_row.webp",
+      "wallA_col": "assets/skins/theme1/wallA_col.webp",
+      "wallB_row": "assets/skins/theme1/wallB_row.webp",
+      "wallB_col": "assets/skins/theme1/wallB_col.webp",
+      "territoryA": "assets/skins/theme1/territoryA.webp",
+      "territoryB": "assets/skins/theme1/territoryB.webp"
+    }
+  },
+  {
+    "id": "theme4",
+    "name": "크리스탈",
+    "available": true,
+    "assets": {
+      "playerA": "assets/skins/theme4/playerA.webp",
+      "playerB": "assets/skins/theme4/playerB.webp",
+      "wallA_row": "assets/skins/theme4/wallA_row.webp",
+      "wallA_col": "assets/skins/theme4/wallA_col.webp",
+      "wallB_row": "assets/skins/theme4/wallB_row.webp",
+      "wallB_col": "assets/skins/theme4/wallB_col.webp",
+      "territoryA": "assets/skins/theme4/territoryA.webp",
+      "territoryB": "assets/skins/theme4/territoryB.webp"
+    }
+  },
+  {
+    "id": "theme2",
+    "name": "호박·옥",
+    "available": true,
+    "assets": {
+      "playerA": "assets/skins/theme2/playerA.webp",
+      "playerB": "assets/skins/theme2/playerB.webp",
+      "wallA_row": "assets/skins/theme2/wallA_row.webp",
+      "wallA_col": "assets/skins/theme2/wallA_col.webp",
+      "wallB_row": "assets/skins/theme2/wallB_row.webp",
+      "wallB_col": "assets/skins/theme2/wallB_col.webp",
+      "territoryA": "assets/skins/theme2/territoryA.webp",
+      "territoryB": "assets/skins/theme2/territoryB.webp"
+    }
+  },
+  {
+    "id": "theme3",
+    "name": "오닉스 골드",
+    "available": false,
+    "assets": {
+      "playerA": "assets/skins/theme3/playerA.webp",
+      "playerB": "assets/skins/theme3/playerB.webp",
+      "wallA_row": "assets/skins/theme3/wallA_row.webp",
+      "wallA_col": "assets/skins/theme3/wallA_col.webp",
+      "wallB_row": "assets/skins/theme3/wallB_row.webp",
+      "wallB_col": "assets/skins/theme3/wallB_col.webp",
+      "territoryA": "assets/skins/theme3/territoryA.webp",
+      "territoryB": "assets/skins/theme3/territoryB.webp"
+    }
+  },
+  {
+    "id": "theme5",
+    "name": "화염석·빙정석",
+    "available": false,
+    "assets": {
+      "playerA": "assets/skins/theme5/playerA.webp",
+      "playerB": "assets/skins/theme5/playerB.webp",
+      "wallA_row": "assets/skins/theme5/wallA_row.webp",
+      "wallA_col": "assets/skins/theme5/wallA_col.webp",
+      "wallB_row": "assets/skins/theme5/wallB_row.webp",
+      "wallB_col": "assets/skins/theme5/wallB_col.webp",
+      "territoryA": "assets/skins/theme5/territoryA.webp",
+      "territoryB": "assets/skins/theme5/territoryB.webp"
+    }
+  },
+  {
+    "id": "theme6",
+    "name": "고려청자/조선백자",
+    "available": false,
+    "assets": {
+      "playerA": "assets/skins/theme6/playerA.webp",
+      "playerB": "assets/skins/theme6/playerB.webp",
+      "wallA_row": "assets/skins/theme6/wallA_row.webp",
+      "wallA_col": "assets/skins/theme6/wallA_col.webp",
+      "wallB_row": "assets/skins/theme6/wallB_row.webp",
+      "wallB_col": "assets/skins/theme6/wallB_col.webp",
+      "territoryA": "assets/skins/theme6/territoryA.webp",
+      "territoryB": "assets/skins/theme6/territoryB.webp"
+    }
+  }
+]

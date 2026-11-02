@@ -198,18 +198,21 @@
 
 .replay-cell {
   position: absolute;
-  width: 14.28571429%;
-  height: 14.28571429%;
+  width: calc(100% / 7);
+  height: calc(100% / 7);
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  background-size: 700% 700%;
+  box-shadow: inset 0 0 0 .20cqw #d4af37, inset 0 0 0 .33cqw #0006;
 }
 
 .replay-cell-a {
-  background: #ffcdd2;
+  background-color: #ffcdd2;
+  background-image: var(--region-a);
 }
 
 .replay-cell-b {
-  background: #bbdefb;
+  background-color: #bbdefb;
+  background-image: var(--region-b);
 }
 
 .replay-cell-visible {
@@ -232,26 +235,26 @@
 
 .replay-wall-horizontal {
   width: 14.28571429%;
-  height: 1.71428571%;
+  height: 2.57142857%;
 }
 
 .replay-wall-vertical {
-  width: 1.71428571%;
+  width: 2.57142857%;
   height: 14.28571429%;
 }
 
 .replay-wall-new {
-  animation: replay-wall-appear 160ms ease-out 300ms both;
+  animation: replay-wall-appear 160ms ease-out var(--move-ms, 0ms) both;
 }
 
 .replay-piece {
   position: absolute;
   display: block;
-  width: 8.57142857%;
-  height: 8.57142857%;
+  width: 10.57142857%;
+  height: 10.57142857%;
   object-fit: contain;
   transform: translate(-50%, -50%);
-  transition: left 300ms ease, top 300ms ease;
+  filter: drop-shadow(0 .156cqw .078cqw #000);
 }
 
 .replay-result {
@@ -309,6 +312,13 @@
 .replay-score-vs {
   margin-inline: 1.2cqw;
 }
+
+.replay-result-actions{display:flex;position:relative;justify-content:center;width:90%;max-width:206px;margin-top:2cqw;border:1px solid #b88b43;border-radius:999px;overflow:hidden;background:#26170f var(--result-wood) center/cover;box-shadow:0 2px 5px #0006}
+.replay-result-actions button{flex:1;min-width:0;min-height:36px;padding:5px 4px;border:0;background:transparent;color:#f1e3c4;font-family:'ReplayChungju',sans-serif;font-size:clamp(10px,4.5cqw,14px);white-space:nowrap;cursor:pointer}
+.replay-result-actions button:first-child{color:#e0b56e}
+.replay-result-actions button+button{border-left:1px solid #a57c3c}
+.replay-result-actions button:hover{background:#ffffff12}
+.replay-result-actions button:focus-visible{outline:2px solid #ffe0a8;outline-offset:-3px}
 
 .replay-sr-only {
   position: absolute;
