@@ -23,7 +23,10 @@ PUBLIC_FILES = [
     'assets/game/playerA.png', 'assets/game/playerB.png',
     'assets/game/wallA_col.png', 'assets/game/wallA_row.png',
     'assets/game/wallB_col.png', 'assets/game/wallB_row.png',
+    'skins.css', 'scripts/replay-motion.js', 'scripts/skin-showcase.js', 'assets/themes.json',
 ]
+for theme in json.loads((ROOT / 'assets/themes.json').read_text()):
+    PUBLIC_FILES.extend(theme['assets'].values())
 
 
 def package(output: Path, base_url: str) -> None:
