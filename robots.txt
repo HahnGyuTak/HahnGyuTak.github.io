@@ -9,4 +9,5 @@ Allow: /
 
 Sitemap: https://hahngyutak.github.io/sitemap.xml
 Sitemap: https://hahngyutak.github.io/sitemap-posts.xml
+Sitemap: https://project-zhhpr.vercel.app/sitemap.xml
 
