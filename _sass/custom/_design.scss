@@ -169,6 +169,8 @@ article[data-paper-review] .content {
   }
 
   a.paper-resource-button {
+    --resource-accent: #46546b;
+
     display: inline-flex;
     position: relative;
     overflow: hidden;
@@ -185,6 +187,12 @@ article[data-paper-review] .content {
     &[data-resource='arxiv'] { --resource-accent: #b31b1b; }
 
     &[data-resource='github'] { --resource-accent: #181717; }
+
+    &[data-resource='cvf'] { --resource-accent: #25476b; }
+
+    &[data-resource='acl-anthology'] { --resource-accent: #234c65; }
+
+    &[data-resource='hugging-face'] { --resource-accent: #72531c; }
 
     &[data-resource='project'] { --resource-accent: #000000; }
 
@@ -215,6 +223,16 @@ article[data-paper-review] .content {
       flex-shrink: 0;
 
       svg { width: 16px; height: 16px; fill: currentcolor; }
+
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        object-fit: contain;
+        background: #ffffff;
+        border-radius: 4px;
+      }
     }
 
     .resource-label {
@@ -227,12 +245,6 @@ article[data-paper-review] .content {
     &:hover,
     &:focus-visible {
       .resource-label { color: #ffffff; }
-
-      &[data-resource='arxiv'] { --resource-accent: #b31b1b; }
-
-      &[data-resource='github'] { --resource-accent: #181717; }
-
-      &[data-resource='project'] { --resource-accent: #000000; }
 
       .resource-decor { transform: translateX(0); }
     }

@@ -18,8 +18,6 @@ typora-root-url: ../../../
 >
 > [[arXiv](https://arxiv.org/abs/2607.04423v1)] [[Github](https://github.com/cvlab-kaist/UMM_Transferability)] [[Project Page](https://cvlab-kaist.github.io/UMM_Transferability/)]
 
-이 글의 본문·수치·그림은 **arXiv v1**을 기준으로 정리한다. 학회 정보는 공식 프로젝트 페이지와 arXiv의 발표 정보를 확인했다.
-
 ## **Background**
 
 ### **Unified Multimodal Models**

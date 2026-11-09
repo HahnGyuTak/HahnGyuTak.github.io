@@ -18,8 +18,6 @@ typora-root-url: ../../../
 >
 > [[arXiv](https://arxiv.org/abs/2603.11320v1)] [[Paper](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_UniCompress_Token_Compression_for_Unified_Vision-Language_Understanding_and_Generation_CVPR_2026_paper.html)]
 
-이 글의 방법·수치·그림은 제공된 **arXiv v1**을 기준으로 정리한다. 학회 정보는 CVF 공식 페이지에서 확인했다.
-
 ## **Background**
 
 ### **Unified Multimodal Model에서 Image Token의 역할**

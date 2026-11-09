@@ -83,6 +83,16 @@ https://creativecommons.org/publicdomain/zero/1.0/
 
 Project icon: Startpage SVG supplied by the blog owner.
 
+Paper resource favicons (original site artwork):
+CVF Open Access: https://openaccess.thecvf.com/favicon.ico
+ACL Anthology: https://aclanthology.org/aclicon.ico
+Hugging Face: https://huggingface.co/favicon.ico
+VIRAL: https://cvlab-kaist.github.io/VIRAL/images/viral_robot.png
+AnyGPT: https://junzhan2000.github.io/AnyGPT.github.io/static/images/logo.png
+UniReal: https://xavierchen34.github.io/UniReal-Page/static/images/logo.png
+ReAct project page icon: Search by Maxim Basinski Premium from Flaticon.
+https://www.flaticon.com/free-icon/search_954591
+
 Ghost Jam external media references, retained from the original Pen:
 GIF: https://res.cloudinary.com/dgwef8ttm/image/upload/v1791324727/ghost-dancing_gsctoo.gif
 Audio: Technotronic - Pump Up the Jam (excerpt)

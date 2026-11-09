@@ -1,0 +1,29 @@
+# Match the URL's host, optionally followed by the project path without a trailing slash.
+arxiv.org:
+  kind: arxiv
+github.com:
+  kind: github
+openaccess.thecvf.com:
+  kind: cvf
+  favicon: true
+aclanthology.org:
+  kind: acl-anthology
+  favicon: true
+huggingface.co:
+  kind: hugging-face
+  favicon: true
+cvlab-kaist.github.io/VIRAL:
+  kind: viral
+  favicon: true
+junzhan2000.github.io/AnyGPT.github.io:
+  kind: anygpt
+  favicon: true
+xavierchen34.github.io/UniReal-Page:
+  kind: unireal
+  favicon: true
+react-vl.github.io:
+  kind: react
+  favicon: true
+  credit:
+    text: ReAct project icon designed by Maxim Basinski Premium from Flaticon
+    url: https://www.flaticon.com/free-icon/search_954591
