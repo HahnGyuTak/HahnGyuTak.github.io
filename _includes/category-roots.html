@@ -1,0 +1,10 @@
+{%- assign root_categories = '' | split: '' -%}
+{%- for post in site.posts -%}
+  {%- assign root_category = post.categories | first -%}
+  {%- if root_category -%}
+    {%- unless root_categories contains root_category -%}
+      {%- assign root_categories = root_categories | push: root_category -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign root_categories = root_categories | sort -%}

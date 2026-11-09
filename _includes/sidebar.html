@@ -26,6 +26,7 @@
   </header>
   <!-- .profile-wrapper -->
 
+  {% include category-roots.html %}
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- home -->
@@ -37,10 +38,15 @@
       </li>
       <!-- the real tabs -->
       {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+        {% assign has_category_menu = false %}
+        {% if tab.layout == 'categories' and root_categories.size > 0 %}
+          {% assign has_category_menu = true %}
+        {% endif %}
+        <li class="nav-item{% if tab.url == page.url or has_category_menu and page.layout == 'category' %} active{% endif %}">
+          {% if has_category_menu %}<div class="sidebar-category-row">{% endif %}
           <a
             href="{% if tab.url == '/abouts/' %}https://hahngt.github.io{% else %}{{ tab.url | relative_url }}{% endif %}"
-            class="nav-link sidebar-nav-glass"
+            class="nav-link{% unless has_category_menu %} sidebar-nav-glass{% endunless %}"
             {% if tab.url == page.url %}aria-current="page"{% endif %}
             {% if tab.url == '/abouts/' %}target="_blank" rel="noopener noreferrer"{% endif %}
           >
@@ -49,6 +55,20 @@
 
             <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
           </a>
+          {% if has_category_menu %}
+              <button type="button" class="sidebar-category-toggle" aria-label="대분류 목록" aria-expanded="true" aria-controls="sidebar-category-links" hidden>
+                <svg class="sidebar-category-chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                  <path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <ul id="sidebar-category-links" class="sidebar-category-links">
+              {% for root_category in root_categories %}
+                {% capture category_url %}/categories/{{ root_category | slugify | url_encode }}/{% endcapture %}
+                <li><a href="{{ category_url | relative_url }}"{% if category_url == page.url %} aria-current="page"{% endif %}>{{ root_category | escape }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </li>
         <!-- .nav-item -->
       {% endfor %}

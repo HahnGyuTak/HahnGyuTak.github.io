@@ -56,6 +56,18 @@ export function initSidebarDesign() {
   const choices = sidebar.querySelectorAll('input[name="sidebar-background"]');
   const backgrounds = new Set([...choices].map((choice) => choice.value));
   if (!backgrounds.has(root.dataset.sidebarBackground)) root.dataset.sidebarBackground = 'grid';
+  const categoryToggle = sidebar.querySelector('.sidebar-category-toggle');
+  const categoryLinks = sidebar.querySelector('#sidebar-category-links');
+  const setCategoriesExpanded = (expanded) => {
+    if (!categoryToggle || !categoryLinks) return;
+    categoryToggle.setAttribute('aria-expanded', String(expanded));
+    categoryLinks.hidden = !expanded;
+  };
+  if (categoryToggle && categoryLinks) {
+    setCategoriesExpanded(root.dataset.sidebarBackground !== 'pool');
+    categoryToggle.hidden = false;
+    categoryToggle.addEventListener('click', () => setCategoriesExpanded(categoryLinks.hidden));
+  }
   const clearHighlight = () => {
     cancelAnimationFrame(frame);
     frame = 0;
@@ -66,6 +78,7 @@ export function initSidebarDesign() {
     choice.addEventListener('change', () => {
       if (!choice.checked) return;
       root.dataset.sidebarBackground = choice.value;
+      setCategoriesExpanded(choice.value !== 'pool');
       clearHighlight();
       try { localStorage.setItem('sidebar-background', choice.value); } catch { /* Session only. */ }
     });
@@ -74,7 +87,7 @@ export function initSidebarDesign() {
     if (!finePointer.matches) return;
     // Keep the grid highlight from appearing as an extra hover spot in glass controls.
     if (root.dataset.sidebarBackground !== 'grid' ||
-        event.target.closest('.sidebar-background-picker, .sidebar-nav-glass, .sidebar-bottom, .sidebar-theme')) {
+        event.target.closest('.sidebar-background-picker, .sidebar-nav-glass, .sidebar-category-row, .sidebar-category-links, .sidebar-bottom, .sidebar-theme')) {
       clearHighlight();
       return;
     }

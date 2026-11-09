@@ -29,6 +29,9 @@
 
   nav > ul { flex-shrink: 0; margin-bottom: 16px; }
 
+  /* Match the saved background before the category toggle is initialized. */
+  .sidebar-category-row:has(.sidebar-category-toggle[hidden]) + .sidebar-category-links { display: none; }
+
   .sidebar-pool-region {
     position: relative;
     display: block;
