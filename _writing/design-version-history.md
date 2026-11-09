@@ -13,6 +13,8 @@
 | 사이드바 선택형 디자인 | `design/2026-10-14` | `e910a1d` | 아래의 사이드바 변경 28개 파일과 빌드 산출물을 하나의 독립 커밋으로 저장한 버전이다. |
 | 원형 배치 수정 전 | `design/before-orbit-2026-10-15` | `4d123c6` | 직전 배포 상태. 사진 위의 가로 배열과 8개 배경 선택 기능, 기존 테마·연락처 디자인을 포함한다. |
 | 원형 배치·관성 회전 | `design/2026-10-15` | `c1b625d` | 사진 둘레의 원형 배치, 드래그·관성 회전, 각도 저장과 관련 빌드 산출물 13개 파일을 하나의 독립 커밋으로 저장했다. |
+| 대분류 메뉴 수정 전 | `design/before-sidebar-categories-2026-11-09` | `d4db7cd` | Engineering 글과 기존 원형 사이드바를 포함한 배포 직전 버전이다. |
+| 사이드바 대분류 메뉴 | `design/2026-11-09` | `13da651` | 소개 문구와 Home 사이의 여백을 줄이고, Categories 옆에 대분류 펼침 버튼을 추가했다. |
 
 사용자 지정 디자인에 포함된 변경:
 
@@ -38,6 +40,28 @@
 
 검증: JavaScript·SCSS 검사, `npm run build`, production Jekyll 빌드, SEO 검사, 147개 HTML 파일의 내부 링크·이미지·스크립트 검사 통과. 홈·카테고리·리뷰 글의 사이드바와 PC·모바일 배치를 확인했다. 초기 GIF 자리에는 유효한 투명 이미지 주소를 두어 배포 검사를 통과하고, 유령 배경을 선택하면 실제 GIF를 불러온다.
 
+## 2026-11-09 사이드바 대분류 메뉴
+
+Categories 글자는 전체 카테고리 페이지로 이동하고, 옆의 화살표는 대분류 목록을 열고 닫는다. 대분류는 게시물의 첫 카테고리에서 가져오며 각 링크는 해당 글 목록으로 이동한다. 목록은 수영장 배경에서만 접힌 상태로 시작한다.
+
+이 버전만 되돌리면 원형 배경 선택과 Engineering 글, SEO 설정은 그대로 유지된다. 다른 로컬 작업이 있다면 먼저 별도 커밋이나 stash로 보관한 뒤 진행한다. 디자인 커밋에 JavaScript 번들도 포함되어 함께 복원된다.
+
+```bash
+git revert --no-commit design/2026-11-09
+git diff --cached --check
+JEKYLL_ENV=production bundle exec jekyll build
+bundle exec jekyll serve
+```
+
+로컬에서 확인한 뒤 복원 커밋을 만든다. 사용자가 복원본의 푸시를 승인하면 원격에 반영한다.
+
+```bash
+git commit -m "revert(ui): restore the sidebar before the category menu"
+git push origin main
+```
+
+임시 Git 복사본에서 `13da651`을 되돌린 파일 트리가 배포 직전 커밋 `d4db7cd`와 정확히 일치하는 것을 확인했다. 이 안내 문서는 별도 커밋에 저장하므로 디자인을 되돌려도 유지된다.
+
 ## 2026-10-15 원형 배치·관성 회전
 
 - 8개 배경 선택 버튼을 사진 중심에서 반지름 74px, 45도 간격으로 배치한다. 사진과 아이콘의 방향은 고정한다.
@@ -49,6 +73,8 @@
 검증: JavaScript·SCSS 검사, `npm run build`, production Jekyll 빌드, SEO 검사와 147개 HTML 파일의 내부 링크·이미지·스크립트 검사를 통과했다. 실제 브라우저에서 양방향 회전, 자연 감속·정지, 다시 잡기, 8개 배경 선택, 키보드 조작, 사진 고정과 새로고침 후 각도 유지를 확인했다. PC 및 375px·390px 모바일 크기와 라이트·다크 모드에서 배치와 스크롤을 확인했다. 모바일 관성 측정에서는 속도가 약 166도/초에서 28도/초로 감소한 후 정지했다. 별도 로직 검사에서는 30·60·120Hz 시간 간격에서 감속 결과가 일관됨을 확인했다.
 
 ### 원형 배치만 되돌려 가로 배열로 복원
+
+2026-11-09 버전도 적용되어 있다면 위 절의 대분류 메뉴 복원을 먼저 진행한다. 두 커밋이 같은 JavaScript 번들을 바꾸므로 최신 버전부터 되돌린다.
 
 다른 작업이 있다면 먼저 별도 커밋이나 stash로 보관한다. 다음 명령은 `c1b625d`만 되돌리므로 8개 배경, 기존 사이드바 버튼·테마 스타일과 이후의 글·SEO 변경을 보존한다.
 
@@ -105,7 +131,7 @@ git push origin main
 아래 명령은 모든 디자인 수정이 적용된 최신 버전을 기준으로 한다. 이미 되돌린 커밋은 `revert` 목록에서 제외한다.
 
 ```bash
-git revert --no-commit design/2026-10-15 design/2026-10-14 design/2026-10-13.1 design/2026-10-13
+git revert --no-commit design/2026-11-09 design/2026-10-15 design/2026-10-14 design/2026-10-13.1 design/2026-10-13
 npm run build
 git add -- _sass/vendors/_bootstrap.scss assets/js/dist/categories.min.js assets/js/dist/commons.min.js assets/js/dist/home.min.js assets/js/dist/misc.min.js assets/js/dist/page.min.js assets/js/dist/post.min.js
 git diff --cached --check
@@ -133,6 +159,7 @@ git revert --no-commit design/2026-10-13.1
 git diff design/before-2026-10-13 design/2026-10-13
 git diff design/before-sidebar-2026-10-14 design/2026-10-14
 git diff design/before-orbit-2026-10-15 design/2026-10-15
+git diff design/before-sidebar-categories-2026-11-09 design/2026-11-09
 git log --oneline --decorate
 ```
 
