@@ -23,7 +23,8 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Ruby 3.2.2 has a prebuilt package for this runner.
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
