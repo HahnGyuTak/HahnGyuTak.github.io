@@ -1,0 +1,55 @@
+.guide {
+  max-width: 760px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.guide-intro,
+.guide-section {
+  padding-block: clamp(36px, 6vw, 70px);
+}
+
+.guide h1 {
+  margin-top: 0;
+  font-size: clamp(34px, 6vw, 58px);
+  letter-spacing: -.05em;
+}
+
+.guide h2 {
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.45;
+  letter-spacing: -.04em;
+}
+
+.guide h3 {
+  margin: 30px 0 8px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.guide p,
+.guide li {
+  margin-top: 12px;
+  color: #c9ccc3;
+}
+
+.guide ol {
+  margin: 18px 0 0;
+  padding-inline-start: 1.4em;
+}
+
+.guide strong {
+  color: var(--paper);
+}
+
+.guide-section {
+  border-top: 1px solid var(--line);
+}
+
+.guide-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 22px;
+}

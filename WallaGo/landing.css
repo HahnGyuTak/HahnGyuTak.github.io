@@ -31,6 +31,7 @@ h1{margin:20px 0 23px;font-size:64px;line-height:1.22;font-weight:700;letter-spa
 .text-link{display:inline-flex;width:max-content;padding:8px 0;border:0;border-bottom:1px solid #a7ab9f;background:transparent;font-size:15px;font-weight:500;line-height:1.55;transition:color .18s,border-color .18s}
 .text-link:hover{color:var(--brass);border-color:var(--brass)}
 .video-feature{margin-top:40px}
+.video-guide-link{margin-top:12px}
 .video-trigger{position:relative;display:block;width:100%;padding:0;overflow:hidden;border:1px solid #42463d;border-radius:5px;background:#080b09;text-align:left}
 .video-trigger img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:opacity .2s}
 .video-trigger:hover img{opacity:.82}

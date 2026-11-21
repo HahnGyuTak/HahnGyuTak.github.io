@@ -9,8 +9,12 @@ from urllib.parse import urlsplit
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[1]
+INDEXED_PAGES = {
+    'index.html': '/',
+    'devils-plan-wall-baduk/index.html': '/devils-plan-wall-baduk/',
+}
 PUBLIC_FILES = [
-    'index.html', 'landing.css', 'style.css',
+    *INDEXED_PAGES, 'devils-plan-wall-baduk/guide.css', 'landing.css', 'style.css',
     'replays.html', 'replays.css', 'scripts/replays.js', 'assets/replays/candidates.json',
     'support_ko.html', 'support_en.html', 'privacy.html',
     'scripts/landing.js', 'scripts/board-replay.js', 'scripts/board-replay.css',
@@ -45,14 +49,16 @@ def package(output: Path, base_url: str) -> None:
         destination = output / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / relative, destination)
-    index = output / 'index.html'
-    html = index.read_text()
-    html = html.replace('https://hahngyutak.github.io/WallaGo', base_url)
-    html = html.replace('https://wallbaduk.pages.dev', base_url)
-    canonical = f'<link rel="canonical" href="{base_url}/">'
-    if 'rel="canonical"' not in html:
-        html = html.replace('</head>', f'    {canonical}\n  </head>')
-    index.write_text(html)
+    for relative, route in INDEXED_PAGES.items():
+        page = output / relative
+        html = page.read_text(encoding='utf-8')
+        html = html.replace('https://hahngyutak.github.io/WallaGo', base_url)
+        html = html.replace('https://wallbaduk.pages.dev', base_url)
+        canonical = f'<link rel="canonical" href="{base_url}{route}">'
+        assert canonical in html, f'Canonical does not match {relative}'
+        assert 'hahngyutak.github.io' not in html.lower()
+        assert 'figmacapture' not in html
+        page.write_text(html, encoding='utf-8')
     (output / '_headers').write_text(
         '/*\n  Referrer-Policy: strict-origin-when-cross-origin\n'
     )
@@ -60,14 +66,16 @@ def package(output: Path, base_url: str) -> None:
     (output / 'robots.txt').write_text(
         f'User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n'
     )
+    urls = ''.join(
+        f'  <url><loc>{escape(base_url + route)}</loc></url>\n'
+        for route in INDEXED_PAGES.values()
+    )
     (output / 'sitemap.xml').write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f'  <url><loc>{escape(base_url)}/</loc></url>\n'
+        f'{urls}'
         '</urlset>\n'
     )
-    assert 'hahngyutak.github.io' not in html.lower()
-    assert 'figmacapture' not in html
     data = json.loads((output / 'assets/replay.json').read_text())
     assert len(data['frames']) == 9
     print(json.dumps({
