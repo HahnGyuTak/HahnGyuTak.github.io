@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>WallBaduk 개인정보처리방침</h1>
-<p>Wall바둑 / WallBaduk / WallaGo · 개발자 ImTak · 개정 적용일 2026년 11월 3일</p>
+<p>Wall바둑 / WallBaduk / WallaGo · 개발자 ImTak · 개정일 2026년 11월 22일</p>
 <nav aria-label="Policy navigation"><a href="#account-deletion">계정 및 데이터 삭제 요청</a><a href="#english" lang="en">English</a><a href="support_ko.html">앱 지원</a></nav>
 <section class="notice" id="account-deletion">
 <h2>계정 및 데이터 삭제 요청</h2>
@@ -27,11 +27,15 @@
 <tr><td>Firebase 사용자 ID, 로그인 제공자 ID, 인증 정보. Google·Apple 로그인 시 제공되는 이메일·표시 이름. 익명 로그인은 이메일이 필요하지 않습니다.</td><td>로그인, 계정 연결, 접근 권한 확인, 계정 삭제 처리</td></tr>
 <tr><td>직접 입력한 닉네임, 계정 생성·접속 시각, 점수·승패·순위</td><td>프로필 표시, 상대방 식별, 순위 및 전적 제공</td></tr>
 <tr><td>온라인 매칭·방 참가 정보, 말 배치·이동·벽 설치 명령, 대국 상태·시각·결과</td><td>온라인 대국 진행, 재접속 복구, 시간 초과 판정, 점수 중복 반영 방지</td></tr>
+<tr><td>호환 버전에서 자동 수집하는 분석용 기보. 대국 규칙·모드·인원, 피스 배치·이동, 벽 설치·부수기, 시간 초과, 결과, 해당하는 경우 AI 난이도</td><td>게임 이용 경험과 규칙·대국 진행 개선, AI 상대 개발·학습·평가</td></tr>
 <tr><td>일반 AI 대전 Sedol의 계정 연결 기보, 모델·탐색 및 품질 정보, 일별 업로드 건수</td><td>수순·결과 검증, 중복 및 수신 한도 관리, 유저 승률 집계. 상세 내용은 아래를 참고해 주세요.</td></tr>
-<tr><td>기존에 저장된 구매 상품 ID와 소유 권한·구매 이력</td><td>기존 계정과 구매 기록 보존. 이번 버전에서는 새 유료 결제와 구매 복원을 제공하지 않습니다.</td></tr>
+<tr><td>구매 상품 ID, 스토어 영수증·거래 식별정보, 소유 권한 및 구매 이력</td><td>앱 내 구매 검증, 구입한 상품 지급과 복원, 중복 지급 방지 및 구매 기록 보존</td></tr>
 <tr><td>지원 이메일에 사용자가 보내는 연락처와 문의 내용</td><td>문제 해결, 본인 확인 및 개인정보 권리 요청 처리</td></tr>
 </tbody></table>
 <p>네트워크 연결·인증·보안을 위해 서비스 제공업체가 IP 주소 등 기술 정보를 처리할 수 있습니다. 앱에서 결제 카드 번호를 수집하지 않습니다.</p>
+<h3 id="replay-analysis">분석용 기보 자동 수집</h3>
+<p>자동 수집이 적용되는 버전은 3.9.0 빌드 63부터입니다. 기능이 활성화되면 해당 버전에서 새로 시작한 온라인 대전, 한 기기 대전, AI 대전의 기보를 자동으로 기록합니다. 온라인 대전은 모든 실제 참가자가 호환 버전을 사용하는 판을 대상으로 합니다. 한 기기 대전과 AI 대전은 기기에 기보를 먼저 저장하고, 인터넷에 연결되고 게임 계정이 인증되면 전송합니다.</p>
+<p>수순과 대국 결과는 이용 경험을 개선하고 AI 상대를 개발·학습·평가하는 데 사용합니다. 분석용 기보는 Oracle 서버의 별도 저장소에 보관하며 다른 이용자에게 공개하지 않습니다. 분석용 기보에는 계정 ID, 닉네임, 이메일, 방 코드, 원본 대국 ID, 정확한 대국 시각을 담지 않습니다. 분석 기록은 서버의 운영 저장소에서 90일 기준으로 정리합니다. 아래의 계정 연결 Sedol 기록과 전적에는 각자의 처리 목적과 삭제 절차를 적용합니다.</p>
 <h3>Sedol 기보와 승률 통계</h3>
 <p>일반 AI 대전의 Sedol 난이도에서 정상 완료한 유효 대국의 전체 수순과 결과를 기록합니다. 기록에는 말 배치·이동·벽 설치 순서, 사용자 진영, 시작·완료 시각, 앱 버전, AI 모델·탐색 버전과 계산 상한, 대체 수 사용·시간 초과 등의 품질 정보가 포함됩니다. 대국 시작 시 이용 중인 Firebase 계정의 사용자 ID에 연결되며 익명 계정도 포함됩니다. 닉네임·이메일은 기보 본문에 넣지 않지만, 사용자 ID에 연결된 원본이므로 익명 통계와는 다릅니다.</p>
 <p>완료 기보는 먼저 기기에 저장한 뒤 계정 인증을 거쳐 서버에 전송합니다. 오프라인이면 나중에 같은 계정으로 전송을 재시도하며, 다른 계정의 기록으로 옮기지 않습니다. 중도 이탈, 다른 난이도, 온라인 AI 상대 대국은 이 Sedol 기보 수집에 포함되지 않습니다. 네트워크·저장 용량·검증 및 수신 한도 때문에 모든 대국의 저장을 보장하지는 않습니다.</p>
@@ -41,16 +45,17 @@
 <p>계정에 연결된 Sedol 원본 기보는 순위표나 다른 이용자에게 공개하지 않습니다. 앱에 표시하는 Sedol 승률은 사용자 ID나 개별 기보를 포함하지 않는 누적 통계입니다.</p>
 <ul>
 <li><strong>Google Firebase:</strong> Firebase Authentication으로 익명·Google·Apple 로그인을 처리하고, Cloud Firestore에 프로필·전적·기존 구매 기록과 대국 상태, 계정에 연결된 Sedol 원본 기보·일별 업로드 건수 및 사용자 ID 없는 누적 통계를 저장합니다. <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 및 보안 안내</a></li>
-<li><strong>Cloudflare:</strong> Workers 및 Durable Objects에서 Firebase 인증 토큰을 검증하고, 온라인 매칭·게임 규칙·시간·결과·삭제 요청과 Sedol 기보의 인증·검증·저장 요청 및 통계 조회를 처리합니다. 필요한 사용자 ID와 대국 명령·상태를 처리하며, 기존 Firebase 계정을 다른 계정으로 이전하지 않습니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보처리방침</a></li>
-<li><strong>Apple·Google:</strong> 사용자가 선택한 소셜 로그인 제공자가 자체 정책에 따라 로그인 정보를 처리합니다.</li>
+<li><strong>Oracle Cloud Infrastructure:</strong> 게임 서버를 운영합니다. 온라인 매칭·대국 진행·재접속·결과·삭제 요청과 기보 수신·검증·보관을 처리합니다. 대국 진행에 필요한 정보와 분석용 기보는 분리해 저장합니다.</li>
+<li><strong>Cloudflare:</strong> 앱 내 구매 영수증 검증을 지원하고, 이전 온라인 경로의 대국·인증 요청을 처리할 수 있습니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보처리방침</a></li>
+<li><strong>Apple·Google:</strong> 선택한 소셜 로그인과 앱 마켓 결제를 각 제공자의 정책에 따라 처리합니다.</li>
 </ul>
-<p>해당 서비스는 제공업체의 국제 인프라에서 처리될 수 있습니다. 개발자는 개인정보를 판매하지 않습니다. 제출 버전 2.0.5(42)에서는 광고 목적으로 개인정보를 제공하지 않습니다. 광고가 포함된 이전 버전의 처리는 다음 항목에 설명합니다.</p>
-<h2>3. 광고·결제·분석 중지</h2>
-<p>제출 버전 2.0.5(42)에서는 광고 표시와 광고 SDK 초기화, 새 유료 결제 및 Firebase Analytics 수집을 비활성화합니다. 사용자를 광고 목적으로 추적하지 않습니다. Firebase Crashlytics를 이 버전의 앱에 사용하지 않습니다. 이전 출시 버전은 기존 설정으로 동작할 수 있으므로 최신 버전으로 업데이트해 주세요.</p>
+<p>해당 서비스는 제공업체의 국제 인프라에서 처리될 수 있습니다. 개발자는 개인정보를 판매하지 않습니다. 현재 지원 버전에서는 광고 목적으로 개인정보를 제공하지 않습니다. 광고가 포함된 이전 버전의 처리는 다음 항목에 설명합니다.</p>
+<h2>3. 광고·결제·분석</h2>
+<p>현재 지원 버전에서는 광고를 표시하거나 광고 SDK를 초기화하지 않으며, Firebase Analytics와 Crashlytics를 사용하지 않습니다. 앱 내 구매는 지원되는 버전에서 Apple App Store 또는 Google Play 결제 기능을 통해 처리합니다.</p>
 <h3>광고가 포함된 이전 버전의 광고·분석 처리</h3>
 <p>1.2.7 등 광고가 포함된 이전 버전에는 Google AdMob 광고 SDK와 Firebase Analytics가 포함되어 있습니다. 이 버전의 소스는 앱 시작 시 두 SDK를 초기화하며, 새 버전의 중지 설정이 이전에 설치한 앱에 소급 적용되지는 않습니다.</p>
 <p>이전 광고 포함 버전에서는 SDK 버전·설정·사용 상황에 따라 IP 주소에서 추정한 대략적인 위치, 광고·앱 식별자 등 기기 식별 정보, 앱 실행·탭·광고 상호작용, 앱·SDK 성능 및 진단 정보가 광고 제공·효과 측정·분석·부정 이용 방지를 위해 수집되거나 공유될 수 있습니다. Firebase Analytics는 사용 통계와 일부 구매 이벤트를 자동 처리할 수 있습니다. 이전 버전에서는 유료 테마 결제와 구매 복원이 제공될 수 있으며, 구매는 선택한 앱 스토어에서 처리합니다. 앱은 결제 카드 번호를 수집하지 않습니다.</p>
-<p>세부 동작은 당시 포함된 SDK와 실제 설정에 따라 달라집니다. <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google AdMob의 Android 데이터 처리 안내</a>와 <a href="https://firebase.google.com/docs/analytics/android/measure-in-app-purchases">Firebase Analytics 구매 이벤트 안내</a>를 참고해 주세요. 이번 제출 버전 2.0.5(42)의 광고·결제·Analytics 중지 상태에는 변화가 없습니다.</p>
+<p>세부 동작은 당시 포함된 SDK와 실제 설정에 따라 달라집니다. <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google AdMob의 Android 데이터 처리 안내</a>와 <a href="https://firebase.google.com/docs/analytics/android/measure-in-app-purchases">Firebase Analytics 구매 이벤트 안내</a>를 참고해 주세요. 현재 버전의 동작은 위 항목에 따릅니다.</p>
 <h2>4. 보관과 삭제</h2>
 <p>계정에 연결된 Sedol 원본 기보와 일별 업로드 건수는 계정 데이터로 보관하며, 현재 별도의 기간 만료 자동 삭제는 적용하지 않습니다. 계정 삭제 시 해당 서버 원본과 업로드 건수도 삭제 절차에 포함됩니다. 사용자 ID·닉네임·개별 기보가 없는 누적 승패 통계는 원본 삭제 후에도 유지되며, 계정 삭제에 맞춰 과거 합계를 소급 차감하지 않습니다.</p>
 <p>기기의 미전송·재시도 중인 기보와 서버가 거절한 기보는 로컬에 남을 수 있습니다. 서버가 저장 완료를 확인한 대기 기보는 기기의 대기열에서 제거합니다. 일반 로그아웃만으로는 대기·거절 기보가 삭제되지 않으며, 앱에서 계정 삭제 요청이 접수되면 해당 계정의 로컬 기록 정리도 시도합니다. 기기 저장 오류 등으로 로컬 정리가 완료되지 않을 수 있으므로, 서버 데이터 삭제와 기기 내 저장 상태는 구분됩니다.</p>
@@ -58,37 +63,40 @@
 <p>삭제 처리는 서버의 재시도 가능한 작업으로 수행됩니다. 일시적인 통신 장애가 있으면 처리를 재시도하며, 완료 전에는 해당 계정의 이용을 제한합니다. 중복 명령·삭제 재실행을 방지하기 위한 최소 보안 표식은 삭제 완료 후 30일이 지나면 자동 정리 대상이 됩니다. 정리 중 장애가 발생하면 재시도합니다. 온라인 서버의 비활성 대국·세션 임시 기록도 30일 보관 정리 대상입니다. 진행 중이거나 처리가 완료되지 않은 대국·삭제 작업은 완료될 때까지 유지합니다.</p>
 <p>지원 문의는 처리에 필요한 동안 보관하며, 문의 내용의 삭제를 이메일로 요청할 수 있습니다. 법령에 따른 별도 보관이 필요한 경우 그 근거와 대상·기간을 안내합니다.</p>
 <h2>5. 권리와 연락처</h2>
-<p>프로필 수정, 개인정보 열람·수정·삭제·처리 제한 문의: <a href="mailto:gue707@naver.com">gue707@naver.com</a> (개발자 ImTak). 계정 삭제는 위의 <a href="#account-deletion">삭제 요청 절차</a>를 이용해 주세요. 중요한 처리 변경은 이 페이지와 앱 업데이트 안내에 반영합니다.</p>
+<p>프로필 수정, 개인정보 열람·수정·삭제·처리 제한 문의: <a href="mailto:gue707@naver.com">gue707@naver.com</a> (개발자 ImTak). 계정 삭제는 위의 <a href="#account-deletion">삭제 요청 절차</a>를 이용해 주세요. 이전에 앱에서 별도로 제공한 기보는 호환 버전의 설정 → 이용약관 → 기존 기보 철회에서 철회할 수 있습니다. 중요한 처리 변경은 이 페이지와 앱 업데이트 안내에 반영합니다.</p>
 <hr>
 <section lang="en" id="english">
 <h1>WallBaduk Privacy Policy</h1>
-<p>WallBaduk / Wall바둑 / WallaGo · Developer: ImTak · Revised effective date: November 3, 2026</p>
+<p>WallBaduk / Wall바둑 / WallaGo · Developer: ImTak · Revised November 22, 2026</p>
 <div class="notice" id="account-deletion-en"><h2>Request account and data deletion</h2>
 <p><strong>In the app:</strong> Open Settings → Delete account while signed in. Leave any active online game or waiting room first. Google or Apple sign-in may require reauthentication.</p>
 <p><strong>Without the app:</strong> Email <a href="mailto:gue707@naver.com?subject=WallBaduk%20account%20deletion">gue707@naver.com</a> with the subject “WallBaduk account deletion”, your sign-in method and the account email or nickname needed to identify your account. Do not send passwords, verification codes or authentication tokens. We verify ownership, process the request and inform you of the result. Reinstalling the app is not required. For anonymous accounts, deletion in the app is the most reliable option; contact support if you no longer have access.</p></div>
 <h2>Data and use</h2>
 <p>We process Firebase and sign-in provider user IDs and authentication information; an email address and display name when supplied by Google or Apple; your chosen nickname; account and login times; ratings, wins, losses and rankings; online matchmaking and room information; placement, movement and wall commands; game state, times and results. This supports authentication, account linking, permissions, gameplay, reconnection, timing, rankings and prevention of duplicate results. Anonymous sign-in does not require email.</p>
-<p>Existing product ownership and purchase records remain stored for account continuity. New payments and purchase restoration are unavailable in this release. We do not collect payment card numbers. Support requests contain information you choose to email us. Providers may process network information such as IP addresses to deliver and secure the service.</p>
+<p>We process product identifiers, store receipts or transaction references, entitlements and purchase history to verify purchases, deliver or restore items and prevent duplicate grants. We do not collect payment card numbers. Support requests contain information you choose to email us. Providers may process network information such as IP addresses to deliver and secure the service.</p>
+<h3 id="replay-analysis-en">Automatic collection of analysis replays</h3>
+<p>This feature applies from version 3.9.0 build 63. When enabled, we automatically record replays of new online, same-device and AI matches in supported builds. Online collection applies to matches where all human participants use supported builds. Same-device and AI replays are saved on the device first and sent when the device is online and the game account can be authenticated.</p>
+<p>Analysis replays include rules, mode, player count, piece placements and moves, wall placements and breaks, timeouts, results and AI difficulty where applicable. We use them to improve gameplay and to develop, train and evaluate AI opponents. We store these replays separately on Oracle Cloud Infrastructure and do not publish them to other players. Analysis replays exclude account IDs, nicknames, email addresses, room codes, original match IDs and exact match times. The live archive removes records on a 90-day schedule. The account-linked Sedol and match history records described here follow separate purposes and deletion procedures.</p>
 <h3>Sedol replays and win-rate statistics</h3>
 <p>We record the full sequence and result of valid, normally completed games against Sedol in local AI mode. Records include piece placements, moves and walls; the human player’s side; start and completion times; app version; AI model and search versions and time limit; and quality information such as fallback moves and timeouts. They are linked to the Firebase user ID of the account used when the game starts, including anonymous accounts. Nicknames and email addresses are not included in the replay body, but the original is account-linked and is distinct from aggregate statistics.</p>
 <p>Completed replays are saved on the device before an authenticated upload. Offline uploads are retried later under the same account and are not reassigned to another account. Abandoned games, other difficulties and online games against AI opponents are not part of this Sedol replay collection. Network conditions, storage capacity, validation and receipt limits mean that not every game is guaranteed to be stored.</p>
 <p>We use replays to validate moves and results and calculate the human win rate against Sedol. Separate statistics store cumulative game, human-win, Sedol-win and draw counts and reference dates, without user IDs, nicknames or individual replays. The human win rate is displayed to two decimal places when at least 300 replays have been received and validated through the previous day in Korea Standard Time and a fresh online request succeeds. Draws count toward total games. Delayed uploads count on the server receipt date, not retroactively on the play date. This upload feature does not currently trigger automatic AI model training or model updates.</p>
 <h2>Providers and visibility</h2>
 <p>Account-linked Sedol replay originals are not published in rankings or to other users. The Sedol win rate shown in the app is an aggregate that contains no user IDs or individual replays.</p>
-<p>Google Firebase Authentication handles sign-in and Cloud Firestore stores profiles, history, existing purchase records and game state, account-linked Sedol replay originals and daily upload counts, and cumulative statistics without user IDs. Cloudflare Workers and Durable Objects verify Firebase tokens and process online game commands, matchmaking, state, results and deletion requests, as well as authentication, validation and storage requests for Sedol replays and statistics queries. Apple and Google process the sign-in you select. Providers may use international infrastructure. Nicknames and rating or game statistics are shown to opponents and in rankings; account emails and purchase history are not public profile fields. We do not sell personal data. Submission version 2.0.5(42) does not disclose personal data for advertising; advertising in previously released versions is described below.</p>
-<h2>Paused features</h2>
-<p>Submission version 2.0.5(42) disables ads, ad SDK initialization, new paid purchases and Firebase Analytics collection. It does not track users for advertising and does not include Firebase Crashlytics. Previously released app versions may behave according to their existing configuration; please update to the latest version.</p>
+<p>Google Firebase Authentication handles sign-in and Cloud Firestore stores profiles, history, existing purchase records and game state, account-linked Sedol replay originals and daily upload counts, and cumulative statistics without user IDs. Oracle Cloud Infrastructure hosts the game server for matchmaking, game state, reconnection, results, deletion requests and replay processing. Cloudflare supports purchase receipt verification and may process requests from legacy online routes. Apple and Google process your chosen sign-in and app store payments. Providers may use international infrastructure. Nicknames and rating or game statistics are shown to opponents and in rankings; account emails and purchase history are not public profile fields. We do not sell personal data. Current supported builds do not disclose personal data for advertising; advertising in previously released versions is described below.</p>
+<h2>Advertising, purchases and analytics</h2>
+<p>Current supported builds do not show ads, initialize the ad SDK or use Firebase Analytics or Crashlytics. Purchases in supported builds are processed by the Apple App Store or Google Play.</p>
 <h3>Advertising and Analytics in previously released versions</h3>
 <p>Previously released versions that include advertising, such as 1.2.7, include Google AdMob and Firebase Analytics. Their source initializes these SDKs when the app starts. The new release settings do not retroactively disable SDKs in an older installed app.</p>
 <p>Depending on the included SDK version, settings and use, older advertising versions may collect or share approximate location inferred from IP addresses, device or app identifiers, app launches and interactions, advertising interactions, and app or SDK performance and diagnostic information for advertising, measurement, analytics and fraud prevention. Firebase Analytics may automatically process usage statistics and certain purchase events. Older versions may also offer paid themes and purchase restoration; the selected app store processes payments. The app does not collect payment card numbers.</p>
-<p>Actual behavior depends on the SDK and configuration in that release. See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google AdMob Android data disclosure</a> and <a href="https://firebase.google.com/docs/analytics/android/measure-in-app-purchases">Firebase Analytics purchase-event guidance</a>. Ads, new purchases and Analytics remain disabled in submission version 2.0.5(42).</p>
+<p>Actual behavior depends on the SDK and configuration in that release. See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google AdMob Android data disclosure</a> and <a href="https://firebase.google.com/docs/analytics/android/measure-in-app-purchases">Firebase Analytics purchase-event guidance</a>. See the section above for the behavior of current builds.</p>
 <h2>Retention and deletion</h2>
 <p>Account-linked Sedol replay originals and daily upload counts are retained as account data; they currently have no separate time-based automatic deletion period. Account deletion includes these server originals and upload counts. Cumulative win/loss/draw statistics contain no user IDs, nicknames or individual replays and remain after originals are deleted; account deletion does not retroactively subtract a player’s contributions from those totals.</p>
 <p>Unsent or retrying replays and replays rejected by the server may remain on the device. A queued replay is removed from the local queue after the server confirms it was stored. Ordinary sign-out does not remove pending or rejected replays. When an account-deletion request is accepted in the app, it also attempts to remove that account’s local records. Local storage errors can prevent this cleanup from completing, so server deletion and data remaining on a device are distinct.</p>
 <p>Profiles, game history and existing purchases are stored while the account is in use. Account deletion removes the authentication account, private and public profiles, the account's history and purchase subcollections, and waiting or game sessions. The deleted player's ID and nickname are removed from other players' history and ended game records while results and rating changes that do not identify that player can remain.</p>
 <p>Server deletion jobs retry after temporary failures and restrict use of the account while deletion is pending. Minimal security markers that prevent duplicate commands or repeated deletion are scheduled for automatic cleanup after 30 days following completion, with retries on failure. Inactive online-server game and session records are also eligible for cleanup after 30 days. Active games and unfinished jobs remain until their processing completes. Support correspondence is retained while needed to resolve the request; you may ask us to delete it. If a legal retention obligation applies, we explain its basis, scope and period.</p>
 <h2>Your choices and contact</h2>
-<p>For access, correction, deletion, restriction or support, contact ImTak at <a href="mailto:gue707@naver.com">gue707@naver.com</a>. Use the prominent deletion instructions above to delete an account. Material changes will be reflected here and in app update information.</p>
+<p>For access, correction, deletion, restriction or support, contact ImTak at <a href="mailto:gue707@naver.com">gue707@naver.com</a>. Use the prominent deletion instructions above to delete an account. To withdraw a replay you previously chose to share, use Settings → Terms of Use → Withdraw previously shared replays in a supported build. Material changes will be reflected here and in app update information.</p>
 </section>
 </body>
 </html>
