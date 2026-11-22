@@ -46,6 +46,9 @@ python3 scripts/export-candidates.py /path/to/real-game-corpus.json
 
 ## Cloudflare Pages 배포
 
+GitHub Pages의 `/WallaGo/`는 운영 주소로 즉시 이동한다. Cloudflare에 올리는
+실제 소개 페이지는 `_cloudflare/index.html`이며, 패키징 시 루트 `index.html`로 복사한다.
+
 새 빈 출력 디렉터리를 지정해 공개 파일만 묶는다.
 
 ```sh

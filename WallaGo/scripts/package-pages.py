@@ -40,15 +40,16 @@ def package(output: Path, base_url: str) -> None:
     base_url = base_url.rstrip('/')
     if output.exists() and any(output.iterdir()):
         raise ValueError('Choose an empty output directory')
-    for relative in PUBLIC_FILES:
-        source = ROOT / relative
+    sources = {relative: ROOT / relative for relative in PUBLIC_FILES}
+    sources['index.html'] = ROOT / '_cloudflare/index.html'
+    for source in sources.values():
         if not source.is_file():
-            raise FileNotFoundError(relative)
+            raise FileNotFoundError(source)
     output.mkdir(parents=True, exist_ok=True)
-    for relative in PUBLIC_FILES:
+    for relative, source in sources.items():
         destination = output / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT / relative, destination)
+        shutil.copy2(source, destination)
     for relative, route in INDEXED_PAGES.items():
         page = output / relative
         html = page.read_text(encoding='utf-8')
