@@ -3,6 +3,7 @@ ownerdomain=hahngyutak.github.io
 
 # Meta Audience Network
 facebook.com, 1695809098607190, RESELLER, c3e20eee3f780d68
+facebook.com, 2235623327025759, DIRECT, c3e20eee3f780d68
 
 # Unity Ads
 adwmg.com, 159512, RESELLER, c9688a22012618e7
