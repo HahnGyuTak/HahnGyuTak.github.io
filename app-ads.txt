@@ -1,6 +1,9 @@
 google.com, pub-2672397304836996, DIRECT, f08c47fec0942fa0
 ownerdomain=hahngyutak.github.io
 
+# Meta Audience Network
+facebook.com, 1695809098607190, RESELLER, c3e20eee3f780d68
+
 # Unity Ads
 adwmg.com, 159512, RESELLER, c9688a22012618e7
 appads.in, 106246, RESELLER
