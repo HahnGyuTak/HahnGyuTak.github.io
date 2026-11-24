@@ -42,6 +42,7 @@ def package(output: Path, base_url: str) -> None:
         raise ValueError('Choose an empty output directory')
     sources = {relative: ROOT / relative for relative in PUBLIC_FILES}
     sources['index.html'] = ROOT / '_cloudflare/index.html'
+    sources['app-ads.txt'] = ROOT.parent / 'app-ads.txt'
     for source in sources.values():
         if not source.is_file():
             raise FileNotFoundError(source)
@@ -81,7 +82,7 @@ def package(output: Path, base_url: str) -> None:
     assert len(data['frames']) == 9
     print(json.dumps({
         'output': str(output), 'baseUrl': base_url,
-        'files': len(PUBLIC_FILES) + 3,
+        'files': len(sources) + 3,
         'bytes': sum(p.stat().st_size for p in output.rglob('*') if p.is_file()),
         'replayFrames': len(data['frames']),
     }, ensure_ascii=False))
